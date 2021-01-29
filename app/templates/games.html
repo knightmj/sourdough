@@ -1,0 +1,25 @@
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<style>
+    body {background-color: coral;}
+</style>
+
+<br />
+<div class="d-flex justify-content-center">
+    <form action="play" method="post">
+        <div class="d-flex flex-column" style="width:600px">
+            <div class="d-flex flex-row">
+                <p>Welcome <strong>{{ user.username }} </strong> do you want to join an existing World or make a new one?</p>
+            </div>
+            <div class="d-flex flex-row">
+                new one: <input type="text" name='game' value='{{ game.random }}' size="40"> <input type="submit" value="create">
+
+            </div>
+            <div class="d-flex flex-row">
+                TODO list of existing
+            </div>
+        </div>
+    </form>
+</div>
