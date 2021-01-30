@@ -129,12 +129,17 @@ def join_game(game_name, name):
 
 @app.route('/play', methods=["POST", "GET"])
 def play():
+    set_cookie = False
     if 'user_uid' not in request.cookies:
-        return redirect("/index")
+        user_id = str(uuid.uuid1())
+        set_cookie = True
     name, user = get_name()
     game_name, game = get_game_name()
     update_game(game_name)
     join_game(game_name, name)
     game = get_game(game_name)
     resp = make_response(render_template('play.html', user=user, game=game, players=game["players"].keys()))
+    if set_cookie:
+        resp.set_cookie('user_uid', user_id)
+        resp.set_cookie('user_name', name)
     return resp
