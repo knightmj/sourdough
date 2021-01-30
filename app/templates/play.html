@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<script src="{{url_for('static', filename='play.js')}}"></script>
 <style>
 body {background-color: coral;}
 #letter {
@@ -221,7 +221,7 @@ body {background-color: coral;}
                 </div>
                 <div class="col text-center">
                     <small> {{ user.username }}</small> <br>
-                    <input type=text> <input type="submit" value="guess">
+                    <input id =wordInput type=text> <button onclick="addWordPressed()">add word</button>
                 </div>
                 <br>
                 <div class="row no-gutters ">
