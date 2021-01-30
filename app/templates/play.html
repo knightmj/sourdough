@@ -221,7 +221,9 @@ body {background-color: coral;}
                 </div>
                 <div class="col text-center">
                     <small> {{ user.username }}</small> <br>
-                    <input id =wordInput type=text> <button onclick="addWordPressed()">add word</button>
+                    <input id=game_name type="hidden" value="{{ game.name }}">
+                    <input id=word_textbox type=text> <button id='addWordButton'>add word</button><br>
+                    <small id="status"></small> <br>
                 </div>
                 <br>
                 <div class="row no-gutters ">

@@ -1,11 +1,28 @@
+import string
 from secrets import choice
-
+import enchant
 import flask
 from flask import request, redirect
 import cachetools
+from threading import Thread, Lock
+
+games_mutex = Lock()
+dictionary = enchant.Dict("en_US")
+
+def lock_game_and_run(method, *args):
+    games_mutex.acquire()
+    try:
+        return method(*args)
+    finally:
+        games_mutex.release()
+    return
 
 
-def update_game(game_name):
+def add_game_if_needed(game_name):
+    return lock_game_and_run(add_game_if_needed_unsafe, game_name)
+
+
+def add_game_if_needed_unsafe(game_name):
     shared = get_shared()
     if "games" not in shared:
         shared["games"] = {}
@@ -27,6 +44,10 @@ def get_game(game_name):
 
 
 def join_game(game_name, name):
+    return lock_game_and_run(join_game_unsafe, game_name, name)
+
+
+def join_game_unsafe(game_name, name):
     game = get_game(game_name)
     if "players" not in game:
         game["players"] = cachetools.TTLCache(maxsize=999999, ttl=60 * 20)
@@ -54,6 +75,30 @@ def get_game_name():
 
     game = {'title': name}
     return name, game
+
+
+def add_game_word(game_name, word):
+    return lock_game_and_run(add_word_unsafe, game_name, word)
+
+
+def add_word_unsafe(game_name, word):
+    word = word.strip()
+
+    if not dictionary.check(word):
+        return {"invalid": "word is not in dictionary"}
+
+    game = get_game(game_name)
+    if not game:
+        print("unable to find game and add word:" + game_name)
+        return None
+    if "words" not in game:
+        game["words"] = []
+
+    if word not in game["words"]:
+        game["words"].append(word)
+
+    get_shared()["games"][game_name] = game
+    return {"valid": True}
 
 
 def random_name():

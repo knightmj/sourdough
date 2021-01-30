@@ -1,5 +1,5 @@
 import uuid
-from flask import render_template, make_response
+from flask import render_template, make_response, jsonify
 from app import app
 from app.game_helpers import *
 
@@ -54,7 +54,7 @@ def play():
         set_cookie = True
     name, user = get_name()
     game_name, game = get_game_name()
-    update_game(game_name)
+    add_game_if_needed(game_name)
     join_game(game_name, name)
     game = get_game(game_name)
     resp = make_response(render_template('play.html', user=user, game=game, players=game["players"].keys()))
@@ -62,3 +62,12 @@ def play():
         resp.set_cookie('user_uid', user_id)
         resp.set_cookie('user_name', name)
     return resp
+
+
+@app.route('/add_word', methods=["GET"])
+def add_word():
+    if "word" not in request.args or "game" not in request.args:
+        return "Invalid args", 400
+
+    result = add_game_word(request.args["game"],  request.args["word"])
+    return jsonify(result)
