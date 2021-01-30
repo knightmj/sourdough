@@ -6,8 +6,11 @@ from flask import request, redirect
 import cachetools
 from threading import Thread, Lock
 
+from app.levels import get_level
+
 games_mutex = Lock()
 dictionary = enchant.Dict("en_US")
+
 
 def lock_game_and_run(method, *args):
     games_mutex.acquire()
@@ -22,15 +25,12 @@ def add_game_if_needed(game_name):
     return lock_game_and_run(add_game_if_needed_unsafe, game_name)
 
 
-def add_game_if_needed_unsafe(game_name):
+def add_game_if_needed_unsafe(game_name, level=get_level(1)):
     shared = get_shared()
     if "games" not in shared:
         shared["games"] = {}
-    if game_name in shared["games"]:
-        # update for ttl
-        shared["games"][game_name] = shared["games"][game_name]
-    else:
-        shared["games"][game_name] = {"name": game_name}
+    if game_name not in shared["games"]:
+        shared["games"][game_name] = {"name": game_name, 'level': level}
     set_shared(shared)
 
 
@@ -77,28 +77,40 @@ def get_game_name():
     return name, game
 
 
-def add_game_word(game_name, word):
-    return lock_game_and_run(add_word_unsafe, game_name, word)
+def add_game_word(game_name, word, player):
+    return lock_game_and_run(add_word_unsafe, game_name, word, player)
 
 
-def add_word_unsafe(game_name, word):
-    word = word.strip()
+def add_word_unsafe(game_name, word, player):
+    word = word.strip().lower()
 
-    if not dictionary.check(word):
-        return {"invalid": "word is not in dictionary"}
+    #if not dictionary.check(word):
+    #    return {"invalid": "word is not in dictionary"}
 
     game = get_game(game_name)
+
     if not game:
         print("unable to find game and add word:" + game_name)
         return None
     if "words" not in game:
         game["words"] = []
+        game["found_words"] = []
 
-    if word not in game["words"]:
-        game["words"].append(word)
+    valid_words = game["level"]['valid']
+    invalid_words = game["level"]['valid']
+
+    if word not in game["found_words"]:
+        valid = word in valid_words         # this is a good word
+        invalid = word in invalid_words     # this is a known bad word
+        in_dict = dictionary.check(word)    # this word is in the dictionary
+        if valid or invalid or in_dict:
+            game["words"].append({'text': word, 'valid': valid, 'player': player})
+            game["found_words"].append(word)
+        else:
+            return {'invalid': 'unknown word ' + word}
 
     get_shared()["games"][game_name] = game
-    return {"valid": True}
+    return {"valid": False}
 
 
 def random_name():

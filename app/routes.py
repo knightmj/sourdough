@@ -57,17 +57,33 @@ def play():
     add_game_if_needed(game_name)
     join_game(game_name, name)
     game = get_game(game_name)
-    resp = make_response(render_template('play.html', user=user, game=game, players=game["players"].keys()))
+
+    resp = make_response(render_template('play.html', user=user,
+                                         board=game['level']['board'],
+                                         game=game,
+                                         players=game["players"].keys()))
     if set_cookie:
         resp.set_cookie('user_uid', user_id)
         resp.set_cookie('user_name', name)
     return resp
 
 
-@app.route('/add_word', methods=["GET"])
-def add_word():
-    if "word" not in request.args or "game" not in request.args:
+@app.route('/get_words', methods=["GET"])
+def get_words():
+    if "game" not in request.args:
         return "Invalid args", 400
 
-    result = add_game_word(request.args["game"],  request.args["word"])
+    game = get_game(request.args["game"])
+    if "words" in game:
+        return jsonify(game["words"])
+    return jsonify([])
+
+
+@app.route('/add_word', methods=["GET"])
+def add_word():
+    if "word" not in request.args or "game" not in request.args\
+            or "player" not in request.args:
+        return "Invalid args", 400
+
+    result = add_game_word(request.args["game"],  request.args["word"], request.args["player"])
     return jsonify(result)

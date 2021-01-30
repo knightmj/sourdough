@@ -42,186 +42,43 @@ body {background-color: coral;}
                         <h3> {{ game.name}}</h3>
                     </div>
                     <div class="col">
-                        <h3> 100</h3>
+                        <div class="row justify-content-center">
+
+                            <div class="col">
+                                time
+                            </div>
+                            <div class="col">
+                                <h5 id="time"></h5>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col">
+                                score
+                            </div>
+                            <div class="col">
+                                <h5 id="score">100</h5>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col text-center">
-                        <h1 id=letter class="letter-on">C</h1>
+                <br/>
+                {% for row in board %}
+                    <div class="row no-gutters">
+                        {% for letter in row %}
+                        <div class="col text-center">
+                            <h1 id=letter class="letter">{{ letter }}</h1>
+                        </div>
+                        {% endfor %}
                     </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>C</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>A</h1>
-                    </div>
-                    <div class="col text-center">
-                        <h1 id=letter>T</h1>
-                    </div>
-                </div>
+                {% endfor %}
+                <br/>
                 <div class="col text-center">
-                    <small> {{ user.username }}</small> <br>
+                    <small>{{ user.username }}</small> <br>
                     <input id=game_name type="hidden" value="{{ game.name }}">
+                    <input id=player type="hidden" value="{{ user.username }}">
                     <input id=word_textbox type=text> <button id='addWordButton'>add word</button><br>
                     <small id="status"></small> <br>
                 </div>
@@ -241,12 +98,7 @@ body {background-color: coral;}
                         <div class="col-sm bg-primary"> Words </div>
                     </div>
                     <div class="row overflow-auto " style="min-height:100px;max-height:200px;">
-                        <div class="col">
-                            {% for word in words %}
-                            <div class="row">
-                                <p id={{word.tag}}-word>word.text - word.player</p>
-                            </div>
-                            {% endfor %}
+                        <div id=word_list class="col">
                         </div>
                     </div>
                     <div class="row">
