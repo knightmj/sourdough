@@ -37,6 +37,19 @@ body{
     background-color:tomato;
     font-size: 10pt;
 }
+.passing_word {
+   padding: 3px;
+   display: inline;
+   margin-right:5px;
+   background-color:olive;
+}
+
+.failing_word {
+   padding: 3px;
+   display: inline;
+   margin-right:5px;
+   background-color:tomato;
+}
 
 .nopadding {
    padding: 0 !important;
@@ -53,7 +66,7 @@ body{
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <p>Great job! You found the truth behind the words! Are you up for the next challenge</p>
+          <p>Great job! You found the truth behind the words! Are you up for the next challenge?</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Onward!</button>
@@ -78,7 +91,7 @@ body{
                         <div class="row justify-content-center">
 
                             <div class="col">
-                                time
+                                Time left
                             </div>
                             <div class="col">
                                 <h5 id="time"></h5>
@@ -87,7 +100,7 @@ body{
                         </div>
                         <div class="row">
                             <div class="col">
-                                Words
+                                Words left
                             </div>
                             <div class="col">
                                 <h5 id=word_count>100</h5>
@@ -112,11 +125,19 @@ body{
                     <input id=game_name type="hidden" value="{{ game.name }}">
                     <input id=player type="hidden" value="{{ user.username }}">
                     <input id=word_textbox type=text> <button id='addWordButton'>add word</button><br>
-                    <small id="status"></small> <br>
+                    <small id="status">-</small>
                 </div>
                 <br>
                 <div class="row no-gutters ">
                     <div id=hint class="col">
+                    </div>
+                </div>
+                <div class="row no-gutters ">
+                    <div id=passed_words class="col p-2">
+                    </div>
+                </div>
+                <div class="row no-gutters ">
+                    <div id=failed_words class="col p-2">
                     </div>
                 </div>
             </div>
@@ -134,7 +155,7 @@ body{
                         <div class="col-sm bg-primary rounded"> Players </div>
                     </div>
                     <div class="row overflow-auto bg-white" style="height:140px">
-                        <div class="col">
+                        <div id=player_list class="col">
                             {% for player in players %}
                                  <div class="row"> {{ player }} </div>
                             {% endfor %}

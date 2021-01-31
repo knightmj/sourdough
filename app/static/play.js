@@ -2,7 +2,7 @@ function update_status(text) {
     $('#status').text(text);
     setTimeout( function(){
             // clear it back out
-            $('#status').text("");
+            $('#status').text("-");
         },
         1000);
 }
@@ -43,18 +43,37 @@ function update_game() {
 
                     remaining_words = data["remaining_words"]
                     $('#word_count').text(remaining_words);
+                    console.log(data["players"])
 
+                    named_words = ""
+                    passing_words = ""
+                    failed_words = ""
                     words = data["words"]
                     for(var i = words.length-1; i >= 0 ; i--){
                         if (words[i]['valid']) {
-                            str += "<div class='row b'><p id=passed-word>" +
-                                     words[i].text  +" - " + words[i].player +"</p></div>"
+                            named_words += "<div class='row b'><p id=passed-word>" +
+                                     words[i].text  + " - " + words[i].player +"</p></div>"
+                            passing_words+= "<p class='passing_word rounded p-1'>" + words[i].text +" </p>"
+
                         } else {
-                            str += "<div class='row'><p id=failed-word>" +
+                            named_words += "<div class='row'><p id=failed-word>" +
                                      words[i].text  +" - " + words[i].player +"</p></div>"
+                            failed_words+= "<p class='failing_word rounded p-1'>" + words[i].text +" </p>"
                         }
                     }
-                    $('#word_list').html(str);
+                    $('#word_list').html(named_words);
+                    $('#passed_words').html(passing_words);
+                    $('#failed_words').html(failed_words);
+
+
+                    str =""
+                    players = data["players"]
+                    for(var i = 0; i <players.length ; i++){
+                        str +="<div class='row'>" + players[i] + "</div>"
+                    }
+                    $('#player_list').html(str);
+
+
 
                     if (level == -1) {
                         level = data["level_index"]

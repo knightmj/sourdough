@@ -63,7 +63,6 @@ def play():
     join_game(game_name, name)
     game = get_game(game_name)
     image = "/static/" + game["level"]["background_image"]
-    print(request.url)
 
     resp = make_response(render_template('play.html', user=user,
                                          board=game['level']['board'],
@@ -116,9 +115,12 @@ def get_game_data():
 
     if remaining_words == 0:
         advance_game(request.args["game"])
+    players = []
+    for player in game["players"].keys():
+        players.append(str(player))
 
     data = {
-        'players': [],
+        'players': players,
         'remaining_words': remaining_words,
         'remaining_time': remaining_time,
         'rule_text': text,
