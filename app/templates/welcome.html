@@ -3,21 +3,40 @@
 {% block content %}
 
 <style>
-    body {background-color: coral;}
+    body {background-color: #FAEBD7;}
+
+    .bg_image {
+        background-image:url("{{url_for('static', filename='background_board.jpeg')}}");
+          background-repeat: no-repeat;
+            background-size: auto;
+    }
 </style>
 
+<script language="JavaScript">
+
+    function new_name()
+    {
+        window.location.href = "/?new=name"
+    }
+
+</script>
 <br />
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center ">
     <form action="games" method="post">
-        <div class="d-flex flex-column" style="width:400px">
-            <div class="d-flex flex-row">
-                <h3>Hello <input type="text" name='selected_name' value='{{ user.username }}'></h3>
-            </div>
-            <div class="d-flex flex-row">
-                <p>welcome to Sourdough's Worlds of Lost Words. Create your own starter puzzle and see how long you your friends can kee it alive!</p>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-                <input type="submit" value="let's go">
+        <div class="d-flex justify-content-center bg_image" style="width:612px;height:413">
+            <div class="d-flex flex-column justify-content-center  rounded"
+                 style="width:500;height:200;margin-top: 50px; background-color:rgba(255, 255, 255, 0.8);">
+                <div class="d-flex flex-row p-2">
+                    <h4>Hello {{ user.username }}</h4>
+                    <input type="hidden" id="selected_name" value="{{ user.username }}">
+                </div>
+                <div class="d-flex flex-row p-2">
+                    <p>Welcome to Sourdough's Worlds of <strong>conspiracy theories</strong> where the truth often lies behind a believable falsehoods.
+                    Can you separate the fact from the fiction?</p>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                    <button type="button" onclick="new_name();">new name  </button>  <input type="submit" value="let's go">
+                </div>
             </div>
         </div>
     </form>

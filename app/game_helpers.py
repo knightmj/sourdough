@@ -3,7 +3,7 @@ import time
 from secrets import choice
 import enchant
 import flask
-from flask import request, redirect
+from flask import request, redirect, session
 import cachetools
 from threading import Thread, Lock
 
@@ -42,6 +42,7 @@ def advance_game_unsafe(game_name):
 def add_game_if_needed(game_name):
     return lock_game_and_run(add_game_if_needed_unsafe, game_name)
 
+
 def add_game_if_needed_unsafe(game_name, level=get_level(1)):
     shared = get_shared()
     if "games" not in shared:
@@ -76,12 +77,10 @@ def join_game_unsafe(game_name, name):
 
 
 def get_name():
-    if "user_name" in request.cookies:
-        name = request.cookies["user_name"]
+    if "user_name" in session:
+        name = session["user_name"]
     else:
         name = random_name()
-    if "selected_name" in request.form:
-        name = request.form["selected_name"]
 
     user = {'username': name}
     return name, user
@@ -134,9 +133,9 @@ def add_word_unsafe(game_name, word, player):
 
 
 def random_name():
-    sirs = ["Agent", "Dr.", "Adjudicator"]
-    firsts = ["happy", "sad", "good", "great", "pink", "rad", "rotten", "shifty", "stanky"]
-    seconds = ["dog", "cat", "bat", "rat", "kaola", "panda", "kangaroo", "turtle", "bunny", "porcupine"]
+    sirs = ["agent", "dr.", "adjudicator", "prof.", "sgt."]
+    firsts = ["happy", "sad", "good", "great", "pink", "rad", "rotten", "shifty", "stanky", "flunky"]
+    seconds = ["dog", "cat", "bat", "rat", "kaola", "panda", "kangaroo", "turtle", "bun-bun", "porcupine"]
     sir = choice(sirs)
     first = choice(firsts)
     second = choice(seconds)
@@ -144,8 +143,14 @@ def random_name():
 
 
 def random_game():
-    firsts = ["planet", "solar_system", "town_o", "island", "black_hole", "hamlet_o", "forest_moon", "space"]
-    seconds = ["words", "nouns", "gerunds", "gerunds", "adverbia", "conjunctions", "interjections"]
+    firsts = ["moon", "space_station", "outer_rim_o",
+              "ocean_word", "planet", "solar_system",
+              "town_o", "island", "black_hole", "hamlet_o",
+              "forest_moon", "space", "new", "new_old",
+              "old_new"]
+    seconds = [
+               "words", "nouns", "gerunds", "gerunds",
+               "adverbia", "conjunctions", "interjections"]
     first = choice(firsts)
     second = choice(seconds)
     return first + "_" + second

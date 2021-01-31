@@ -1,5 +1,5 @@
 import uuid
-from flask import render_template, make_response, jsonify
+from flask import render_template, make_response, jsonify, session
 from app import app
 from app.game_helpers import *
 
@@ -15,56 +15,59 @@ def index():
 
     stats = {"count": shared.count}
 
-    if 'user_uid' not in request.cookies:
-        user_id = str(uuid.uuid1())
+    if 'user_uid' not in session:
         name = random_name()
         user = {'username': name}
+        session["user_name"] = name
         resp = make_response(render_template('welcome.html', user=user, stats=stats))
-        resp.set_cookie('user_uid', user_id)
-        resp.set_cookie('user_name', name)
+        return resp
     else:
         name, user = get_name()
-        resp = make_response(render_template('welcome.html', user=user, stats=stats))
-        resp.set_cookie('user_name', name)
+        if "new" in request.args:
+            name = random_name()
+        session["user_name"] = name
 
-    return resp
+        resp = make_response(render_template('welcome.html', user=user, stats=stats))
+
+        return resp
 
 
 @app.route('/games', methods=["POST", "GET"])
 def games():
-    if 'user_uid' not in request.cookies:
-        return redirect("/index")
     name, user = get_name()
 
     game = {'random': random_game()}
-    game_list = []
+
+    resp = make_response(render_template('games.html', user=user, game=game))
+
+    return resp
+
+
+@app.route('/game_list', methods=["POST", "GET"])
+def game_list():
+    all_games = []
     shared = get_shared()
     if "games" in shared:
-        game_list = shared["games"].values()
+        all_games = shared["games"].values()
 
-    resp = make_response(render_template('games.html', user=user, game=game, games=game_list))
+    resp = make_response(render_template('game_list.html', games=all_games))
     return resp
 
 
 @app.route('/play', methods=["POST", "GET"])
 def play():
-    set_cookie = False
-    if 'user_uid' not in request.cookies:
-        user_id = str(uuid.uuid1())
-        set_cookie = True
     name, user = get_name()
+
     game_name, game = get_game_name()
     add_game_if_needed(game_name)
     join_game(game_name, name)
     game = get_game(game_name)
-
+    image = "/static/" + game["level"]["background_image"]
     resp = make_response(render_template('play.html', user=user,
                                          board=game['level']['board'],
                                          game=game,
+                                         background_image=image,
                                          players=game["players"].keys()))
-    if set_cookie:
-        resp.set_cookie('user_uid', user_id)
-        resp.set_cookie('user_name', name)
     return resp
 
 

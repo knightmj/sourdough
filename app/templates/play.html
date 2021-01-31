@@ -2,8 +2,16 @@
 
 {% block content %}
 <script src="{{url_for('static', filename='play.js')}}"></script>
-<style>
-body {background-color: #D6EAF8;}
+<style type="text/css">
+
+body{
+    width:100%;
+    height: 100%;
+    background-image: url("{{ background_image }}");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 #letter {
     font-size: 18pt;
     min-width: 44px
