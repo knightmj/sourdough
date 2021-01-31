@@ -68,22 +68,49 @@ def play():
     return resp
 
 
-@app.route('/get_words', methods=["GET"])
-def get_words():
-    if "game" not in request.args:
-        return "Invalid args", 400
-
-    game = get_game(request.args["game"])
-    if "words" in game:
-        return jsonify(game["words"])
-    return jsonify([])
-
-
 @app.route('/add_word', methods=["GET"])
 def add_word():
-    if "word" not in request.args or "game" not in request.args\
+    if "word" not in request.args or "game" not in request.args \
             or "player" not in request.args:
         return "Invalid args", 400
 
-    result = add_game_word(request.args["game"],  request.args["word"], request.args["player"])
+    result = add_game_word(request.args["game"], request.args["word"], request.args["player"])
     return jsonify(result)
+
+
+@app.route('/get_game_data', methods=["GET"])
+def get_game_data():
+    if "game" not in request.args:
+        return "Invalid args", 400
+    game = get_game(request.args["game"])
+    start_time = game["start_time"]
+    elapsed = time.time() - start_time
+    reveal_time = game["level"]["text_fully_revealed_at_s"]
+    total_time = game["level"]["time_s"]
+    remaining_time = total_time - elapsed
+    if remaining_time < 0:
+        remaining_time = 0
+
+    if "words" not in game:
+        game["words"] = []
+        game["found_words"] = []
+
+    valid = 0
+    for word in game["words"]:
+        if word["valid"]:
+            valid = valid + 1
+
+    remaining_words = game["level"]["number_of_words"] - valid
+    percent_text = elapsed / reveal_time
+    letters = int(percent_text * len(game["level"]["rule_text"]))
+    extra = len(game["level"]["rule_text"]) - letters
+    text = game["level"]["rule_text"][:letters] + extra * "*"
+
+    data = {
+        'players': [],
+        'remaining_words': remaining_words,
+        'remaining_time': remaining_time,
+        'rule_text': text,
+        'words': game["words"],
+    }
+    return jsonify(data)

@@ -3,9 +3,10 @@
 {% block content %}
 <script src="{{url_for('static', filename='play.js')}}"></script>
 <style>
-body {background-color: coral;}
+body {background-color: #D6EAF8;}
 #letter {
     font-size: 18pt;
+    min-width: 44px
 }
 .letter-on {
     font-size: 28pt;
@@ -33,7 +34,7 @@ body {background-color: coral;}
 <br>
 <br>
 <div class="d-flex justify-content-center">
-    <div class="container mw-100" style="width:750px; min-width: 750px;">
+    <div class="container rounded" style="width:750px; min-width: 750px;background-color:F4F6F6 ">
         <div class="row">
             <!-- This is the board area -->
             <div class="col">
@@ -53,12 +54,11 @@ body {background-color: coral;}
 
                         </div>
                         <div class="row">
-
                             <div class="col">
-                                score
+                                Words
                             </div>
                             <div class="col">
-                                <h5 id="score">100</h5>
+                                <h5 id=word_count>100</h5>
                             </div>
 
                         </div>
@@ -66,9 +66,9 @@ body {background-color: coral;}
                 </div>
                 <br/>
                 {% for row in board %}
-                    <div class="row no-gutters">
+                    <div class="row justify-content-md-center no-gutters">
                         {% for letter in row %}
-                        <div class="col text-center">
+                        <div class="col col-md-auto text-center border bg-white">
                             <h1 id=letter class="letter">{{ letter }}</h1>
                         </div>
                         {% endfor %}
@@ -84,10 +84,7 @@ body {background-color: coral;}
                 </div>
                 <br>
                 <div class="row no-gutters ">
-                    <div class="col">
-                         {% for rule in rules %}
-                            <div class="row no-gutters justify-content-center"> <p>rule</p> </div>
-                        {% endfor %}
+                    <div id=hint class="col">
                     </div>
                 </div>
             </div>
@@ -95,16 +92,16 @@ body {background-color: coral;}
             <div class="col-sm-4">
                 <div class="container" style="width:235px">
                     <div class="row">
-                        <div class="col-sm bg-primary"> Words </div>
+                        <div class="col-sm bg-primary rounded">Words</div>
                     </div>
-                    <div class="row overflow-auto " style="min-height:100px;max-height:200px;">
+                    <div class="row overflow-auto bg-white" style="min-height:200px;max-height:300px;">
                         <div id=word_list class="col">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm bg-primary"> Players </div>
+                        <div class="col-sm bg-primary rounded"> Players </div>
                     </div>
-                    <div class="row overflow-auto" style="height:140px">
+                    <div class="row overflow-auto bg-white" style="height:140px">
                         <div class="col">
                             {% for player in players %}
                                  <div class="row"> {{ player }} </div>

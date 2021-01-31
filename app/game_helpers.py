@@ -1,4 +1,5 @@
 import string
+import time
 from secrets import choice
 import enchant
 import flask
@@ -30,7 +31,9 @@ def add_game_if_needed_unsafe(game_name, level=get_level(1)):
     if "games" not in shared:
         shared["games"] = {}
     if game_name not in shared["games"]:
-        shared["games"][game_name] = {"name": game_name, 'level': level}
+        shared["games"][game_name] = {"name": game_name,
+                                      'level': level,
+                                      'start_time': time.time()}
     set_shared(shared)
 
 
