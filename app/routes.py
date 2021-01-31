@@ -101,10 +101,15 @@ def get_game_data():
             valid = valid + 1
 
     remaining_words = game["level"]["number_of_words"] - valid
+
     percent_text = elapsed / reveal_time
     letters = int(percent_text * len(game["level"]["rule_text"]))
     extra = len(game["level"]["rule_text"]) - letters
-    text = game["level"]["rule_text"][:letters] + extra * "*"
+    extra /= 2
+    text = game["level"]["rule_text"][:letters] + int(extra) * "* "
+
+    if remaining_words == 0:
+        advance_game(request.args["game"])
 
     data = {
         'players': [],

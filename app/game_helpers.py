@@ -22,9 +22,25 @@ def lock_game_and_run(method, *args):
     return
 
 
+def advance_game(game_name):
+    return lock_game_and_run(advance_game_unsafe, game_name)
+
+
+def advance_game_unsafe(game_name):
+    print("advance_game_unsafe")
+    game = get_game(game_name)
+    index = game["level_index"]
+    game['start_time'] = time.time()
+    game['level_index'] = index + 1
+    game['level'] = get_level(index + 1)
+    game['words'] = []
+    game['found_words'] = []
+    get_shared()["games"][game_name] = game
+    print(get_shared())
+
+
 def add_game_if_needed(game_name):
     return lock_game_and_run(add_game_if_needed_unsafe, game_name)
-
 
 def add_game_if_needed_unsafe(game_name, level=get_level(1)):
     shared = get_shared()
@@ -33,6 +49,7 @@ def add_game_if_needed_unsafe(game_name, level=get_level(1)):
     if game_name not in shared["games"]:
         shared["games"][game_name] = {"name": game_name,
                                       'level': level,
+                                      'level_index': 1,
                                       'start_time': time.time()}
     set_shared(shared)
 
@@ -87,9 +104,6 @@ def add_game_word(game_name, word, player):
 def add_word_unsafe(game_name, word, player):
     word = word.strip().lower()
 
-    #if not dictionary.check(word):
-    #    return {"invalid": "word is not in dictionary"}
-
     game = get_game(game_name)
 
     if not game:
@@ -109,8 +123,11 @@ def add_word_unsafe(game_name, word, player):
         if valid or invalid or in_dict:
             game["words"].append({'text': word, 'valid': valid, 'player': player})
             game["found_words"].append(word)
+            return {"valid": valid}
         else:
             return {'invalid': 'unknown word ' + word}
+    else:
+        return {'invalid': 'word already listed'}
 
     get_shared()["games"][game_name] = game
     return {"valid": False}

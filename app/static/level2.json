@@ -1,0 +1,74 @@
+{
+    "board": [
+        [
+            "L",
+            "I",
+            "Z"
+        ],
+        [
+            "N",
+            "G",
+            "A"
+        ],
+        [
+            "D",
+            "R",
+            "P"
+        ]
+    ],
+    "valid": [
+        "izar",
+        "izard",
+        "lizard",
+        "razing",
+        "zag",
+        "zap",
+        "zig",
+        "zin",
+        "zing"
+    ],
+    "invalid": [
+        "agin",
+        "ail",
+        "ain",
+        "ard",
+        "argil",
+        "drag",
+        "drail",
+        "drain",
+        "drap",
+        "gain",
+        "gap",
+        "gar",
+        "garni",
+        "gin",
+        "glia",
+        "grail",
+        "grain",
+        "liar",
+        "liard",
+        "lig",
+        "lin",
+        "lind",
+        "ling",
+        "linga",
+        "nil",
+        "pail",
+        "pain",
+        "par",
+        "pard",
+        "rag",
+        "ragi",
+        "rai",
+        "rail",
+        "rain",
+        "rap"
+    ],
+    "required": [
+        "lizard"
+    ],
+    "rule_text": "Reptile would not fit here, your words must include the letter Z",
+    "number_of_words": 4,
+    "time_s": 180,
+    "text_fully_revealed_at_s": 90
+}

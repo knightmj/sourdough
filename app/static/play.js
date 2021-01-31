@@ -7,6 +7,8 @@ function update_status(text) {
         1000);
 }
 
+var game_over = false
+
 function update_game() {
         $.ajax({
                 url: "get_game_data",
@@ -28,18 +30,24 @@ function update_game() {
                     if (remaining > 60) {
                         m = Math.floor(remaining/60)
                         $('#time').text(m.toString() + "m");
-
                     } else {
                         $('#time').text(Math.floor(remaining).toString() + "s");
                     }
 
-                    words = data["remaining_words"]
-                    $('#word_count').text(words);
+                    if (remaining <=0) {
+                        game_over = true
+                        $("#word_textbox").val('<game over>')
+                        $("#word_textbox").attr("disabled", "disabled");
+                        $("#addWordButton").attr("disabled", "disabled");
+                    }
+
+                    remaining_words = data["remaining_words"]
+                    $('#word_count').text(remaining_words);
 
                     words = data["words"]
-                    for(var i = 0; i < words.length; i++){
+                    for(var i = words.length-1; i >= 0 ; i--){
                         if (words[i]['valid']) {
-                            str += "<div class='row'><p id=passed-word>" +
+                            str += "<div class='row b'><p id=passed-word>" +
                                      words[i].text  +" - " + words[i].player +"</p></div>"
                         } else {
                             str += "<div class='row'><p id=failed-word>" +
@@ -47,11 +55,25 @@ function update_game() {
                         }
                     }
                     $('#word_list').html(str);
+
+                    if (remaining_words == 0){
+                        advance()
+                        game_over = true
+                    }
                 }
          });
 }
+function advance() {
+
+        $('#myModal').modal();
+        $('#myModal').on('hidden.bs.modal', function () {
+            location.reload()
+        });
+}
 setInterval(function () {
-    update_game()
+    if (!game_over){
+        update_game()
+     }
 }, 1000);
 
 function addWord() {
@@ -66,9 +88,7 @@ function addWord() {
     },
     success:function(data) {
         $( "#word_textbox" ).val('')
-
         if (data["invalid"]) {
-
             update_status(data['invalid']);
         }
         else if (data["valid"]){

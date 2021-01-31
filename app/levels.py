@@ -1,4 +1,8 @@
-level1 = {
+import json
+
+from app import app
+
+levelx = {
     "board": [
         [
             "Z",
@@ -65,4 +69,6 @@ level1 = {
 
 
 def get_level(i):
-    return level1
+    file = "static/level" + str(i) + ".json"
+    with app.open_resource(file) as f:
+        return json.load(f)
