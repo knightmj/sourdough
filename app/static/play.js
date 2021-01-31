@@ -8,7 +8,7 @@ function update_status(text) {
 }
 
 var game_over = false
-
+var level = -1
 function update_game() {
         $.ajax({
                 url: "get_game_data",
@@ -56,7 +56,10 @@ function update_game() {
                     }
                     $('#word_list').html(str);
 
-                    if (remaining_words == 0){
+                    if (level == -1) {
+                        level = data["level_index"]
+                    }
+                    else if (data["level_index"]  != level){
                         advance()
                         game_over = true
                     }

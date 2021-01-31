@@ -116,6 +116,7 @@ def get_game_data():
         'remaining_words': remaining_words,
         'remaining_time': remaining_time,
         'rule_text': text,
+        'level_index': game["level_index"],
         'words': game["words"],
     }
     return jsonify(data)
