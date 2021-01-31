@@ -671,7 +671,7 @@
         "flat",
         "earth"
     ],
-    "rule_text": "Most people believe the world is round... they use SCIENCE and think they are better than you. Some people believe the earth is flat. They use an interesting new form of logic that does not really resemble anything you might interpret as logic. Turns out everyone is wrong, because the earth is actually a mobius strip! Your words must all wrap around from one side of the edge to the other edge. Careful though, crossing can only be done horizontally or vertically and probably should only be attempted once per word.",
+    "rule_text": "Most people believe the world is round... they use SCIENCE and think they are better than you. Some people believe the earth is flat. They use an interesting new form of logic that does not really resemble anything you might interpret as logic. Turns out everyone is wrong, because the earth is actually a mobius strip! Your words must all wrap around from one side of the edge to the other edge. Careful though, crossing can only be done horizontally or vertically and probably should only be attempted once per word. Be careful not the travel back to the lat/long you started at",
     "number_of_words": 50,
     "time_s": 3600,
     "text_fully_revealed_at_s": 1800
