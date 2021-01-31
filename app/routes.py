@@ -58,6 +58,9 @@ def game_list():
 def play():
     name, user = get_name()
 
+    if "user_name" not in session:
+        session["user_name"] = name
+
     game_name, game = get_game_name()
     add_game_if_needed(game_name)
     join_game(game_name, name)
