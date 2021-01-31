@@ -27,7 +27,6 @@ def advance_game(game_name):
 
 
 def advance_game_unsafe(game_name):
-    print("advance_game_unsafe")
     game = get_game(game_name)
     index = game["level_index"]
     game['start_time'] = time.time()
@@ -36,7 +35,6 @@ def advance_game_unsafe(game_name):
     game['words'] = []
     game['found_words'] = []
     get_shared()["games"][game_name] = game
-    print(get_shared())
 
 
 def add_game_if_needed(game_name):

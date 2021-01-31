@@ -63,9 +63,12 @@ def play():
     join_game(game_name, name)
     game = get_game(game_name)
     image = "/static/" + game["level"]["background_image"]
+    print(request.url)
+
     resp = make_response(render_template('play.html', user=user,
                                          board=game['level']['board'],
                                          game=game,
+                                         link=request.url,
                                          background_image=image,
                                          players=game["players"].keys()))
     return resp
