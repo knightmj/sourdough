@@ -82,7 +82,12 @@ def add_word():
             or "player" not in request.args:
         return "Invalid args", 400
 
+    # ensure that this player stays logged on by updating the time time to live
+    player_active(request.args["game"],  request.args["player"])
+
+    # add word to the game
     result = add_game_word(request.args["game"], request.args["word"], request.args["player"])
+
     return jsonify(result)
 
 

@@ -62,6 +62,26 @@ def get_game(game_name):
     return
 
 
+def get_player_cache():
+    # players list max out at 2000 players with 10 minutes of usage
+    # plays can continue to play but we will never put more than 2000
+    # in the UI for now
+    return cachetools.TTLCache(maxsize=2000, ttl=60*10)
+
+
+def player_active(game_name, name):
+    return lock_game_and_run(player_active_unsafe, game_name, name)
+
+
+def player_active_unsafe(game_name, name):
+    game = get_game(game_name)
+    if "players" not in game:
+        game["players"] = get_player_cache()
+    # increase player timeout by setting the name again
+    game["players"][name] = name
+    get_shared()["games"][game_name] = game
+
+
 def join_game(game_name, name):
     return lock_game_and_run(join_game_unsafe, game_name, name)
 
@@ -69,7 +89,7 @@ def join_game(game_name, name):
 def join_game_unsafe(game_name, name):
     game = get_game(game_name)
     if "players" not in game:
-        game["players"] = cachetools.TTLCache(maxsize=999999, ttl=60 * 20)
+        game["players"] =  get_player_cache()
     game["players"][name] = name
     get_shared()["games"][game_name] = game
 
