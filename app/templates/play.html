@@ -29,14 +29,6 @@ body{
   margin-top: 0px;
   margin-bottom: 0px
 }
-#passed-word {
-    background-color:olive;
-    font-size: 10pt;
-}
-#failed-word {
-    background-color:tomato;
-    font-size: 10pt;
-}
 .passing_word {
    padding: 3px;
    display: inline;
@@ -48,8 +40,19 @@ body{
    padding: 3px;
    display: inline;
    margin-right:5px;
-   background-color:tomato;
+   background-color:wheat;
 }
+
+.passing_word_count {
+   display: inline;
+   color:olive;
+}
+
+.failing_word_count {
+   display: inline;
+   color:wheat;
+}
+
 
 .nopadding {
    padding: 0 !important;
@@ -85,27 +88,19 @@ body{
             <div class="col">
                 <div class="row">
                     <div class="col">
-                        <h3> {{ game.name}}</h3>
-                    </div>
-                    <div class="col">
                         <div class="row justify-content-center">
-
                             <div class="col">
-                                Time
+                                time left
                             </div>
                             <div class="col">
                                 <h5 id="time"></h5>
                             </div>
-
-                        </div>
-                        <div class="row">
                             <div class="col">
-                                Words
+                                words left
                             </div>
                             <div class="col">
-                                <h5 id=word_count>100</h5>
+                                <h5 id=word_count></h5>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -145,30 +140,23 @@ body{
             <div class="col-sm-4">
                 <div class="container" style="width:235px">
                     <div class="row">
-                        <div class="col-sm bg-primary rounded">Words</div>
+                        <div class="col-sm bg-info"> Players </div>
                     </div>
-                    <div class="row overflow-auto bg-white" style="min-height:200px;max-height:300px;">
-                        <div id=word_list class="col">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm bg-primary rounded"> Players </div>
-                    </div>
-                    <div class="row overflow-auto bg-white" style="height:140px">
+                    <div class="row overflow-auto border-left border-bottom rounded" style="height:450px">
                         <div id=player_list class="col">
-                            {% for player in players %}
-                                 <div class="row"> {{ player }} </div>
-                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center" style="margin-top:25px;">
-            Share:<a href="{{link}}">{{link}}</a>
+            <button onclick="audio_toggle()" class="btn"><h id="audio_label">🔊</h></button>
+        </div>
+        <div class="row justify-content-center">
+             <a href="{{link}}">{{link}}</a>
         </div>
         <div class="row justify-content-center" style="margin-bottom:10px;">
-            Great with Discord Audio:<a href="https://discord.gg/fnTh288f9u">Join us</a>
+            <a href="https://discord.gg/fnTh288f9u">Join us on Discord</a>
         </div>
     </div>
 </div>

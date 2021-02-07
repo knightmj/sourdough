@@ -89,7 +89,7 @@ def join_game(game_name, name):
 def join_game_unsafe(game_name, name):
     game = get_game(game_name)
     if "players" not in game:
-        game["players"] =  get_player_cache()
+        game["players"] = get_player_cache()
     game["players"][name] = name
     get_shared()["games"][game_name] = game
 
@@ -151,13 +151,12 @@ def add_word_unsafe(game_name, word, player):
 
 
 def random_name():
-    sirs = ["agent", "dr.", "adjudicator", "prof.", "sgt."]
-    firsts = ["happy", "sad", "good", "great", "pink", "rad", "rotten", "shifty", "stanky", "flunky"]
-    seconds = ["dog", "cat", "bat", "rat", "kaola", "panda", "kangaroo", "turtle", "bun-bun", "porcupine"]
-    sir = choice(sirs)
+    firsts = ["agent", "dr.", "adjudicator", "prof.", "sgt.", "fank", "sir.", "rebellious", "snidely",
+              "happy", "pouty", "sparky", "great", "pinky", "radical", "rotten", "shifty", "stanky", "flunky"]
+    seconds = ["dog", "kitty", "bat", "ratatat", "capybara", "mcFrisky", "panda", "kangaroo", "turtle", "bun-bun", "porcupine"]
     first = choice(firsts)
     second = choice(seconds)
-    return sir.capitalize() + " " + first.capitalize() + " " + second.capitalize()
+    return first.capitalize() + " " + second.capitalize()
 
 
 def random_game():
