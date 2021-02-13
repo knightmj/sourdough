@@ -1,3 +1,6 @@
+var game_over = false
+var level = -1
+
 function update_status(text) {
     $('#status').text(text);
     setTimeout( function(){
@@ -30,9 +33,105 @@ function get_cookie(cname) {
   return "";
 }
 
-var game_over = false
-var level = -1
-function update_game() {
+function updateTime(data) {
+    remaining = data["remaining_time"]
+    if (remaining > 60) {
+        m = Math.floor(remaining/60)
+        $('#time').text(m.toString() + "m");
+    } else {
+        $('#time').text(Math.floor(remaining).toString() + "s");
+    }
+}
+
+function updateHint(data) {
+    rule_text = data["rule_text"]
+
+    $('#hint').html(
+        "<div class='row no-gutters justify-content-center'> <p>" +
+        rule_text +"</p> </div>"
+    );
+}
+function checkGameOver(data) {
+    if (remaining <=0) {
+        game_over = true
+        $("#word_textbox").val('<game over>')
+        $("#word_textbox").attr("disabled", "disabled");
+        $("#addWordButton").attr("disabled", "disabled");
+    }
+}
+
+function updateWords(data) {
+    remaining_words = data["remaining_words"]
+    $('#word_count').text(remaining_words);
+
+    named_words = ""
+    passing_words = ""
+    failed_words = ""
+    words = data["words"]
+    player_to_words = {}
+    for(var i = words.length-1; i >= 0 ; i--){
+        if (!(words[i].player in player_to_words)) {
+                player_to_words[words[i].player] = {"valid": 0, "invalid": 0}
+         }
+        if (words[i]['valid']) {
+            player_to_words[words[i].player]["valid"] = 1 + player_to_words[words[i].player]["valid"]
+            named_words += "<div class='row b'><p id=passed-word>" +
+                     words[i].text  + " - " + words[i].player +"</p></div>"
+            passing_words+= "<p class='passing_word rounded p-1'>" + words[i].text +" </p>"
+
+        } else {
+
+            player_to_words[words[i].player]["invalid"] = 1 + player_to_words[words[i].player]["valid"]
+            failed_words+= "<p class='failing_word rounded p-1'>" + words[i].text +" </p>"
+        }
+    }
+
+    $('#passed_words').html(passing_words);
+    $('#failed_words').html(failed_words);
+    return player_to_words
+}
+
+function updatePlayers(data, player_to_words) {
+
+    str =""
+    players = data["players"]
+    for(var i = 0; i <players.length ; i++){
+        pass_fail = ""
+        if (players[i] in player_to_words) {
+            pass_fail =  "(<p class='passing_word_count'>" +
+                         player_to_words[players[i]]["valid"].toString() + " </p>" +
+                         "/" +
+                         "<p class='failing_word_count'>" +
+                         player_to_words[players[i]]["invalid"].toString() +" </p>)"
+        }
+        str += "<div class='row'><p style='margin-right:5px;margin-left:5px'>" +
+                players[i] + "</p>" + pass_fail + "</div>"
+    }
+    $('#player_list').html(str);
+
+}
+
+function checkGameComplete(data) {
+
+    if (level == -1) {
+        level = data["level_index"]
+    }
+    else if (data["level_index"]  != level){
+        advance()
+        game_over = true
+    }
+}
+
+function updateUserInterface(data) {
+    updateHint(data)
+    updateTime(data)
+    checkGameOver(data)
+    player_to_words = updateWords(data)
+    updatePlayers(data, player_to_words)
+    checkGameComplete(data)
+}
+
+function updateGame() {
         $.ajax({
                 url: "get_game_data",
                 data: {"game":$( "#game_name" ).val()} ,
@@ -40,80 +139,7 @@ function update_game() {
                     update_status("error" + data);
                 },
                 success:function(data) {
-                    str = ""
-                    rule_text = data["rule_text"]
-
-                    $('#hint').html(
-                        "<div class='row no-gutters justify-content-center'> <p>" +
-                        rule_text +"</p> </div>"
-                    );
-
-                    remaining = data["remaining_time"]
-                    if (remaining > 60) {
-                        m = Math.floor(remaining/60)
-                        $('#time').text(m.toString() + "m");
-                    } else {
-                        $('#time').text(Math.floor(remaining).toString() + "s");
-                    }
-
-                    if (remaining <=0) {
-                        game_over = true
-                        $("#word_textbox").val('<game over>')
-                        $("#word_textbox").attr("disabled", "disabled");
-                        $("#addWordButton").attr("disabled", "disabled");
-                    }
-
-                    remaining_words = data["remaining_words"]
-                    $('#word_count').text(remaining_words);
-
-                    named_words = ""
-                    passing_words = ""
-                    failed_words = ""
-                    words = data["words"]
-                    player_to_words = {}
-                    for(var i = words.length-1; i >= 0 ; i--){
-                        if (!(words[i].player in player_to_words)) {
-                                player_to_words[words[i].player] = {"valid": 0, "invalid": 0}
-                         }
-                        if (words[i]['valid']) {
-                            player_to_words[words[i].player]["valid"] = 1 + player_to_words[words[i].player]["valid"]
-                            named_words += "<div class='row b'><p id=passed-word>" +
-                                     words[i].text  + " - " + words[i].player +"</p></div>"
-                            passing_words+= "<p class='passing_word rounded p-1'>" + words[i].text +" </p>"
-
-                        } else {
-
-                            player_to_words[words[i].player]["invalid"] = 1 + player_to_words[words[i].player]["valid"]
-                            failed_words+= "<p class='failing_word rounded p-1'>" + words[i].text +" </p>"
-                        }
-                    }
-
-                    $('#passed_words').html(passing_words);
-                    $('#failed_words').html(failed_words);
-
-                    str =""
-                    players = data["players"]
-                    for(var i = 0; i <players.length ; i++){
-                        pass_fail = ""
-                        if (players[i] in player_to_words) {
-                            pass_fail =  "(<p class='passing_word_count'>" +
-                                         player_to_words[players[i]]["valid"].toString() + " </p>" +
-                                         "/" +
-                                         "<p class='failing_word_count'>" +
-                                         player_to_words[players[i]]["invalid"].toString() +" </p>)"
-                        }
-                        str += "<div class='row'><p style='margin-right:5px;margin-left:5px'>" +
-                                players[i] + "</p>" + pass_fail + "</div>"
-                    }
-                    $('#player_list').html(str);
-
-                    if (level == -1) {
-                        level = data["level_index"]
-                    }
-                    else if (data["level_index"]  != level){
-                        advance()
-                        game_over = true
-                    }
+                    updateUserInterface(data)
                 }
          });
 }
@@ -127,7 +153,7 @@ function advance() {
 }
 setInterval(function () {
     if (!game_over){
-        update_game()
+        updateGame()
      }
 }, 750);
 
@@ -211,7 +237,7 @@ $(document).ready(function(){
 
     set_audio_label(audio_on)
 
-    update_game()
+    updateGame()
     $('#word_textbox').keypress(function (e) {
       if (e.which == 13) {
         addWord();

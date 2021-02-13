@@ -91,6 +91,12 @@ def add_word():
     return jsonify(result)
 
 
+@app.route('/get_board', methods=["GET"])
+def get_game_board():
+    game = get_game(request.args["game"])
+    return jsonify(game["level"]["board"])
+
+
 @app.route('/get_game_data', methods=["GET"])
 def get_game_data():
     if "game" not in request.args:
