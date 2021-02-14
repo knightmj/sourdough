@@ -12,14 +12,15 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-#letter {
+.letter {
     font-size: 18pt;
-    min-width: 44px
+    min-width: 44px;
+    margin:0px;
+    padding:5px;
 }
-.letter-on {
-    font-size: 28pt;
+.letter_on {
     background-color:orange;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 .row{
   margin-top: 0px;
@@ -108,10 +109,11 @@ body{
                 </div>
                 <br/>
                 {% for row in board %}
+                    {% set rowloop = loop %}
                     <div class="row justify-content-md-center no-gutters">
                         {% for letter in row %}
                         <div class="col col-md-auto text-center border bg-white">
-                            <h1 id=letter class="letter">{{ letter }}</h1>
+                            <h1 id="letter_{{rowloop.index}}_{{loop.index}}" class="letter">{{ letter }}</h1>
                         </div>
                         {% endfor %}
                     </div>
