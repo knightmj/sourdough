@@ -124,13 +124,20 @@ function get_cookie(cname) {
   }
   return "";
 }
-
+clock = undefined
 function updateTime(data) {
   remaining = data["remaining_time"]
   if (remaining > 60) {
     m = Math.floor(remaining / 60)
     $('#time').text(m.toString() + "m");
+
   } else {
+    if (clock === undefined ) {
+        clock = new Audio('/static/audio/clock_ticking.m4a');
+        clock.volume = .5
+        clock.loop = true
+        play_sound(clock)
+    }
     $('#time').text(Math.floor(remaining).toString() + "s");
   }
 }
@@ -146,6 +153,14 @@ function updateHint(data) {
 
 function checkGameOver(data) {
   if (remaining <= 0) {
+    gameOver = new Audio('/static/audio/game_over.m4a')
+    gameOver.volume = .1
+    play_sound(gameOver)
+    //special case to turn the clock off in case it bugs people
+    if (clock) {
+        clock.pause()
+    }
+
     game_over = true
     $("#word_textbox").val('<game over>')
     $("#word_textbox").attr("disabled", "disabled");
@@ -270,7 +285,7 @@ function addWord() {
       $("#word_textbox").val('')
       if (data["invalid"]) {
         update_status(data['invalid']);
-        play_sound(invalid_sound)
+        play_sound(known_word)
       } else if (data["valid"]) {
         update_status("word matched");
         play_sound(valid_sound)
@@ -309,6 +324,12 @@ function audio_toggle() {
   audio_on = (get_cookie("sound")).length == 0
   if (audio_on) {
     set_cookie("sound", "off")
+
+    //special case to turn the clock off in case it bugs people
+    if (clock) {
+        clock.pause()
+    }
+
   } else {
     set_cookie("sound", "")
   }
@@ -367,8 +388,9 @@ var audio_on = (get_cookie("sound")).length == 0
 
 $(document).ready(function() {
   valid_sound = new Audio('/static/audio/valid.m4a');
-  valid_sound.volume = .35
+  valid_sound.volume = .25
   invalid_sound = new Audio('/static/audio/invalid.m4a');
+  known_word = new Audio('/static/audio/known_word.m4a');
 
   getBoard()
 
