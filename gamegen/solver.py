@@ -73,10 +73,10 @@ def make_graph(grid, directions):
     graph = {root: set()}
     character_dict = {root: ''}
 
-    for i, row in enumerate(grid):
-        for j, char in enumerate(row):
-            character_dict[(i, j)] = char
-            node = (i, j)
+    for y, row in enumerate(grid):
+        for x, char in enumerate(row):
+            character_dict[(x, y)] = char
+            node = (x, y)
             children = set()
             graph[node] = children
             graph[root].add(node)
@@ -161,10 +161,9 @@ def add_children(node, children, grid, directions=all_cardinal_directions()):
         Nothing
     """
     x0, y0 = node
-    x_max = len(grid)
-    y_max = len(grid[0])
+    y_max = len(grid)
+    x_max = len(grid[0])
     for direction in directions:
-
         if abs(direction[0]) > 1 or abs(direction[1]) > 1:
             # this is a super direction, it means go one space in that
             # direction even if it wraps around the board. super directions
@@ -217,7 +216,6 @@ def find_words(graph, character_dictionary, position, prefix, results, words, pr
         Nothing, results are placed in the result list
     """
     word = to_word(character_dictionary, prefix)
-
     if word not in prefixes:
         return
 
@@ -320,16 +318,18 @@ def exercise_board(board, **kwargs):
     start = datetime.now()
     words = solve_board(board, **kwargs)
     elapsed = datetime.now() - start
-    print("found ", len(words), "words", elapsed)
+    larger_than_2 =0
+    for word in words:
+        if len(word) > 2:
+            larger_than_2 += 1
+    print("found ", len(words), "words", elapsed, "larger than 2:", larger_than_2)
 
 
 def get_test_board():
-    return ["asletm",
-            "gtrtsn",
-            "bsowlo",
-            "milkep",
-            "oilkeq",
-            "blowlo"]
+    return ["frog",
+            "dogs",
+            "logs",
+            "poos"]
 
 
 def exercise_board_simple():
@@ -337,7 +337,7 @@ def exercise_board_simple():
 
 
 def exercise_board_word_list():
-    exercise_board(get_test_board(), word_list=["asle", "agb", "miow", "blse"])
+    exercise_board(get_test_board(), word_list=["frogs", "adl", "sss", "blse"])
 
 
 def exercise_board_directions():
@@ -349,7 +349,7 @@ def exercise_board_super_directions():
 
 
 def exercise_board_super_directions_word_list():
-    exercise_board(get_test_board(), word_list=["asle", "agb", "miow", "blse"], directions=all_super_directions())
+    exercise_board(get_test_board(), word_list=["frogs", "adl", "sss", "blse"], directions=all_super_directions())
 
 
 def exercise_boards():
@@ -360,5 +360,54 @@ def exercise_boards():
     exercise_board_super_directions_word_list()
 
 
+def test_boards():
+    board = ["test",
+             "zzzz",
+             "frog"]
+    words = solve_board(board, word_list=["test", "est", "zest", "zzz", "aaa"])
+    valid = ('test', 'zest', 'est', 'zzz')
+    validate_results(valid, words)
+
+    # should find test and est moving right
+    words = solve_board(["test"], word_list=["test", "est", "tse"], directions=[(1, 0)])
+    valid = ('test', 'est')
+    validate_results(valid, words)
+
+    # should just find tz moving down
+    words = solve_board(["test", "zzzz", ], word_list=["test", "tz"], directions=[(0, 1)])
+    valid = ('tz',)
+    validate_results(valid, words)
+
+    # should find tzo with diagonal direction
+    words = solve_board(board, word_list=["test", "est", "tzo", "zzz", "aaa"], directions=[(1, 1)])
+    valid = ('tzo', )
+    validate_results(valid, words)
+
+    # should find fgo
+    words = solve_board(["frog"], word_list=["fgo"], directions=[(-2, 0)])
+    valid = ('fgo',)
+    validate_results(valid, words)
+
+
+def validate_results(valid, words):
+    """
+    Ensure that the all and only the valid words are in the valid word list
+    Args:
+        valid (): list of valid words
+        words (): list of words found
+
+    Returns:
+        Does not return anything but will exit if an error is found.
+    """
+    if len(words) != len(valid):
+        print("error: found something unexpected", words, valid)
+        exit()
+    for v in valid:
+        if v not in words:
+            print("error, should have found:" + v)
+            exit()
+
+
 if __name__ == "__main__":
+    test_boards()
     exercise_boards()
