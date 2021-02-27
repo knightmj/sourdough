@@ -1,0 +1,108 @@
+{
+  "board": [
+    [
+      "R",
+      "I"
+    ],
+    [
+      "A",
+      "X"
+    ],
+    [
+      "O",
+      "N"
+    ],
+    [
+      "D",
+      "U"
+    ],
+    [
+      "E",
+      "M"
+    ],
+    [
+      "D",
+      "W"
+    ]
+  ],
+  "valid": [
+    "wed",
+    "due",
+    "dew",
+    "duo",
+    "ode",
+    "don",
+    "nod",
+    "mew",
+    "air",
+    "emu",
+    "mud",
+    "dun",
+    "aid",
+    "oar"
+  ],
+  "invalid": [
+    "naid",
+    "nard",
+    "raid",
+    "dunair",
+    "noded",
+    "wird",
+    "ran",
+    "median",
+    "dedo",
+    "ide",
+    "mun",
+    "ride",
+    "nar",
+    "oxide",
+    "doum",
+    "aide",
+    "udo",
+    "dian",
+    "arid",
+    "rid",
+    "node",
+    "oxan",
+    "iao",
+    "randem",
+    "noxa",
+    "rand",
+    "ria",
+    "and",
+    "nude",
+    "doxa",
+    "ume",
+    "odeum",
+    "media",
+    "undo",
+    "rix",
+    "arx",
+    "rax",
+    "wide",
+    "diaxon",
+    "wran",
+    "dum",
+    "noa",
+    "donax",
+    "wride",
+    "unode",
+    "axon",
+    "wir",
+    "donum",
+    "odum",
+    "wem",
+    "mund",
+    "wid",
+    "ona",
+    "unde",
+    "anode",
+    "unaided"
+  ],
+  "rule_text": "all-ways! -- You don't need a sweater but you do need words with at least 3 letters. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.2972972972972973,
+  "difficulty": 91.7
+}

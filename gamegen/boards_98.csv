@@ -1,0 +1,99 @@
+id, difficulty,uniqueness,rules,goal words,valid words,total words, cells, hint
+1,243.4,0.3333333333333333,1,154,723,1201,36,all-ways! -- OMG, ends with: consonants -- 
+2,226.9,0.4,1,139,232,1261,49,all-ways! -- OMG,these are: verbs -- 
+3,206.0,0.2972972972972973,1,120,305,789,36,all-ways! -- OMG,these are: nouns -- 
+4,203.8,0.2972972972972973,1,118,302,789,49,all-ways! -- These words are all: nouns. -- 
+5,197.2,0.4,1,112,182,981,36,all-ways! -- These words are all: verbs. -- 
+6,196.3,0.7639639639639639,3,93,203,1103,49,all-ways! -- It may seem like this hint isn't useful. But i promise at least 4 times it is. -- These words seem to start with... consonants. -- OMG,these are: nouns -- 
+7,188.5,0.3333333333333333,2,95,347,1096,42,all-ways! -- At least 4 many letters, so little time. -- OMG, ends with: consonants -- 
+8,177.5,0.7639639639639639,2,85,211,556,28,all-ways! -- In the beginning there was: consonants -- OMG,these are: nouns -- 
+9,176.29999999999998,0.4117647058823529,1,93,592,1458,36,all-ways! -- I'd pay attention to the end of the words. Specifically: apple -- 
+10,167.5,0.0,1,85,368,434,60,all-ways! -- You don't need a sweater but you do need words with at least 5 letters. -- 
+11,166.4,0.2972972972972973,1,84,194,531,28,all-ways! -- These words are all: nouns. -- 
+12,165.3,0.2972972972972973,1,83,189,432,36,all-ways! -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+13,159.9,0.4,2,69,110,825,42,all-ways! -- Home on the range where the letters and the antelope play in groups of 4-5. -- OMG,these are: verbs -- 
+14,158.7,0.2972972972972973,1,77,194,465,18,all-ways! -- These words are all: nouns. -- 
+15,158.7,0.2972972972972973,1,77,185,399,42,all-ways! -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+16,156.60000000000002,0.2972972972972973,2,66,157,642,36,all-ways! -- I think some words are betters when they have 4-5 letters. -- These words are all: nouns. -- 
+17,154.3,0.15384615384615385,1,73,497,1099,42,all-ways! -- I'd pay attention to the end of the words. Specifically: vowels -- 
+18,145.6,0.2972972972972973,2,56,116,310,18,all-ways! -- Your words my be not longer than dis many fingers: 4. -- These words are all: nouns. -- 
+19,144.39999999999998,0.3333333333333333,1,64,256,458,60,all-ways! -- OMG, ends with: consonants -- 
+20,143.3,0.2972972972972973,1,63,146,322,70,all-ways! -- These words are all: nouns. -- 
+21,138.89999999999998,0.4666666666666667,1,59,241,350,24,all-ways! -- These words seem to start with... consonants. -- 
+22,134.6,0.3333333333333333,2,46,166,1138,42,all-ways! -- Maka dem all the same siza: 4 -- I'd pay attention to the end of the words. Specifically: consonants -- 
+23,132.39999999999998,0.5538461538461539,2,44,73,1164,42,all-ways! -- These words seem to end with... vowels. -- OMG,these are: verbs -- 
+24,132.3,0.3333333333333333,1,53,404,1611,28,all-ways! -- All these words have something in common. I think t and r. sry typo -- 
+25,129.0,0.0,1,50,219,260,21,all-ways! -- You don't need a sweater but you do need words with at least 5 letters. -- 
+26,127.9,0.0,1,49,174,547,28,all-ways! -- Exactamundo 4 -- 
+27,125.8,0.2972972972972973,2,38,86,446,84,all-ways! -- It may seem like this hint isn't useful. But i promise at least 3 times it is. -- OMG,these are: nouns -- 
+28,124.60000000000001,0.2972972972972973,1,46,112,274,12,all-ways! -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+29,117.1,0.7333333333333334,3,21,36,461,21,all-ways! -- I think some words are betters when they have 4-5 letters. -- These words seem to end with... consonants. -- I'd pay attention to the kind of the words there are. Specifically: verbs -- 
+30,117.1,0.5666666666666667,3,21,35,1710,36,all-ways! -- At least 4 many letters, so little time. -- These words seem to start with... apple. -- These words are all: verbs. -- 
+31,116.89999999999999,0.15384615384615385,1,39,171,420,21,all-ways! -- These words seem to end with... vowels. -- 
+32,116.0,0.8285714285714285,3,20,33,1172,42,all-ways! -- Your words my be not longer than dis many fingers: 5. -- In the beginning there was: vowels -- These words are all: verbs. -- 
+33,115.9,0.16666666666666666,2,29,132,728,36,all-ways! -- It may seem like this hint isn't useful. But i promise at least 5 times it is. -- I'd pay attention to the end of the words. Specifically: mike -- 
+34,115.89999999999999,0.463963963963964,2,29,93,819,36,all-ways! -- These words seem to start with... apple. -- These words are all: nouns. -- 
+35,115.80000000000001,0.4,1,38,64,229,9,all-ways! -- These words are all: verbs. -- 
+36,115.8,0.4117647058823529,1,38,186,457,60,all-ways! -- OMG, ends with: apple -- 
+37,114.8,0.2972972972972973,2,28,66,178,21,all-ways! -- Your words my be not longer than dis many fingers: 4. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+38,114.7,0.4,1,37,64,280,12,all-ways! -- These words are all: verbs. -- 
+39,114.69999999999999,0.4,1,37,61,285,12,all-ways! -- These words are all: verbs. -- 
+40,113.7,0.4666666666666667,2,27,118,298,21,all-ways! -- I think some words are betters when they have 4-5 letters. -- These words seem to start with... consonants. -- 
+41,113.60000000000001,0.3333333333333333,1,36,152,244,12,all-ways! -- OMG, ends with: consonants -- 
+42,113.6,0.15384615384615385,1,36,282,571,24,all-ways! -- These words seem to end with... vowels. -- 
+43,112.69999999999999,0.45114345114345117,3,17,46,484,24,all-ways! -- Home on the range where the letters and the antelope play in groups of 4-5. -- These words seem to end with... vowels. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+44,110.5,0.45114345114345117,3,15,44,649,49,all-ways! -- Your words my be not longer than dis many fingers: 3. -- These words seem to end with... vowels. -- These words are all: nouns. -- 
+45,109.5,0.7639639639639639,4,5,12,1000,49,all-ways! -- Exactamundo 4 -- All these words have something in common. I think t and i. sry typo -- These words seem to start with... consonants. -- OMG,these are: nouns -- 
+46,109.3,0.7972972972972974,2,23,57,421,9,all-ways! -- All these words have something in common. I think s and e. sry typo -- OMG,these are: nouns -- 
+47,109.2,0.0,1,32,142,269,21,all-ways! -- I think some words are betters when they have 4-5 letters. -- 
+48,109.19999999999999,0.4,1,32,51,250,60,all-ways! -- OMG,these are: verbs -- 
+49,107.10000000000001,0.15384615384615385,2,21,104,574,28,all-ways! -- At least 4 many letters, so little time. -- I'd pay attention to the end of the words. Specifically: vowels -- 
+50,107.1,0.4,2,21,33,451,28,all-ways! -- Your words my be not longer than dis many fingers: 3. -- I'd pay attention to the kind of the words there are. Specifically: verbs -- 
+51,105.89999999999999,0.0,1,29,106,538,18,all-ways! -- Your words my be not longer than dis many fingers: 3. -- 
+52,103.9,0.5666666666666667,3,9,14,705,18,all-ways! -- Words need to represent with : r and e. -- OMG, ends with: mike -- These words are all: verbs. -- 
+53,103.9,0.7090620031796502,3,9,22,130,16,all-ways! -- It may seem like this hint isn't useful. But i promise at least 5 times it is. -- I'd pay attention to the end of the words. Specifically: apple -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+54,103.69999999999999,0.4117647058823529,1,27,211,411,28,all-ways! -- These words seem to end with... apple. -- 
+55,103.69999999999999,0.7272727272727273,1,27,151,1099,49,all-ways! -- OMG, ends with: frog -- 
+56,102.69999999999999,0.15384615384615385,2,17,101,289,60,all-ways! -- You don't need a sweater but you do need words with at least 4 letters. -- These words seem to end with... vowels. -- 
+57,101.7,0.7333333333333334,3,7,13,963,36,all-ways! -- Exactamundo 4 -- In the beginning there was: frog -- I'd pay attention to the kind of the words there are. Specifically: verbs -- 
+58,101.69999999999999,0.5666666666666667,3,7,11,406,16,all-ways! -- It may seem like this hint isn't useful. But i promise at least 4 times it is. -- These words seem to start with... apple. -- I'd pay attention to the kind of the words there are. Specifically: verbs -- 
+59,100.60000000000001,0.6306306306306306,3,6,17,903,28,all-ways! -- Exactamundo 4 -- These words seem to start with... frog. -- These words are all: nouns. -- 
+60,100.5,0.7090620031796502,2,15,52,212,12,all-ways! -- These words seem to end with... apple. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+61,100.5,0.5538461538461539,2,15,26,270,18,all-ways! -- OMG, ends with: vowels -- These words are all: verbs. -- 
+62,100.5,0.2972972972972973,2,15,36,219,60,all-ways! -- I think some words are betters when they have 4-5 letters. -- OMG,these are: nouns -- 
+63,100.5,0.7258687258687259,2,15,54,614,24,all-ways! -- The first part of the word is important. Important that it's : vowels -- OMG,these are: nouns -- 
+64,100.4,0.16666666666666666,1,24,109,344,24,all-ways! -- These words seem to end with... lisa. -- 
+65,99.5,0.9666666666666667,3,5,26,49,14,all-ways! -- It may seem like this hint isn't useful. But i promise at least 5 times it is. -- All these words have something in common. I think e. sry typo -- These words seem to start with... consonants. -- 
+66,99.5,0.463963963963964,3,5,10,84,18,all-ways! -- Your words my be not longer than dis many fingers: 4. -- These words seem to end with... mike. -- OMG,these are: nouns -- 
+67,99.5,1.1306306306306306,3,5,12,1236,49,all-ways! -- All these words have something in common. I think ee and t. sry typo -- These words seem to end with... consonants. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+68,99.30000000000001,0.4117647058823529,1,23,104,151,16,all-ways! -- I'd pay attention to the end of the words. Specifically: apple -- 
+69,98.3,0.6306306306306306,2,13,36,527,18,all-ways! -- Words need to represent with : t and r. -- These words are all: nouns. -- 
+70,98.3,0.36872586872586877,2,13,26,396,16,all-ways! -- Maka dem all the same siza: 5 -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+71,98.3,0.463963963963964,2,13,28,318,24,all-ways! -- The first part of the word is important. Important that it's : apple -- OMG,these are: nouns -- 
+72,98.2,0.0,1,22,119,363,60,all-ways! -- Maka dem all the same siza: 4 -- 
+73,96.1,0.8285714285714285,2,11,20,1013,42,all-ways! -- In the beginning there was: vowels -- I'd pay attention to the kind of the words there are. Specifically: verbs -- 
+74,94.9,0.0,1,19,97,240,18,all-ways! -- No more no less than the best which is 4. -- 
+75,93.9,0.42857142857142855,2,9,44,853,24,all-ways! -- No more no less than the best which is 4. -- In the beginning there was: mike -- 
+76,93.89999999999999,0.7333333333333334,2,9,16,437,21,all-ways! -- The first part of the word is important. Important that it's : frog -- OMG,these are: verbs -- 
+77,91.7,0.2972972972972973,2,7,19,90,8,all-ways! -- At least 4 many letters, so little time. -- OMG,these are: nouns -- 
+78,91.7,0.2972972972972973,2,7,14,70,12,all-ways! -- You don't need a sweater but you do need words with at least 3 letters. -- OMG,these are: nouns -- 
+79,91.69999999999999,0.2972972972972973,2,7,16,36,8,all-ways! -- I think some words are betters when they have 4-5 letters. -- These words are all: nouns. -- 
+80,90.6,0.2972972972972973,2,6,16,102,9,all-ways! -- Exactamundo 4 -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+81,89.5,0.2972972972972973,2,5,13,37,14,all-ways! -- You don't need a sweater but you do need words with at least 3 letters. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+82,89.5,0.7333333333333334,2,5,9,51,14,all-ways! -- The first part of the word is important. Important that it's : frog -- OMG,these are: verbs -- 
+83,89.5,0.23809523809523808,2,5,34,592,24,all-ways! -- Maka dem all the same siza: 5 -- In the beginning there was: apple -- 
+84,88.3,0.0,1,13,58,63,12,all-ways! -- You don't need a sweater but you do need words with at least 4 letters. -- 
+85,88.3,0.3333333333333333,1,13,65,105,12,all-ways! -- I'd pay attention to the end of the words. Specifically: consonants -- 
+86,88.3,0.42857142857142855,1,13,87,842,36,all-ways! -- These words seem to start with... mike. -- 
+87,88.3,0.42857142857142855,1,13,63,586,42,all-ways! -- These words seem to start with... mike. -- 
+88,87.19999999999999,0.4,1,12,21,116,12,all-ways! -- These words are all: verbs. -- 
+89,86.1,0.2972972972972973,1,11,25,71,9,all-ways! -- OMG,these are: nouns -- 
+90,83.9,0.2972972972972973,1,9,29,60,8,all-ways! -- OMG,these are: nouns -- 
+91,83.89999999999999,0.4117647058823529,1,9,31,113,9,all-ways! -- I'd pay attention to the end of the words. Specifically: apple -- 
+92,83.89999999999999,0.4,1,9,16,114,9,all-ways! -- I'd pay attention to the kind of the words there are. Specifically: verbs -- 
+93,82.8,0.4,1,8,13,38,14,all-ways! -- OMG,these are: verbs -- 
+94,80.6,0.2972972972972973,1,6,13,35,14,all-ways! -- I'd pay attention to the kind of the words there are. Specifically: nouns -- 
+95,79.5,0.4117647058823529,1,5,24,61,12,all-ways! -- These words seem to end with... apple. -- 
+96,79.5,0.5,1,5,36,1022,42,all-ways! -- What's in dem words. Is it: r and ee. Yeah it is. -- 
+97,79.5,0.42857142857142855,1,5,51,390,84,all-ways! -- These words seem to start with... mike. -- 
+98,79.5,0.0,1,5,28,647,49,all-ways! -- What's in dem words. Is it: t and et. Yeah it is. -- 

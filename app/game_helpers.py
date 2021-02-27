@@ -41,7 +41,10 @@ def add_game_if_needed(game_name):
     return lock_game_and_run(add_game_if_needed_unsafe, game_name)
 
 
-def add_game_if_needed_unsafe(game_name, level=get_level(1)):
+def add_game_if_needed_unsafe(game_name, level=None):
+    if level is None:
+        level = get_level(1)
+
     shared = get_shared()
     if "games" not in shared:
         shared["games"] = {}

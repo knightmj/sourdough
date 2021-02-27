@@ -1,0 +1,79 @@
+{
+  "board": [
+    [
+      "W",
+      "O"
+    ],
+    [
+      "E",
+      "C"
+    ],
+    [
+      "Q",
+      "E"
+    ],
+    [
+      "H",
+      "N"
+    ],
+    [
+      "J",
+      "A"
+    ],
+    [
+      "V",
+      "L"
+    ],
+    [
+      "O",
+      "U"
+    ]
+  ],
+  "valid": [
+    "van",
+    "cow",
+    "loo",
+    "hen",
+    "vow",
+    "low",
+    "avo",
+    "woe",
+    "han",
+    "wee",
+    "coo",
+    "ova",
+    "lan"
+  ],
+  "invalid": [
+    "coe",
+    "jane",
+    "alo",
+    "vol",
+    "halo",
+    "wool",
+    "avow",
+    "vane",
+    "nee",
+    "ula",
+    "lane",
+    "ween",
+    "enhalo",
+    "alowe",
+    "uval",
+    "coween",
+    "oval",
+    "cool",
+    "owe",
+    "uva",
+    "coul",
+    "cee",
+    "alow",
+    "woo"
+  ],
+  "rule_text": "all-ways! -- It may seem like this hint isn't useful. But i promise at least 3 times it is. -- OMG,these are: nouns -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.2972972972972973,
+  "difficulty": 89.5
+}

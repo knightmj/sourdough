@@ -1,0 +1,99 @@
+{
+  "board": [
+    [
+      "N",
+      "P"
+    ],
+    [
+      "D",
+      "E"
+    ],
+    [
+      "R",
+      "V"
+    ],
+    [
+      "C",
+      "L"
+    ],
+    [
+      "D",
+      "U"
+    ],
+    [
+      "O",
+      "E"
+    ]
+  ],
+  "valid": [
+    "dene",
+    "due",
+    "ode",
+    "epode",
+    "doe",
+    "clue",
+    "dop",
+    "ope",
+    "done",
+    "deul",
+    "one",
+    "poe",
+    "dope",
+    "rep",
+    "nep",
+    "pone",
+    "crepe",
+    "lucre",
+    "depone",
+    "node",
+    "cue",
+    "repone",
+    "nope",
+    "lue"
+  ],
+  "invalid": [
+    "depend",
+    "pon",
+    "duo",
+    "ender",
+    "oner",
+    "ponder",
+    "crepon",
+    "vend",
+    "dev",
+    "per",
+    "neo",
+    "erd",
+    "doper",
+    "don",
+    "pen",
+    "verd",
+    "repen",
+    "douc",
+    "eon",
+    "peon",
+    "ludo",
+    "pend",
+    "rev",
+    "neper",
+    "culver",
+    "cud",
+    "udo",
+    "pond",
+    "nod",
+    "den",
+    "rend",
+    "opener",
+    "ped",
+    "pod",
+    "red",
+    "end",
+    "open"
+  ],
+  "rule_text": "all-ways! -- I'd pay attention to the end of the words. Specifically: apple -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.4117647058823529,
+  "difficulty": 79.5
+}

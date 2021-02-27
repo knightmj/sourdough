@@ -1,60 +1,6 @@
-from collections import defaultdict
 from datetime import datetime
-import random
 
-
-def n_random_directions(n):
-    """
-    Return a list of random cardinal directions
-    Args:
-        n (): now may directions to return
-
-    Returns:
-        a list of tuples
-    """
-    directions = all_cardinal_directions()
-    return tuple(random.sample(directions, n))
-
-
-def n_super_directions(n):
-    """
-    return a list of N random super directions
-    Args:
-        n (): how may directions to provide
-    Returns:
-        a list of tuples
-    """
-    directions = all_cardinal_directions()
-    return tuple(random.sample(directions, n))
-
-
-def all_super_directions():
-    """
-    Get all directions to wrap around edges. Note super directions
-    are redundant to their non super counterpart.  Meaning (-2,0)
-    will wrap around and it will also move (-1,0) inside of the grid.
-
-    Returns:
-        8 super directions
-    """
-    return (
-        (-2, -2), (-2, 0), (-2, 2),
-        (0, -2), (0, 2),
-        (2, -2), (2, 0), (2, 2),
-    )
-
-
-def all_cardinal_directions():
-    """
-    Get all basic cardinal directions except staying in the same place
-    Returns:
-
-    """
-    return (
-        (-1, -1), (-1, 0), (-1, 1),
-        (0, -1), (0, 1),
-        (1, -1), (1, 0), (1, 1),
-    )
+from gamegen.direction_helpers import *
 
 
 def make_graph(grid, directions):
@@ -242,7 +188,8 @@ def get_words(input_file, norm=None):
         for file_line in f:
             if norm:
                 file_line = norm(file_line)
-            word_list.append(file_line)
+            if len(file_line) > 0:
+                word_list.append(file_line)
 
     return word_list
 
@@ -256,7 +203,12 @@ def normalize(s):
     Returns:
 
     """
-    return s.strip().lower()
+    word = s.strip()
+    if word != word.lower():
+        return ""
+    if len(word) < 3:
+        return ""
+    return word
 
 
 def get_local_words():
@@ -286,7 +238,7 @@ def make_lookup(world_list):
     return prefixes
 
 
-def solve_board(board, word_list=get_local_words(), directions=all_cardinal_directions()):
+def solve_board(board, word_list=get_local_words(), directions=all_cardinal_directions(), prefixes=None):
     """
     Find all words in the provided letter board that meet the directional constraints
     are that are in the word list
@@ -294,7 +246,7 @@ def solve_board(board, word_list=get_local_words(), directions=all_cardinal_dire
         board (): A list of strings all of the same length
         word_list (): a list of words to find
         directions (): a list of directions or super directions to move in the grid
-
+        prefixes (): A list of prefixes from make_lookup to speed solves
     Returns:
         A list of valid words from the word list in the board
     """

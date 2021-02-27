@@ -1,0 +1,66 @@
+{
+  "board": [
+    [
+      "S",
+      "S"
+    ],
+    [
+      "Q",
+      "E"
+    ],
+    [
+      "O",
+      "P"
+    ],
+    [
+      "O",
+      "T"
+    ]
+  ],
+  "valid": [
+    "posse",
+    "toss",
+    "poss",
+    "tope",
+    "sept",
+    "stoep",
+    "stoop",
+    "pose",
+    "sots",
+    "pess",
+    "stop",
+    "peso",
+    "epos",
+    "post",
+    "pest",
+    "soot"
+  ],
+  "invalid": [
+    "oes",
+    "ess",
+    "sot",
+    "poot",
+    "ope",
+    "too",
+    "ose",
+    "pot",
+    "opt",
+    "poe",
+    "toop",
+    "toe",
+    "estop",
+    "stope",
+    "top",
+    "osse",
+    "sope",
+    "sop",
+    "pes",
+    "topo"
+  ],
+  "rule_text": "all-ways! -- At least 4 many letters, so little time. -- OMG,these are: nouns -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.2972972972972973,
+  "difficulty": 91.69999999999999
+}

@@ -1,0 +1,77 @@
+{
+  "board": [
+    [
+      "K",
+      "G"
+    ],
+    [
+      "O",
+      "Z"
+    ],
+    [
+      "J",
+      "I"
+    ],
+    [
+      "S",
+      "T"
+    ],
+    [
+      "E",
+      "Y"
+    ],
+    [
+      "X",
+      "E"
+    ],
+    [
+      "C",
+      "F"
+    ]
+  ],
+  "valid": [
+    "set",
+    "its",
+    "sty",
+    "tee",
+    "sex",
+    "joist",
+    "eye",
+    "site",
+    "yes",
+    "fee",
+    "jog",
+    "see",
+    "exes"
+  ],
+  "invalid": [
+    "xyst",
+    "ist",
+    "tji",
+    "fey",
+    "yees",
+    "yee",
+    "yet",
+    "tyee",
+    "yest",
+    "zoist",
+    "yex",
+    "koi",
+    "tye",
+    "sexy",
+    "stey",
+    "goi",
+    "xysti",
+    "sit",
+    "sey",
+    "feck",
+    "sye",
+    "cee"
+  ],
+  "rule_text": "all-ways! -- OMG,these are: nouns -- ",
+  "time_s": 540,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 6,
+  "uniqueness": 0.2972972972972973,
+  "difficulty": 80.6
+}

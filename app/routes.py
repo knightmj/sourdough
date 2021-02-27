@@ -65,10 +65,14 @@ def play():
     add_game_if_needed(game_name)
     join_game(game_name, name)
     game = get_game(game_name)
-    image = "/static/" + game["level"]["background_image"]
+    if "background_image" in game["level"]:
+        image = "/static/" + game["level"]["background_image"]
+    else:
+        image = "https://picsum.photos/1000"
 
     resp = make_response(render_template('play.html', user=user,
                                          board=game['level']['board'],
+                                         level_index=game['level_index'],
                                          game=game,
                                          link=request.url,
                                          background_image=image,
@@ -119,7 +123,10 @@ def get_game_data():
         if word["valid"]:
             valid = valid + 1
 
-    remaining_words = game["level"]["number_of_words"] - valid
+    if "number_of_words" in game["level"]:
+        remaining_words = game["level"]["number_of_words"] - valid
+    else:
+        remaining_words = game["level"]["goal_words"] - valid
 
     percent_text = elapsed / reveal_time
     letters = int(percent_text * len(game["level"]["rule_text"]))

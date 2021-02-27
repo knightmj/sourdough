@@ -1,4 +1,6 @@
 import json
+import math
+import random
 
 from app import app
 
@@ -69,6 +71,12 @@ levelx = {
 
 
 def get_level(i):
-    file = "static/level" + str(i) + ".json"
+    boards = 98
+    levels = 10
+    boards_per_level = boards/levels
+    index = math.floor(random.randint(0, math.floor(boards_per_level)) + boards_per_level * (i-1))
+    index = 98 - index
+    print("loading board", index)
+    file = "static/generated_boards/" + str(index) + ".json"
     with app.open_resource(file) as f:
         return json.load(f)

@@ -1,0 +1,93 @@
+{
+  "board": [
+    [
+      "S",
+      "E"
+    ],
+    [
+      "E",
+      "L"
+    ],
+    [
+      "Q",
+      "D"
+    ],
+    [
+      "Q",
+      "R"
+    ],
+    [
+      "E",
+      "O"
+    ],
+    [
+      "F",
+      "D"
+    ],
+    [
+      "F",
+      "E"
+    ]
+  ],
+  "valid": [
+    "ford",
+    "feel",
+    "fed",
+    "off",
+    "redo",
+    "fee",
+    "rode",
+    "feed",
+    "rede"
+  ],
+  "invalid": [
+    "ref",
+    "seed",
+    "ode",
+    "ore",
+    "sele",
+    "doe",
+    "dee",
+    "refeel",
+    "foder",
+    "see",
+    "erd",
+    "for",
+    "roed",
+    "doff",
+    "eel",
+    "lees",
+    "oer",
+    "fore",
+    "dor",
+    "fels",
+    "deseed",
+    "else",
+    "sled",
+    "els",
+    "erode",
+    "feod",
+    "roe",
+    "led",
+    "eld",
+    "slee",
+    "dele",
+    "leed",
+    "feeder",
+    "foe",
+    "red",
+    "lee",
+    "fod",
+    "rod",
+    "defer",
+    "seel",
+    "doer",
+    "seeder"
+  ],
+  "rule_text": "all-ways! -- The first part of the word is important. Important that it's : frog -- I'd pay attention to the kind of the words there are. Specifically: verbs -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.7333333333333334,
+  "difficulty": 89.5
+}
