@@ -191,8 +191,7 @@ function updateWords(data) {
       passing_words += "<p class='passing_word rounded p-1'>" + words[i].text + " </p>"
 
     } else {
-
-      player_to_words[words[i].player]["invalid"] = 1 + player_to_words[words[i].player]["valid"]
+      player_to_words[words[i].player]["invalid"] = 1 + player_to_words[words[i].player]["invalid"]
       failed_words += "<p class='failing_word rounded p-1'>" + words[i].text + " </p>"
     }
   }
