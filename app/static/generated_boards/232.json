@@ -1,0 +1,93 @@
+{
+  "board": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "P",
+      "S"
+    ],
+    [
+      "E",
+      "O"
+    ],
+    [
+      "Z",
+      "N"
+    ]
+  ],
+  "valid": [
+    "asp",
+    "pes",
+    "one",
+    "nape",
+    "pose",
+    "ozena",
+    "bap",
+    "pan",
+    "sop",
+    "son",
+    "sap",
+    "nose",
+    "pane",
+    "pen",
+    "peon",
+    "peso",
+    "span",
+    "naze",
+    "open",
+    "spa",
+    "ape",
+    "pone",
+    "eon",
+    "poe",
+    "apse",
+    "bas",
+    "bane",
+    "base",
+    "zone",
+    "sen",
+    "epos",
+    "aspen",
+    "nap",
+    "ban"
+  ],
+  "invalid": [
+    "neo",
+    "azon",
+    "ezba",
+    "nab",
+    "baze",
+    "spane",
+    "ase",
+    "san",
+    "oes",
+    "nope",
+    "sope",
+    "sazen",
+    "sapo",
+    "soe",
+    "ona",
+    "ose",
+    "anes",
+    "pon",
+    "onza",
+    "azo",
+    "ope",
+    "sab",
+    "asop",
+    "bason",
+    "pesa",
+    "sane",
+    "nep",
+    "neoza",
+    "nabs"
+  ],
+  "rule_text": "all-ways! -- OMG,these are: nouns -- ",
+  "time_s": 1170,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 13,
+  "uniqueness": 0.3627450980392157,
+  "difficulty": 88.30000000000001
+}

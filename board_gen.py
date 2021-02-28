@@ -38,13 +38,29 @@ def make_board(letters, x, y):
 def get_random_board_patten():
     pattens = [
         [
-            "   *******  ",
-            "  ********* ",
-            " ***     ***",
-            " ***     ***",
-            " ***     ***",
-            "  ********* ",
-            "   *******  ",
+            "      *       ",
+            "     ***      ",
+            "    ******    ",
+            "  **********  ",
+            "**************",
+            "      **      ",
+        ],
+        [
+            "  ***   ***  ",
+            "****** ******",
+            " *********** ",
+            "  *********  ",
+            "   ******    ",
+            "     **      ",
+        ],
+        [
+            "  *******  ",
+            " ********* ",
+            "***     ***",
+            "***     ***",
+            "***     ***",
+            " ********* ",
+            "  *******  ",
         ],
         [
             "***         ",
@@ -123,7 +139,9 @@ def get_start_end():
     terms = {"vowels": list("aeiouy"),
              "consonants": list("bcdfghjklmnpqrstvwxyz"),
              "frog": list("frog"),
-             "apple": list("apple"),
+             "potato": list("potato"),
+             "wedding": list("wedding"),
+             "minos": list("minos"),
              "mike": list("mike"),
              "lisa": list("lisa")}
 
@@ -163,7 +181,7 @@ def get_word_rules():
 
 
 def board_sizes():
-    one_dimensions = [2, 3, 4, 6, 7 ]
+    one_dimensions = [2, 3, 4, 6, 7, 8]
     sizes = []
     for x in one_dimensions:
         for y in one_dimensions:
@@ -184,8 +202,8 @@ def generate():
     # setup loop vars
     boards_made = 0
     directions = [8]
-    super_directions = [8]
-    max_tries = 20
+    super_directions = [0, 8]
+    max_tries = 30
     sizes = board_sizes()
     total = len(directions) * len(super_directions) * max_tries * len(sizes)
 

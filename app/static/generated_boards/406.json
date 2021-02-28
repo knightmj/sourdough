@@ -1,0 +1,114 @@
+{
+  "board": [
+    [
+      "E",
+      "R"
+    ],
+    [
+      "U",
+      "R"
+    ],
+    [
+      "S",
+      "I"
+    ],
+    [
+      "C",
+      "A"
+    ],
+    [
+      "I",
+      "R"
+    ],
+    [
+      "D",
+      "K"
+    ],
+    [
+      "N",
+      "A"
+    ]
+  ],
+  "valid": [
+    "card",
+    "irk",
+    "rid",
+    "raid",
+    "sic",
+    "sire",
+    "cark",
+    "sue",
+    "air",
+    "said",
+    "aid",
+    "scar",
+    "rue",
+    "err",
+    "arc"
+  ],
+  "invalid": [
+    "dak",
+    "sark",
+    "sure",
+    "sar",
+    "sciarid",
+    "ire",
+    "caird",
+    "sur",
+    "ruer",
+    "saic",
+    "kras",
+    "ark",
+    "sard",
+    "scarid",
+    "cirrus",
+    "eric",
+    "and",
+    "acrid",
+    "kra",
+    "dirk",
+    "dank",
+    "kan",
+    "akia",
+    "uric",
+    "ers",
+    "rasure",
+    "arid",
+    "carid",
+    "airer",
+    "ure",
+    "nak",
+    "acid",
+    "sair",
+    "caid",
+    "akra",
+    "ria",
+    "sac",
+    "asci",
+    "eria",
+    "ikra",
+    "rais",
+    "drias",
+    "andric",
+    "usar",
+    "sri",
+    "acridan",
+    "suer",
+    "sai",
+    "dan",
+    "car",
+    "aire",
+    "dakir",
+    "dika",
+    "nadir",
+    "sari",
+    "sir",
+    "ras"
+  ],
+  "rule_text": "insidezies -- OMG,these are: verbs -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.4169381107491857,
+  "difficulty": 27.9
+}

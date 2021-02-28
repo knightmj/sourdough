@@ -1,0 +1,99 @@
+{
+  "board": [
+    [
+      "S",
+      "E"
+    ],
+    [
+      "T",
+      "V"
+    ],
+    [
+      "N",
+      "N"
+    ],
+    [
+      "E",
+      "Z"
+    ],
+    [
+      "T",
+      "R"
+    ],
+    [
+      "T",
+      "E"
+    ]
+  ],
+  "valid": [
+    "see",
+    "rent",
+    "set",
+    "reset",
+    "rest",
+    "ret",
+    "teeter",
+    "net",
+    "tree",
+    "vet",
+    "stet",
+    "steer",
+    "test",
+    "tee",
+    "tent",
+    "vest",
+    "veer"
+  ],
+  "invalid": [
+    "rentee",
+    "reet",
+    "sett",
+    "netter",
+    "trest",
+    "terete",
+    "tsere",
+    "tst",
+    "tetter",
+    "stree",
+    "teet",
+    "vester",
+    "retest",
+    "street",
+    "teest",
+    "tete",
+    "retent",
+    "stere",
+    "tret",
+    "stre",
+    "ree",
+    "setter",
+    "sere",
+    "sert",
+    "ere",
+    "nete",
+    "estre",
+    "ester",
+    "eer",
+    "stert",
+    "zer",
+    "teer",
+    "tester",
+    "teste",
+    "neter",
+    "tez",
+    "seer",
+    "vee",
+    "ten",
+    "stret",
+    "ser",
+    "esere",
+    "reest",
+    "strent"
+  ],
+  "rule_text": "all-ways! -- I'd pay attention to the kind of the words there are. Specifically: verbs -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.4169381107491857,
+  "difficulty": 83.9
+}

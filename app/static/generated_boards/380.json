@@ -1,0 +1,118 @@
+{
+  "board": [
+    [
+      "P",
+      "T"
+    ],
+    [
+      "I",
+      "E"
+    ],
+    [
+      "S",
+      "N"
+    ],
+    [
+      "O",
+      "Q"
+    ],
+    [
+      "V",
+      "O"
+    ],
+    [
+      "E",
+      "H"
+    ],
+    [
+      "O",
+      "G"
+    ],
+    [
+      "E",
+      "N"
+    ]
+  ],
+  "valid": [
+    "site",
+    "pin",
+    "pet",
+    "hog",
+    "hone",
+    "set",
+    "nose",
+    "snipe",
+    "sip",
+    "pen",
+    "sin",
+    "hoe",
+    "nip",
+    "inset",
+    "pit",
+    "tin",
+    "tip",
+    "gone",
+    "pine",
+    "sit",
+    "net",
+    "tie",
+    "snip",
+    "hove"
+  ],
+  "invalid": [
+    "pes",
+    "tine",
+    "voe",
+    "neo",
+    "piso",
+    "one",
+    "pino",
+    "ens",
+    "oho",
+    "tipe",
+    "ego",
+    "sept",
+    "piet",
+    "son",
+    "hoove",
+    "tien",
+    "iso",
+    "inept",
+    "sipe",
+    "gon",
+    "peso",
+    "sine",
+    "snoove",
+    "pien",
+    "nog",
+    "eon",
+    "pie",
+    "sov",
+    "nei",
+    "oons",
+    "nit",
+    "ons",
+    "onset",
+    "penis",
+    "sie",
+    "geo",
+    "snite",
+    "nep",
+    "gen",
+    "ten",
+    "seit",
+    "sen",
+    "pise",
+    "hong",
+    "neti",
+    "ose",
+    "hoon",
+    "hoose"
+  ],
+  "rule_text": "insidezies -- OMG,these are: verbs -- ",
+  "time_s": 1350,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 15,
+  "uniqueness": 0.4169381107491857,
+  "difficulty": 34.5
+}

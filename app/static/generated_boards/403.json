@@ -1,0 +1,106 @@
+{
+  "board": [
+    [
+      "W",
+      "Z"
+    ],
+    [
+      "Y",
+      "P"
+    ],
+    [
+      "A",
+      "R"
+    ],
+    [
+      "R",
+      "T"
+    ],
+    [
+      "B",
+      "I"
+    ],
+    [
+      "I",
+      "D"
+    ],
+    [
+      "I",
+      "R"
+    ]
+  ],
+  "valid": [
+    "pat",
+    "atry",
+    "trypa",
+    "pyr",
+    "prat",
+    "pya",
+    "parr",
+    "tay",
+    "tap",
+    "tirr",
+    "tra",
+    "pray",
+    "parry",
+    "pay",
+    "tray",
+    "trap",
+    "tarry",
+    "art",
+    "try",
+    "tri",
+    "tib",
+    "pari",
+    "tari",
+    "part",
+    "par",
+    "arid",
+    "pry",
+    "tarr",
+    "tarp",
+    "tarri",
+    "ary",
+    "tar",
+    "tryp",
+    "tid"
+  ],
+  "invalid": [
+    "yat",
+    "irid",
+    "bra",
+    "bid",
+    "yar",
+    "biri",
+    "drib",
+    "dib",
+    "dirt",
+    "ray",
+    "rit",
+    "brit",
+    "brat",
+    "dit",
+    "bird",
+    "birr",
+    "rita",
+    "rap",
+    "yarr",
+    "rib",
+    "bidri",
+    "yarb",
+    "dita",
+    "bray",
+    "yati",
+    "rid",
+    "yap",
+    "ibid",
+    "bit",
+    "rat"
+  ],
+  "rule_text": "insidezies -- In the beginning there was: potato -- ",
+  "time_s": 900,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 10,
+  "uniqueness": 0.41379310344827586,
+  "difficulty": 29.0
+}

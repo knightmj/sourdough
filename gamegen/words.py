@@ -19,7 +19,12 @@ class WordHelpers:
     prefixes = {}
 
     def __init__(self):
-        self.words = get_local_words()
+        self.words = set(get_local_words())
+        lemmas_in_words = set(i for i in wordnet.words())
+        for word in lemmas_in_words:
+            if "_" not in word:
+                self.words.add(word)
+
         self.prefixes = solver.make_lookup(self.words)
         wordnet.ensure_loaded()
         print("Loaded {} words".format(

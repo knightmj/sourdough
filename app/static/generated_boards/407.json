@@ -1,0 +1,107 @@
+{
+  "board": [
+    [
+      "C",
+      "T"
+    ],
+    [
+      "L",
+      "N"
+    ],
+    [
+      "T",
+      "L"
+    ],
+    [
+      "O",
+      "I"
+    ],
+    [
+      "D",
+      "L"
+    ],
+    [
+      "C",
+      "R"
+    ],
+    [
+      "X",
+      "A"
+    ],
+    [
+      "W",
+      "H"
+    ]
+  ],
+  "valid": [
+    "warl",
+    "draw",
+    "doli",
+    "dilo",
+    "toll",
+    "harl",
+    "carl",
+    "hard",
+    "diol",
+    "dill",
+    "clit",
+    "doit",
+    "doll",
+    "craw",
+    "clod",
+    "lilt",
+    "card",
+    "dolt",
+    "olid",
+    "idol",
+    "whar",
+    "lill",
+    "till",
+    "clot",
+    "ward",
+    "loll",
+    "ilot",
+    "told",
+    "toil"
+  ],
+  "invalid": [
+    "wha",
+    "tol",
+    "war",
+    "til",
+    "old",
+    "caw",
+    "oil",
+    "wharl",
+    "arx",
+    "carlot",
+    "rah",
+    "cloit",
+    "cardol",
+    "raw",
+    "wah",
+    "dit",
+    "toi",
+    "tod",
+    "lot",
+    "lit",
+    "haw",
+    "rax",
+    "harlot",
+    "ill",
+    "lod",
+    "lid",
+    "wax",
+    "cardo",
+    "dot",
+    "car",
+    "arc",
+    "tid"
+  ],
+  "rule_text": "insidezies -- No more no less than the best which is 4. -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.0,
+  "difficulty": 27.9
+}

@@ -1,0 +1,75 @@
+{
+  "board": [
+    [
+      "E",
+      "I"
+    ],
+    [
+      "N",
+      "R"
+    ],
+    [
+      "T",
+      "C"
+    ],
+    [
+      "X",
+      "D"
+    ],
+    [
+      "A",
+      "L"
+    ],
+    [
+      "S",
+      "E"
+    ]
+  ],
+  "valid": [
+    "las",
+    "ale",
+    "lad",
+    "axle",
+    "ire",
+    "lead",
+    "lea",
+    "sale",
+    "sax",
+    "sea",
+    "seal"
+  ],
+  "invalid": [
+    "dale",
+    "sal",
+    "ase",
+    "slae",
+    "inert",
+    "rent",
+    "seax",
+    "rie",
+    "slad",
+    "tri",
+    "sad",
+    "crine",
+    "trin",
+    "eld",
+    "nei",
+    "aes",
+    "dal",
+    "rine",
+    "lax",
+    "dae",
+    "els",
+    "das",
+    "rein",
+    "crin",
+    "trine",
+    "sla"
+  ],
+  "rule_text": "insidezies -- The first part of the word is important. Important that it's : lisa -- OMG,these are: nouns -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.696078431372549,
+  "difficulty": 33.5
+}

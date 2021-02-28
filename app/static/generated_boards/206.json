@@ -1,0 +1,122 @@
+{
+  "board": [
+    [
+      "P",
+      "M"
+    ],
+    [
+      "E",
+      "P"
+    ],
+    [
+      "L",
+      "V"
+    ],
+    [
+      "S",
+      "E"
+    ],
+    [
+      "L",
+      "A"
+    ],
+    [
+      "H",
+      "F"
+    ],
+    [
+      "R",
+      "V"
+    ],
+    [
+      "I",
+      "O"
+    ]
+  ],
+  "valid": [
+    "self",
+    "emir",
+    "mope",
+    "leaf",
+    "vela",
+    "half",
+    "romp",
+    "rope",
+    "hals",
+    "plea",
+    "veal",
+    "pimp",
+    "level",
+    "rime",
+    "elves",
+    "elemi",
+    "miro",
+    "flea",
+    "hale",
+    "pome",
+    "pomp",
+    "sale",
+    "seal"
+  ],
+  "invalid": [
+    "lev",
+    "las",
+    "false",
+    "sal",
+    "mel",
+    "imp",
+    "pir",
+    "ase",
+    "fae",
+    "leal",
+    "vim",
+    "pom",
+    "slae",
+    "sah",
+    "from",
+    "eve",
+    "sele",
+    "rio",
+    "rim",
+    "orf",
+    "mor",
+    "seah",
+    "impel",
+    "fro",
+    "alf",
+    "halse",
+    "roi",
+    "mop",
+    "ripe",
+    "oime",
+    "lea",
+    "pelves",
+    "salele",
+    "sea",
+    "aes",
+    "rip",
+    "mir",
+    "pimple",
+    "ale",
+    "else",
+    "rimple",
+    "ope",
+    "ropp",
+    "pep",
+    "frim",
+    "els",
+    "poi",
+    "ripple",
+    "selah",
+    "elf",
+    "mele",
+    "pepo",
+    "sla"
+  ],
+  "rule_text": "all-ways! -- Home on the range where the letters and the antelope play in groups of 4-5. -- These words are all: nouns. -- ",
+  "time_s": 720,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 8,
+  "uniqueness": 0.3738562091503268,
+  "difficulty": 92.8
+}

@@ -71,11 +71,11 @@ levelx = {
 
 
 def get_level(i):
-    boards = 98
+    boards = 425
     levels = 10
     boards_per_level = boards/levels
     index = math.floor(random.randint(0, math.floor(boards_per_level)) + boards_per_level * (i-1))
-    index = 98 - index
+    index = boards - index
     print("loading board", index)
     file = "static/generated_boards/" + str(index) + ".json"
     with app.open_resource(file) as f:

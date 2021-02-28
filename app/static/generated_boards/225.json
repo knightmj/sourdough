@@ -1,0 +1,112 @@
+{
+  "board": [
+    [
+      "K",
+      "L"
+    ],
+    [
+      "J",
+      "D"
+    ],
+    [
+      "O",
+      "C"
+    ],
+    [
+      "E",
+      "R"
+    ],
+    [
+      "E",
+      "A"
+    ],
+    [
+      "A",
+      "G"
+    ]
+  ],
+  "valid": [
+    "roe",
+    "age",
+    "algae",
+    "gee",
+    "doe",
+    "core",
+    "are",
+    "rage",
+    "cere",
+    "agee",
+    "creak",
+    "ore",
+    "cree"
+  ],
+  "invalid": [
+    "cor",
+    "laager",
+    "reg",
+    "ora",
+    "gare",
+    "agla",
+    "ear",
+    "cereal",
+    "regal",
+    "crea",
+    "areal",
+    "gal",
+    "rea",
+    "crag",
+    "orage",
+    "garce",
+    "doer",
+    "cod",
+    "geal",
+    "ocrea",
+    "rag",
+    "ager",
+    "eer",
+    "joe",
+    "doc",
+    "lak",
+    "rod",
+    "eager",
+    "roc",
+    "dor",
+    "aal",
+    "gear",
+    "arc",
+    "aero",
+    "lag",
+    "cee",
+    "era",
+    "cero",
+    "aer",
+    "coe",
+    "ger",
+    "alk",
+    "alga",
+    "joree",
+    "oer",
+    "ree",
+    "raga",
+    "ere",
+    "gar",
+    "orc",
+    "lager",
+    "real",
+    "agal",
+    "reak",
+    "area",
+    "reaal",
+    "cro",
+    "aga",
+    "agar",
+    "cora",
+    "doree"
+  ],
+  "rule_text": "all-ways! -- OMG, ends with: mike -- These words are all: nouns. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.6330153683094859,
+  "difficulty": 89.5
+}

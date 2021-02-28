@@ -1,0 +1,86 @@
+{
+  "board": [
+    [
+      "E",
+      "I",
+      "N"
+    ],
+    [
+      "E",
+      "E",
+      "A"
+    ],
+    [
+      "E",
+      "T",
+      "A"
+    ],
+    [
+      "V",
+      "F",
+      "U"
+    ]
+  ],
+  "valid": [
+    "tan",
+    "fate",
+    "ani",
+    "tai",
+    "fae",
+    "tau",
+    "tufa",
+    "vet",
+    "eft",
+    "fet",
+    "teen",
+    "fee",
+    "uta",
+    "tea",
+    "ate",
+    "eta",
+    "taenia",
+    "fat",
+    "net",
+    "ten",
+    "enate",
+    "tee"
+  ],
+  "invalid": [
+    "veen",
+    "taen",
+    "eat",
+    "nae",
+    "aute",
+    "tua",
+    "tean",
+    "taa",
+    "nea",
+    "neet",
+    "nee",
+    "tain",
+    "veta",
+    "neat",
+    "aft",
+    "ean",
+    "nat",
+    "tane",
+    "etua",
+    "nete",
+    "nei",
+    "atef",
+    "niata",
+    "fut",
+    "naa",
+    "fute",
+    "vee",
+    "tenai",
+    "utai",
+    "tae"
+  ],
+  "rule_text": "insidezies -- These words are all: nouns. -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.3627450980392157,
+  "difficulty": 25.7
+}

@@ -1,0 +1,115 @@
+{
+  "board": [
+    [
+      "A",
+      "I"
+    ],
+    [
+      "Y",
+      "D"
+    ],
+    [
+      "B",
+      "E"
+    ],
+    [
+      "N",
+      "P"
+    ],
+    [
+      "A",
+      "U"
+    ],
+    [
+      "A",
+      "E"
+    ],
+    [
+      "G",
+      "R"
+    ]
+  ],
+  "valid": [
+    "age",
+    "deb",
+    "nape",
+    "den",
+    "era",
+    "dye",
+    "pan",
+    "day",
+    "ade",
+    "aid",
+    "bed",
+    "ear",
+    "pun",
+    "pane",
+    "yen",
+    "rage",
+    "erg",
+    "pen",
+    "are",
+    "rag",
+    "ape",
+    "bey",
+    "aide",
+    "gar",
+    "napu",
+    "gean",
+    "area",
+    "neb",
+    "ben",
+    "bye",
+    "gear",
+    "nap"
+  ],
+  "invalid": [
+    "yad",
+    "unbed",
+    "aye",
+    "gaun",
+    "raun",
+    "yep",
+    "depa",
+    "nae",
+    "reg",
+    "yed",
+    "bena",
+    "ide",
+    "aer",
+    "gare",
+    "ger",
+    "bepun",
+    "ped",
+    "reune",
+    "unbe",
+    "paned",
+    "gra",
+    "rea",
+    "ean",
+    "agre",
+    "dey",
+    "gaup",
+    "ager",
+    "ady",
+    "beday",
+    "pua",
+    "gau",
+    "pau",
+    "peda",
+    "naa",
+    "paar",
+    "reap",
+    "puna",
+    "aune",
+    "yade",
+    "nep",
+    "puan"
+  ],
+  "rule_text": "insidezies -- These words are all: nouns. -- ",
+  "time_s": 1350,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 15,
+  "uniqueness": 0.3627450980392157,
+  "difficulty": 34.5
+}
