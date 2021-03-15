@@ -97,7 +97,11 @@ def add_word():
 
 @app.route('/get_board', methods=["GET"])
 def get_game_board():
+    # if we don't have this game just add it. this
+    # might be a request from unity.
+    add_game_if_needed(request.args["game"])
     game = get_game(request.args["game"])
+
     return jsonify(game["level"]["board"])
 
 

@@ -139,8 +139,7 @@ def add_word_unsafe(game_name, word, player):
     if word not in game["found_words"]:
         valid = word in valid_words         # this is a good word
         invalid = word in invalid_words     # this is a known bad word
-        in_dict = dictionary.check(word)    # this word is in the dictionary
-        if valid or invalid or in_dict:
+        if valid or invalid:
             game["words"].append({'text': word, 'valid': valid, 'player': player})
             game["found_words"].append(word)
             return {"valid": valid}
