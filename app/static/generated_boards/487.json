@@ -1,0 +1,95 @@
+{
+  "board": [
+    [
+      "I",
+      "H"
+    ],
+    [
+      "W",
+      "L"
+    ],
+    [
+      "C",
+      "D"
+    ],
+    [
+      "O",
+      "N"
+    ],
+    [
+      "A",
+      "E"
+    ],
+    [
+      "F",
+      "O"
+    ],
+    [
+      "V",
+      "R"
+    ],
+    [
+      "L",
+      "O"
+    ]
+  ],
+  "valid": [
+    "fend",
+    "cond",
+    "roan",
+    "fen",
+    "doe",
+    "fan",
+    "fand",
+    "nae",
+    "roil",
+    "whorl",
+    "nod",
+    "voe",
+    "cod",
+    "roe",
+    "froe",
+    "con",
+    "coe",
+    "cone",
+    "fae",
+    "for",
+    "feod",
+    "doc",
+    "hoi",
+    "nef",
+    "neo",
+    "wild",
+    "who",
+    "noa",
+    "loro",
+    "roi",
+    "done",
+    "vol",
+    "don",
+    "foe",
+    "fro",
+    "faon",
+    "nea"
+  ],
+  "invalid": [
+    "oaf",
+    "orf",
+    "orlo",
+    "aeon",
+    "end",
+    "one",
+    "ean",
+    "oil",
+    "and",
+    "eon",
+    "eoan",
+    "ona"
+  ],
+  "rule_text": "all-ways! -- In the beginning was one of these letters: consonants -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.3723404255319149,
+  "difficulty": 56.300000000000004
+}

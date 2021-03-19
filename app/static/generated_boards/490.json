@@ -1,0 +1,56 @@
+{
+  "board": [
+    [
+      "I",
+      "A"
+    ],
+    [
+      "O",
+      "T"
+    ],
+    [
+      "A",
+      "C"
+    ],
+    [
+      "I",
+      "N"
+    ]
+  ],
+  "valid": [
+    "tan",
+    "act",
+    "tai",
+    "ani",
+    "can",
+    "coati",
+    "coat",
+    "oat",
+    "cat",
+    "cot",
+    "tao",
+    "iota",
+    "cain"
+  ],
+  "invalid": [
+    "ait",
+    "atocia",
+    "tiao",
+    "acta",
+    "toa",
+    "toi",
+    "iao",
+    "tain",
+    "nat",
+    "octan",
+    "nicotia",
+    "coaita",
+    "niata"
+  ],
+  "rule_text": "insidezies -- It may seem like this hint isn't useful. But i promise at least 5 times it is. -- OMG,these are: nouns -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 56.1
+}

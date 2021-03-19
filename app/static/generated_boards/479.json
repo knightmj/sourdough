@@ -1,0 +1,98 @@
+{
+  "board": [
+    [
+      "E",
+      "E",
+      "N",
+      "C"
+    ],
+    [
+      "S",
+      "H",
+      "P",
+      "O"
+    ],
+    [
+      "T",
+      "I",
+      "X",
+      "N"
+    ],
+    [
+      "D",
+      "E",
+      "R",
+      "J"
+    ],
+    [
+      "E",
+      "D",
+      "I",
+      "A"
+    ],
+    [
+      "E",
+      "N",
+      "Y",
+      "E"
+    ]
+  ],
+  "valid": [
+    "ride",
+    "aide",
+    "need",
+    "reit",
+    "air",
+    "phi",
+    "end",
+    "con",
+    "tie",
+    "ire",
+    "aid",
+    "cop",
+    "its",
+    "yea",
+    "red",
+    "hit",
+    "aire",
+    "see",
+    "tier",
+    "hen"
+  ],
+  "invalid": [
+    "shier",
+    "ide",
+    "redia",
+    "ended",
+    "dire",
+    "pon",
+    "needer",
+    "rede",
+    "shi",
+    "eria",
+    "shied",
+    "nee",
+    "nye",
+    "phit",
+    "ponja",
+    "she",
+    "eyn",
+    "hie",
+    "tied",
+    "rid",
+    "deride",
+    "dee",
+    "ria",
+    "eyne",
+    "seen",
+    "shee",
+    "aider",
+    "ender"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- You don't need a sweater but you do need words with at least 5 letters. -- These words are all: nouns. -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 59.5
+}

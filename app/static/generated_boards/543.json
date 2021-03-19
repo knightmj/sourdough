@@ -1,0 +1,106 @@
+{
+  "board": [
+    [
+      "G",
+      "A",
+      "O",
+      "I"
+    ],
+    [
+      "A",
+      "F",
+      "Z",
+      "E"
+    ],
+    [
+      "I",
+      "N",
+      "O",
+      "I"
+    ],
+    [
+      "U",
+      "N",
+      "I",
+      "O"
+    ],
+    [
+      "O",
+      "A",
+      "D",
+      "E"
+    ],
+    [
+      "P",
+      "N",
+      "E",
+      "A"
+    ],
+    [
+      "O",
+      "Y",
+      "N",
+      "E"
+    ],
+    [
+      "I",
+      "A",
+      "S",
+      "V"
+    ]
+  ],
+  "valid": [
+    "nan",
+    "poi",
+    "oaf",
+    "aga",
+    "fag",
+    "union",
+    "ani",
+    "den",
+    "ens",
+    "unio",
+    "idea",
+    "anion",
+    "say",
+    "gain",
+    "ade",
+    "ion",
+    "inn",
+    "din"
+  ],
+  "invalid": [
+    "ide",
+    "sned",
+    "danio",
+    "ann",
+    "sai",
+    "zoid",
+    "dene",
+    "yas",
+    "ainoi",
+    "nide",
+    "any",
+    "sny",
+    "fain",
+    "zoa",
+    "deny",
+    "poy",
+    "dan",
+    "yoi",
+    "adion",
+    "edea",
+    "nane",
+    "inane",
+    "again",
+    "dao",
+    "nea",
+    "nid"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- OMG,these are: nouns -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 36.9
+}

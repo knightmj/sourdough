@@ -1,0 +1,90 @@
+{
+  "board": [
+    [
+      "Q",
+      "L"
+    ],
+    [
+      "A",
+      "I"
+    ],
+    [
+      "D",
+      "W"
+    ],
+    [
+      "O",
+      "M"
+    ],
+    [
+      "T",
+      "V"
+    ],
+    [
+      "B",
+      "M"
+    ],
+    [
+      "T",
+      "N"
+    ],
+    [
+      "A",
+      "M"
+    ]
+  ],
+  "valid": [
+    "wad",
+    "dial",
+    "lid",
+    "lad",
+    "mat",
+    "laid",
+    "dot",
+    "wod",
+    "dow",
+    "dom",
+    "awd",
+    "dal",
+    "wot",
+    "mot",
+    "nam",
+    "tow",
+    "modal",
+    "nat",
+    "towd",
+    "wail",
+    "odal",
+    "wid",
+    "man",
+    "ant",
+    "aid",
+    "ail",
+    "owd",
+    "daw",
+    "tan",
+    "mow",
+    "amt",
+    "vow",
+    "tam",
+    "mant",
+    "tod",
+    "law"
+  ],
+  "invalid": [
+    "iwa",
+    "lai",
+    "wali",
+    "ado",
+    "dali",
+    "towai",
+    "oda",
+    "wadi"
+  ],
+  "rule_text": "insidezies -- End of the the letters words. Specifically: consonants -- ",
+  "time_s": 1080,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 12,
+  "uniqueness": 0.3431372549019608,
+  "difficulty": 42.800000000000004
+}

@@ -65,15 +65,16 @@ class GameBoard:
         direction_score = 0
         for direction in self.directions:
             if is_super_direction(direction):
-                direction_score += 8
+                direction_score += 3
             else:
                 direction_score += 1
-        rule_sore = len(self.rules) * 10
+        rule_sore = len(self.rules) * 20
         extra_words = len(self.valid_words) - self.goal_words
         number_words = len(self.valid_words)
+        filtered_words = len(self.words) - len(self.valid_words)
 
         self.difficulty = direction_score + rule_sore + \
-            (number_words / 10.0) - (extra_words / 10.0) + self.goal_words
+            (number_words / 2.0) + (extra_words / 2.0) + self.goal_words + (filtered_words/2.0)
 
         for rule in self.rules:
             # the more this rule has failed the more unique we become

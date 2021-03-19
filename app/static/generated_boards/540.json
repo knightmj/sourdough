@@ -1,0 +1,102 @@
+{
+  "board": [
+    [
+      "M",
+      "V",
+      "E",
+      "A"
+    ],
+    [
+      "A",
+      "N",
+      "R",
+      "Y"
+    ],
+    [
+      "E",
+      "O",
+      "M",
+      "F"
+    ],
+    [
+      "G",
+      "N",
+      "F",
+      "R"
+    ],
+    [
+      "U",
+      "U",
+      "O",
+      "M"
+    ],
+    [
+      "E",
+      "P",
+      "F",
+      "I"
+    ],
+    [
+      "A",
+      "E",
+      "G",
+      "E"
+    ],
+    [
+      "E",
+      "L",
+      "T",
+      "I"
+    ]
+  ],
+  "valid": [
+    "leg",
+    "gelt",
+    "rev",
+    "mon",
+    "pung",
+    "peg",
+    "aery",
+    "mona",
+    "pun",
+    "tie",
+    "gel",
+    "lea",
+    "eon",
+    "man",
+    "pea",
+    "gnu",
+    "pelt",
+    "gean",
+    "aeon"
+  ],
+  "invalid": [
+    "fou",
+    "foun",
+    "anon",
+    "elt",
+    "nae",
+    "nam",
+    "mou",
+    "mano",
+    "euge",
+    "mae",
+    "mong",
+    "very",
+    "rea",
+    "geo",
+    "ean",
+    "gue",
+    "fie",
+    "non",
+    "moup",
+    "aer",
+    "ona"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- I'd pay attention to the kind of the words there are. Specifically: nouns -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 38.1
+}

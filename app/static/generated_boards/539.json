@@ -1,0 +1,106 @@
+{
+  "board": [
+    [
+      "T",
+      "H",
+      "B",
+      "N"
+    ],
+    [
+      "Y",
+      "O",
+      "N",
+      "Y"
+    ],
+    [
+      "P",
+      "A",
+      "N",
+      "R"
+    ],
+    [
+      "E",
+      "S",
+      "N",
+      "N"
+    ],
+    [
+      "A",
+      "T",
+      "P",
+      "N"
+    ],
+    [
+      "W",
+      "A",
+      "T",
+      "N"
+    ],
+    [
+      "Y",
+      "S",
+      "T",
+      "P"
+    ]
+  ],
+  "valid": [
+    "wae",
+    "saw",
+    "sap",
+    "taw",
+    "ann",
+    "aes",
+    "wat",
+    "tat",
+    "eat",
+    "san",
+    "sat",
+    "nap",
+    "sea",
+    "ase",
+    "pes",
+    "was",
+    "noy",
+    "awa",
+    "tae",
+    "pea",
+    "noa",
+    "pan",
+    "tho",
+    "ast",
+    "hoy",
+    "yon",
+    "sao",
+    "ape"
+  ],
+  "invalid": [
+    "pest",
+    "type",
+    "pesa",
+    "peat",
+    "thon",
+    "staw",
+    "nape",
+    "oast",
+    "seat",
+    "past",
+    "nast",
+    "asta",
+    "eats",
+    "awat",
+    "annoy",
+    "wast",
+    "bhoy",
+    "python",
+    "hoast",
+    "tawa",
+    "paon",
+    "watt"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- You don't need a sweater but you do need words with at least 3 letters. -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.0036231884057971015,
+  "difficulty": 38.300000000000004
+}

@@ -1,0 +1,99 @@
+{
+  "board": [
+    [
+      "E",
+      "N",
+      "Q"
+    ],
+    [
+      "E",
+      "R",
+      "G"
+    ],
+    [
+      "S",
+      "R",
+      "A"
+    ],
+    [
+      "Y",
+      "A",
+      "J"
+    ],
+    [
+      "L",
+      "Y",
+      "P"
+    ],
+    [
+      "E",
+      "O",
+      "A"
+    ],
+    [
+      "S",
+      "R",
+      "E"
+    ]
+  ],
+  "valid": [
+    "ara",
+    "rag",
+    "jar",
+    "raja",
+    "jay",
+    "ray",
+    "raj",
+    "arse",
+    "roe",
+    "gar",
+    "jag",
+    "ers",
+    "ore",
+    "serra",
+    "green",
+    "erg",
+    "pya",
+    "see",
+    "erne",
+    "yore"
+  ],
+  "invalid": [
+    "arsyl",
+    "reen",
+    "ser",
+    "yor",
+    "ree",
+    "neer",
+    "agree",
+    "grr",
+    "yarr",
+    "nee",
+    "gaj",
+    "agre",
+    "aero",
+    "lyse",
+    "rea",
+    "err",
+    "yar",
+    "lys",
+    "gara",
+    "orsel",
+    "eer",
+    "gree",
+    "oes",
+    "seen",
+    "ajar",
+    "yoe",
+    "jara",
+    "reap",
+    "garse",
+    "aer"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- OMG,these are: nouns -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 35.5
+}

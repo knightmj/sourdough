@@ -27,10 +27,10 @@ class StarsEndsRule(WordRule):
     def get_hint_text(self):
         if self.start:
             options = ["These words seem to start with... {}.",
-                       "In the beginning there was: {}",
-                       "The first part of the word is important. Important that it's : {}"]
+                       "In the beginning was one of these letters: {}",
+                       "The first part of the word is important. Is one of : {}"]
             return random.choice(options).format(self.name)
-        options = ["These words seem to end with... {}.",
-                   "I'd pay attention to the end of the words. Specifically: {}",
-                   "OMG, ends with: {}"]
+        options = ["These words seem to end with the letters... {}.",
+                   "Ends with a letter from {}",
+                   "OMG, ends with a letter from: {}"]
         return random.choice(options).format(self.name)

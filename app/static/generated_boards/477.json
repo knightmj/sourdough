@@ -1,0 +1,117 @@
+{
+  "board": [
+    [
+      "B",
+      "A",
+      "U",
+      "T"
+    ],
+    [
+      "Z",
+      "R",
+      "J",
+      "I"
+    ],
+    [
+      "R",
+      "G",
+      "E",
+      "R"
+    ],
+    [
+      "A",
+      "R",
+      "E",
+      "W"
+    ],
+    [
+      "L",
+      "S",
+      "F",
+      "E"
+    ],
+    [
+      "T",
+      "T",
+      "A",
+      "Y"
+    ],
+    [
+      "O",
+      "V",
+      "U",
+      "N"
+    ]
+  ],
+  "valid": [
+    "jut",
+    "stay",
+    "jeer",
+    "reef",
+    "grab",
+    "grew",
+    "fat",
+    "bar"
+  ],
+  "invalid": [
+    "sla",
+    "are",
+    "large",
+    "gra",
+    "barger",
+    "ref",
+    "writ",
+    "wee",
+    "rit",
+    "yat",
+    "taun",
+    "tay",
+    "ger",
+    "ewer",
+    "fay",
+    "tau",
+    "argeers",
+    "alto",
+    "uji",
+    "era",
+    "ree",
+    "wey",
+    "tua",
+    "staun",
+    "eral",
+    "nye",
+    "ire",
+    "fee",
+    "faun",
+    "bargee",
+    "eyn",
+    "ers",
+    "barge",
+    "ewe",
+    "alt",
+    "eer",
+    "few",
+    "gree",
+    "feer",
+    "yew",
+    "wer",
+    "reg",
+    "rare",
+    "slare",
+    "rab",
+    "erg",
+    "bargeer",
+    "aye",
+    "feral",
+    "fey",
+    "lar",
+    "gee",
+    "tire"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- End of the the letters words. Specifically: consonants -- OMG,these are: verbs -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.9129485756566778,
+  "difficulty": 60.1
+}

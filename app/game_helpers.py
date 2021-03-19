@@ -134,8 +134,9 @@ def add_word_unsafe(game_name, word, player):
         game["found_words"] = []
 
     valid_words = game["level"]['valid']
-    invalid_words = game["level"]['valid']
-
+    invalid_words = game["level"]['invalid']
+    print(valid_words)
+    print(invalid_words)
     if word not in game["found_words"]:
         valid = word in valid_words         # this is a good word
         invalid = word in invalid_words     # this is a known bad word
@@ -146,7 +147,7 @@ def add_word_unsafe(game_name, word, player):
         else:
             return {'invalid': 'unknown word ' + word}
     else:
-        return {'invalid': 'word already listed'}
+        return {'invalid': 'word already found'}
 
     get_shared()["games"][game_name] = game
     return {"valid": False}

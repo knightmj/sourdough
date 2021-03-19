@@ -1,0 +1,111 @@
+{
+  "board": [
+    [
+      "O",
+      "R"
+    ],
+    [
+      "H",
+      "A"
+    ],
+    [
+      "Y",
+      "E"
+    ],
+    [
+      "S",
+      "A"
+    ],
+    [
+      "Y",
+      "D"
+    ],
+    [
+      "J",
+      "G"
+    ],
+    [
+      "X",
+      "E"
+    ]
+  ],
+  "valid": [
+    "hare",
+    "are",
+    "ayah",
+    "say",
+    "hoe",
+    "rhea",
+    "yes",
+    "era",
+    "eyas",
+    "hay",
+    "das",
+    "ray",
+    "ora",
+    "oar",
+    "sea",
+    "roe",
+    "day",
+    "year",
+    "days",
+    "ore",
+    "hao",
+    "yea",
+    "rex",
+    "hoar",
+    "ear",
+    "rho",
+    "head"
+  ],
+  "invalid": [
+    "hox",
+    "hoer",
+    "gerah",
+    "sad",
+    "yday",
+    "oxer",
+    "rah",
+    "aes",
+    "sey",
+    "aho",
+    "ger",
+    "rhe",
+    "haya",
+    "sear",
+    "yas",
+    "rox",
+    "yare",
+    "yad",
+    "oer",
+    "yeah",
+    "raya",
+    "ase",
+    "yah",
+    "ahead",
+    "heady",
+    "saya",
+    "hora",
+    "eyah",
+    "arx",
+    "ady",
+    "geo",
+    "hear",
+    "yar",
+    "sye",
+    "easy",
+    "yaya",
+    "dae",
+    "ahey",
+    "hey",
+    "reg",
+    "aye",
+    "seah"
+  ],
+  "rule_text": "all-ways! -- OMG,these are: nouns -- ",
+  "time_s": 1080,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 12,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 65.60000000000001
+}

@@ -1,0 +1,67 @@
+{
+  "board": [
+    [
+      "E",
+      "O"
+    ],
+    [
+      "E",
+      "G"
+    ],
+    [
+      "M",
+      "T"
+    ],
+    [
+      "L",
+      "C"
+    ]
+  ],
+  "valid": [
+    "cog",
+    "leg",
+    "ogee",
+    "gem",
+    "gelt",
+    "tee",
+    "ego",
+    "gee",
+    "col",
+    "lee",
+    "loge",
+    "clog",
+    "get",
+    "cole",
+    "colt",
+    "gel",
+    "eel",
+    "teg",
+    "olm",
+    "celt",
+    "log",
+    "cleg",
+    "elm"
+  ],
+  "invalid": [
+    "goel",
+    "clee",
+    "coe",
+    "geo",
+    "leet",
+    "geet",
+    "cee",
+    "egol",
+    "teel",
+    "eloge",
+    "golee",
+    "gol",
+    "met",
+    "elt"
+  ],
+  "rule_text": "all-ways! -- These words are all: nouns. -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 54.49999999999999
+}

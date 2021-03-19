@@ -18,28 +18,28 @@ def direction_hint_text(directions):
                 dir_list.append(cur_direction)
         hint = "directions+ : "
         if len(dir_list) == 8:
-            return "all-ways!"
+            return "inside+wrap"
         if len(dir_list) == 0:
-            return "insidezies"
+            return "inside"
 
     lookup = {
-        (-1, 0): "️⬅️",
-        (1, 0): "️➡️",
-        (0, -1): "⬆️",
-        (0, 1): "⬇️",
-        (-1, 1): "↙️",
-        (-1, -1): "↖️",
-        (1, -1): "↗️️",
-        (1, 1): "↘️",
+        (-1, 0): "️E️",
+        (1, 0): "️W",
+        (0, -1): "N️",
+        (0, 1): "S️",
+        (-1, 1): "SW️",
+        (-1, -1): "NW️",
+        (1, -1): "NE️️",
+        (1, 1): "SE",
 
-        (-2, 0): "⏩️",
-        (2, 0): "️⏪️",
-        (0, -2): "⏫️",
-        (0, 2): "⏬️",
-        (-2, 2): "↙️↙️",
-        (-2, -2): "↖️↖️",
-        (2, -2): "↗️↗️️",
-        (2, 2): "↘️↘️",
+        (-2, 0): "EE️",
+        (2, 0): "️WW",
+        (0, -2): "SS️",
+        (0, 2): "NN",
+        (-2, 2): "SWSW️",
+        (-2, -2): "NWNW️",
+        (2, -2): "NENE",
+        (2, 2): "SESE️",
     }
 
     for direction in dir_list:

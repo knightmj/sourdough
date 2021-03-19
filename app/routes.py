@@ -68,9 +68,9 @@ def play():
     if "background_image" in game["level"]:
         image = "/static/" + game["level"]["background_image"]
     else:
-        image = "https://picsum.photos/1000"
+        image = ""
 
-    resp = make_response(render_template('play.html', user=user,
+    resp = make_response(render_template('play_unity.html', user=user,
                                          board=game['level']['board'],
                                          level_index=game['level_index'],
                                          game=game,
@@ -141,12 +141,23 @@ def get_game_data():
     if remaining_words == 0:
         advance_game(request.args["game"])
     players = []
-    for player in game["players"].keys():
-        players.append(str(player))
+
+    if "players" in game:
+        for player in game["players"].keys():
+            players.append(str(player))
+    valid = len(game["level"]["valid"])
+    invalid = len(game["level"]["invalid"])
+    for word in game["words"]:
+        if word["valid"]:
+            valid -= 1
+        else:
+            invalid -= 1
 
     data = {
         'players': players,
         'remaining_words': remaining_words,
+        'valid_words': valid,
+        'invalid_words': invalid,
         'remaining_time': remaining_time,
         'rule_text': text,
         'level_index': game["level_index"],

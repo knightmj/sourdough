@@ -1,0 +1,79 @@
+{
+  "board": [
+    [
+      "D",
+      "E"
+    ],
+    [
+      "R",
+      "E"
+    ],
+    [
+      "A",
+      "E"
+    ],
+    [
+      "J",
+      "G"
+    ]
+  ],
+  "valid": [
+    "eared",
+    "ager",
+    "reed",
+    "edger",
+    "dree",
+    "rede",
+    "dreg",
+    "gare",
+    "jager",
+    "aged",
+    "edge",
+    "dear",
+    "drag",
+    "rage",
+    "edea",
+    "eager",
+    "agee",
+    "gear",
+    "ared",
+    "dere",
+    "jeer",
+    "deer"
+  ],
+  "invalid": [
+    "are",
+    "rag",
+    "jar",
+    "jed",
+    "ger",
+    "ged",
+    "geared",
+    "erd",
+    "era",
+    "deg",
+    "age",
+    "ree",
+    "raj",
+    "jaeger",
+    "gaj",
+    "gar",
+    "jag",
+    "rea",
+    "eer",
+    "dee",
+    "red",
+    "reg",
+    "ear",
+    "ere",
+    "jereed",
+    "aer",
+    "gee"
+  ],
+  "rule_text": "all-ways! -- From 4-5 letters. -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.1680327868852459,
+  "difficulty": 57.1
+}

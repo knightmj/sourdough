@@ -1,0 +1,99 @@
+{
+  "board": [
+    [
+      "W",
+      "N",
+      "M",
+      "E",
+      "R",
+      "O",
+      "R"
+    ],
+    [
+      "I",
+      "O",
+      "L",
+      "K",
+      "T",
+      "O",
+      "I"
+    ],
+    [
+      "B",
+      "U",
+      "C",
+      "E",
+      "L",
+      "L",
+      "G"
+    ],
+    [
+      "A",
+      "L",
+      "R",
+      "Y",
+      "O",
+      "O",
+      "A"
+    ],
+    [
+      "G",
+      "A",
+      "H",
+      "E",
+      "I",
+      "R",
+      "S"
+    ],
+    [
+      "U",
+      "N",
+      "M",
+      "E",
+      "R",
+      "G",
+      "E"
+    ],
+    [
+      "Z",
+      "O",
+      "N",
+      "E",
+      "E",
+      "E",
+      "A"
+    ]
+  ],
+  "valid": [
+    "lan",
+    "sag",
+    "gab",
+    "loo",
+    "gas",
+    "rio",
+    "rig",
+    "sea",
+    "key",
+    "loir",
+    "ire",
+    "bag",
+    "eye"
+  ],
+  "invalid": [
+    "gabi",
+    "ula",
+    "iba",
+    "aes",
+    "ase",
+    "guz",
+    "yee",
+    "eke",
+    "ona"
+  ],
+  "rule_text": "directions: ↕️️ -- I'd pay attention to the kind of the words there are. Specifically: nouns -- ",
+  "time_s": 540,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 6,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 30.400000000000002
+}

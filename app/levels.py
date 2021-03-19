@@ -71,8 +71,8 @@ levelx = {
 
 
 def get_level(i):
-    boards = 425
-    levels = 10
+    boards = 549
+    levels = 15
     boards_per_level = boards/levels
     index = math.floor(random.randint(0, math.floor(boards_per_level)) + boards_per_level * (i-1))
     index = boards - index

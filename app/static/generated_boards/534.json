@@ -1,0 +1,66 @@
+{
+  "board": [
+    [
+      "E",
+      "W",
+      "A"
+    ],
+    [
+      "O",
+      "I",
+      "T"
+    ],
+    [
+      "I",
+      "A",
+      "E"
+    ],
+    [
+      "E",
+      "W",
+      "O"
+    ]
+  ],
+  "valid": [
+    "ate",
+    "woe",
+    "tai",
+    "awe",
+    "tea",
+    "wit",
+    "wet",
+    "ewe",
+    "oat",
+    "taw",
+    "two",
+    "eta",
+    "tao",
+    "tie",
+    "wait"
+  ],
+  "invalid": [
+    "iwa",
+    "wae",
+    "ait",
+    "tew",
+    "tiao",
+    "atwo",
+    "tawie",
+    "tae",
+    "eat",
+    "iao",
+    "oii",
+    "wite",
+    "iwaiwa",
+    "wat",
+    "owe",
+    "weta",
+    "twa"
+  ],
+  "rule_text": "insidezies -- These words are all: nouns. -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.5019157088122606,
+  "difficulty": 39.1
+}

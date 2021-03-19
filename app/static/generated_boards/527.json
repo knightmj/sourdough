@@ -1,0 +1,123 @@
+{
+  "board": [
+    [
+      "S",
+      "A",
+      "E",
+      "A"
+    ],
+    [
+      "E",
+      "R",
+      "P",
+      "T"
+    ],
+    [
+      "I",
+      "E",
+      "I",
+      "D"
+    ],
+    [
+      "L",
+      "U",
+      "T",
+      "U"
+    ],
+    [
+      "Y",
+      "R",
+      "R",
+      "C"
+    ],
+    [
+      "F",
+      "D",
+      "I",
+      "E"
+    ],
+    [
+      "P",
+      "O",
+      "T",
+      "V"
+    ]
+  ],
+  "valid": [
+    "are",
+    "tid",
+    "peat",
+    "pot",
+    "top",
+    "tirr",
+    "pod",
+    "pier",
+    "ase",
+    "tip",
+    "tie",
+    "prase",
+    "tur",
+    "pit",
+    "tae",
+    "tipe",
+    "pea",
+    "tri",
+    "turd",
+    "tue",
+    "turr",
+    "tod",
+    "tier",
+    "pie",
+    "pear"
+  ],
+  "invalid": [
+    "vei",
+    "cud",
+    "ras",
+    "ser",
+    "dot",
+    "rut",
+    "dry",
+    "ruer",
+    "rit",
+    "rue",
+    "cut",
+    "era",
+    "dit",
+    "reit",
+    "ease",
+    "sere",
+    "dirt",
+    "lue",
+    "die",
+    "eat",
+    "dier",
+    "dip",
+    "sar",
+    "lier",
+    "sare",
+    "lut",
+    "lieu",
+    "lie",
+    "idryl",
+    "rase",
+    "fyrd",
+    "erase",
+    "rid",
+    "cutie",
+    "sera",
+    "ear",
+    "rie",
+    "easer",
+    "urd",
+    "ere",
+    "utu",
+    "dop"
+  ],
+  "rule_text": "directions: ️↔️️↕️️ -- The first part of the word is important. Is one of : potato -- ",
+  "time_s": 720,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 8,
+  "uniqueness": 0.46938775510204084,
+  "difficulty": 41.199999999999996
+}

@@ -1,5 +1,5 @@
 from gamegen import solver
-from gamegen.solver import get_local_words
+from gamegen.solver import get_words
 from nltk.corpus import wordnet
 word_helpers = None
 
@@ -19,7 +19,7 @@ class WordHelpers:
     prefixes = {}
 
     def __init__(self):
-        self.words = set(get_local_words())
+        self.words = set(get_words("/Users/mknight/sourdough/words.txt"))
         lemmas_in_words = set(i for i in wordnet.words())
         for word in lemmas_in_words:
             if "_" not in word:

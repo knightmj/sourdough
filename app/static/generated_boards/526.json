@@ -1,0 +1,99 @@
+{
+  "board": [
+    [
+      "M",
+      "D"
+    ],
+    [
+      "T",
+      "D"
+    ],
+    [
+      "U",
+      "E"
+    ],
+    [
+      "L",
+      "O"
+    ],
+    [
+      "D",
+      "H"
+    ],
+    [
+      "S",
+      "N"
+    ],
+    [
+      "I",
+      "E"
+    ]
+  ],
+  "valid": [
+    "old",
+    "due",
+    "doe",
+    "hoe",
+    "sen",
+    "lue",
+    "end",
+    "lut",
+    "out",
+    "let",
+    "ens",
+    "sie",
+    "sin",
+    "hod",
+    "tue",
+    "ted",
+    "ule",
+    "sho",
+    "lod",
+    "led",
+    "leu",
+    "nei",
+    "duo",
+    "eld"
+  ],
+  "invalid": [
+    "nesh",
+    "sind",
+    "leud",
+    "lout",
+    "dhoul",
+    "sinh",
+    "shod",
+    "shoe",
+    "duel",
+    "duole",
+    "sine",
+    "shou",
+    "dout",
+    "should",
+    "hold",
+    "luteo",
+    "lute",
+    "elod",
+    "outed",
+    "dhole",
+    "shole",
+    "tule",
+    "sindle",
+    "inshoe",
+    "duet",
+    "tudel",
+    "indole",
+    "deul",
+    "dole",
+    "hole",
+    "loud",
+    "shout",
+    "send"
+  ],
+  "rule_text": "insidezies -- Your words my be not longer than dis many fingers: 3. -- ",
+  "time_s": 540,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 6,
+  "uniqueness": 0.0036231884057971015,
+  "difficulty": 41.199999999999996
+}

@@ -1,0 +1,86 @@
+{
+  "board": [
+    [
+      "G",
+      "C",
+      "E",
+      "E",
+      "P",
+      "S"
+    ],
+    [
+      "N",
+      "A",
+      "N",
+      "A",
+      "I",
+      "W"
+    ],
+    [
+      "O",
+      "A",
+      "T",
+      "F",
+      "D",
+      "V"
+    ],
+    [
+      "N",
+      "O",
+      "V",
+      "T",
+      "K",
+      "U"
+    ],
+    [
+      "T",
+      "O",
+      "T",
+      "E",
+      "S",
+      "D"
+    ],
+    [
+      "I",
+      "E",
+      "E",
+      "O",
+      "W",
+      "H"
+    ],
+    [
+      "O",
+      "T",
+      "A",
+      "E",
+      "T",
+      "L"
+    ]
+  ],
+  "valid": [
+    "nan",
+    "woe",
+    "tae",
+    "tea",
+    "eat",
+    "cee",
+    "oat",
+    "pee",
+    "set",
+    "ana",
+    "tao",
+    "tot"
+  ],
+  "invalid": [
+    "tote",
+    "teat",
+    "nana",
+    "anan"
+  ],
+  "rule_text": "directions: ️↔️️ -- Your words my be not longer than dis many fingers: 3. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.0036231884057971015,
+  "difficulty": 28.3
+}

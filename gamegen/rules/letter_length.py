@@ -40,7 +40,7 @@ class LetterLengthRule(WordRule):
                        "No more no less than the best which is {}."]
             return random.choice(options).format(self.min)
 
-        options = ["Home on the range where the letters and the antelope play in groups of {}-{}.",
-                   "I think some words are betters when they have {}-{} letters.",
-                   "At least {} many letters, so little time."]
+        options = ["From {}-{} letters.",
+                   "{}-{} letters.",
+                   "{}-{} many letters, so little time."]
         return random.choice(options).format(self.min, self.max)

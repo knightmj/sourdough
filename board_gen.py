@@ -43,7 +43,7 @@ def get_random_board_patten():
             "    ******    ",
             "  **********  ",
             "**************",
-            "      **      ",
+            "     ***      ",
         ],
         [
             "  ***   ***  ",
@@ -83,6 +83,22 @@ def get_random_board_patten():
             "***    ",
             "*******",
             "*******",
+        ],
+        [
+            "*** ****",
+            "*** ****",
+            "*** ****",
+            "*** ****",
+            "*** ****",
+            "*** ****",
+        ],
+        [
+            "****** *",
+            "***** **",
+            "**** ***",
+            "*** ****",
+            "** *****",
+            "* ******",
         ],
         [
             "******    ******",
@@ -203,32 +219,41 @@ def generate():
     boards_made = 0
     directions = [8]
     super_directions = [0, 8]
-    max_tries = 30
+    max_tries = 50
     sizes = board_sizes()
-    total = len(directions) * len(super_directions) * max_tries * len(sizes)
+    # 3 from addition directions
+    total = len(directions) * len(super_directions) * 3 * max_tries * len(sizes)
 
+    all_directions = []
     for direction_count in directions:
         for super_direction_count in super_directions:
             directions = simplify_directions(direction_count, super_direction_count)
-            for size in sizes:
-                print("\ngames so far:", len(games))
-                print("games tried:", boards_made)
-                print("total to try:", total)
-                print("progress:", round(boards_made / float(total) * 100, 2))
-                sys.stdout.flush()
-                for i in range(0, max_tries):
-                    if random.randint(0, 10) == 1:
-                        board = patten_board(word_game_dist(), get_random_board_patten())
-                    else:
-                        board = make_board(word_game_dist(), size[0], size[1])
-                    boards_made += 1
-                    rules = select_rules(word_rules)
-                    if len(rules) == 0:
-                        continue
-                    game = GameBoard(directions, board, rules)
-                    game.solve_and_apply_rules()
-                    if game.is_healthy():
-                        games.append(game)
+            all_directions.append(directions)
+
+    all_directions.append([(0, -1), (0, 1)])  # left right only
+    all_directions.append([(-1, 0), (1, 0)])  # up/down only
+    all_directions.append([(-1, 0), (1, 0), (0, -1), (0, 1)])  # left right up down
+
+    for directions in all_directions:
+        for size in sizes:
+            print("\ngames so far:", len(games))
+            print("games tried:", boards_made)
+            print("total to try:", total)
+            print("progress:", round(boards_made / float(total) * 100, 2))
+            sys.stdout.flush()
+            for i in range(0, max_tries):
+                if random.randint(0, 5) == 1:
+                    board = patten_board(word_game_dist(), get_random_board_patten())
+                else:
+                    board = make_board(word_game_dist(), size[0], size[1])
+                boards_made += 1
+                rules = select_rules(word_rules)
+                if len(rules) == 0:
+                    continue
+                game = GameBoard(directions, board, rules)
+                game.solve_and_apply_rules()
+                if game.is_healthy():
+                    games.append(game)
     for game in games:
         game.set_difficulty_uniqueness()
     games.sort()
