@@ -1,0 +1,113 @@
+{
+  "board": [
+    [
+      "E",
+      "L",
+      "V",
+      "I",
+      "U",
+      "A",
+      "E",
+      "R"
+    ],
+    [
+      "N",
+      "S",
+      "I",
+      "E",
+      "C",
+      "G",
+      "L",
+      "O"
+    ],
+    [
+      "U",
+      "G",
+      "J",
+      "D",
+      "D",
+      "I",
+      "Q",
+      "E"
+    ],
+    [
+      "B",
+      "E",
+      "A",
+      "T",
+      "S",
+      "I",
+      "E",
+      "V"
+    ],
+    [
+      "E",
+      "I",
+      "O",
+      "R",
+      "E",
+      "A",
+      "O",
+      "L"
+    ],
+    [
+      "I",
+      "N",
+      "N",
+      "M",
+      "O",
+      "C",
+      "F",
+      "I"
+    ],
+    [
+      "R",
+      "T",
+      "A",
+      "X",
+      "E",
+      "U",
+      "R",
+      "N"
+    ],
+    [
+      "S",
+      "U",
+      "O",
+      "O",
+      "T",
+      "R",
+      "V",
+      "E"
+    ]
+  ],
+  "valid": [
+    "urn",
+    "ore",
+    "roi",
+    "rue",
+    "axe",
+    "inn",
+    "eats",
+    "beat",
+    "tax"
+  ],
+  "invalid": [
+    "sie",
+    "aer",
+    "aero",
+    "vei",
+    "eat",
+    "loa",
+    "ist",
+    "tae",
+    "rea",
+    "too"
+  ],
+  "rule_text": "directions: ️E️️W -- OMG,these are: nouns -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 38.5
+}

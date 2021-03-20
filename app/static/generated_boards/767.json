@@ -1,0 +1,83 @@
+{
+  "board": [
+    [
+      "V",
+      "I",
+      "H"
+    ],
+    [
+      "S",
+      "O",
+      "E"
+    ],
+    [
+      "O",
+      "T",
+      "U"
+    ],
+    [
+      "I",
+      "V",
+      "P"
+    ],
+    [
+      "I",
+      "V",
+      "D"
+    ],
+    [
+      "R",
+      "T",
+      "G"
+    ],
+    [
+      "A",
+      "E",
+      "G"
+    ],
+    [
+      "I",
+      "R",
+      "W"
+    ]
+  ],
+  "valid": [
+    "rear",
+    "get",
+    "air",
+    "toe",
+    "tear",
+    "put",
+    "egg",
+    "gear",
+    "ret"
+  ],
+  "invalid": [
+    "aer",
+    "teg",
+    "toi",
+    "tri",
+    "rea",
+    "ger",
+    "ear",
+    "aire",
+    "ire",
+    "tue",
+    "tea",
+    "art",
+    "tup",
+    "reg",
+    "sot",
+    "tra",
+    "soe",
+    "eria",
+    "ria",
+    "oii"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- I'd pay attention to the kind of the words there are. Specifically: verbs -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 45.5
+}

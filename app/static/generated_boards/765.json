@@ -1,0 +1,105 @@
+{
+  "board": [
+    [
+      "V",
+      "G",
+      "V",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    [
+      "E",
+      "S",
+      "E",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    [
+      "N",
+      "A",
+      "I",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    [
+      "R",
+      "A",
+      "R",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    [
+      "N",
+      "Q",
+      "V",
+      "E",
+      "R",
+      "A",
+      "J"
+    ],
+    [
+      "E",
+      "L",
+      "E",
+      "C",
+      "I",
+      "E",
+      "E"
+    ]
+  ],
+  "valid": [
+    "air",
+    "ice",
+    "jar",
+    "rev",
+    "revel",
+    "are",
+    "rice",
+    "lever"
+  ],
+  "invalid": [
+    "veri",
+    "reve",
+    "saa",
+    "sairve",
+    "sai",
+    "raj",
+    "ear",
+    "era",
+    "sair",
+    "eve",
+    "ase",
+    "ire",
+    "sen",
+    "arn",
+    "arvel",
+    "arna",
+    "vera",
+    "vei",
+    "eric",
+    "aria",
+    "san",
+    "ever",
+    "lev",
+    "nese",
+    "rie",
+    "sane",
+    "anes",
+    "naa",
+    "ria"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- These words are all: verbs. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 49.0
+}

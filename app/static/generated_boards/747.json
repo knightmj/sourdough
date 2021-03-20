@@ -1,0 +1,82 @@
+{
+  "board": [
+    [
+      "L",
+      "H",
+      "E"
+    ],
+    [
+      "Q",
+      "E",
+      "V"
+    ],
+    [
+      "U",
+      "V",
+      "V"
+    ],
+    [
+      "E",
+      "R",
+      "E"
+    ],
+    [
+      "Q",
+      "M",
+      "F"
+    ],
+    [
+      "T",
+      "O",
+      "E"
+    ]
+  ],
+  "valid": [
+    "eel",
+    "heel",
+    "mere",
+    "eve",
+    "rue",
+    "verve",
+    "lee",
+    "fever",
+    "toe",
+    "revel",
+    "ref",
+    "foe",
+    "mot",
+    "lev",
+    "tome",
+    "rev",
+    "leu",
+    "revue",
+    "lever"
+  ],
+  "invalid": [
+    "reve",
+    "vervel",
+    "vee",
+    "feme",
+    "ure",
+    "urf",
+    "uvver",
+    "eheu",
+    "veuve",
+    "ere",
+    "eveque",
+    "feru",
+    "omer",
+    "ferme",
+    "fot",
+    "ever",
+    "queme",
+    "eme",
+    "qere"
+  ],
+  "rule_text": "inside -- These words are all: nouns. -- ",
+  "time_s": 630,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 7,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 60.0
+}

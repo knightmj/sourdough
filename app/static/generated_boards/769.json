@@ -1,0 +1,60 @@
+{
+  "board": [
+    [
+      "U",
+      "N",
+      "V",
+      "S"
+    ],
+    [
+      "U",
+      "E",
+      "H",
+      "E"
+    ],
+    [
+      "K",
+      "X",
+      "I",
+      "E"
+    ],
+    [
+      "T",
+      "A",
+      "L",
+      "N"
+    ]
+  ],
+  "valid": [
+    "see",
+    "axe",
+    "seen",
+    "hex",
+    "taxi",
+    "lie",
+    "alien",
+    "hie",
+    "tax"
+  ],
+  "invalid": [
+    "tal",
+    "aln",
+    "lat",
+    "nei",
+    "lax",
+    "nee",
+    "tali",
+    "lien",
+    "nexal",
+    "axil",
+    "hexa",
+    "hen",
+    "eheu"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- These words are all: verbs. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 42.0
+}

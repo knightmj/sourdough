@@ -1,0 +1,85 @@
+{
+  "board": [
+    [
+      "T",
+      "A",
+      "I"
+    ],
+    [
+      "C",
+      "O",
+      "E"
+    ],
+    [
+      "J",
+      "S",
+      "D"
+    ],
+    [
+      "G",
+      "T",
+      "V"
+    ],
+    [
+      "O",
+      "B",
+      "H"
+    ],
+    [
+      "R",
+      "E",
+      "T"
+    ],
+    [
+      "R",
+      "L",
+      "U"
+    ]
+  ],
+  "valid": [
+    "tao",
+    "robe",
+    "let",
+    "ore",
+    "bog",
+    "bore",
+    "bel",
+    "beth",
+    "gob",
+    "oat",
+    "tai",
+    "reb",
+    "cost",
+    "bet",
+    "lute",
+    "gore",
+    "cos",
+    "coat"
+  ],
+  "invalid": [
+    "coe",
+    "iao",
+    "rog",
+    "luter",
+    "obe",
+    "lut",
+    "gor",
+    "ber",
+    "err",
+    "soc",
+    "rob",
+    "rel",
+    "bor",
+    "soe",
+    "ule",
+    "coed",
+    "ret",
+    "tule"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- These words are all: nouns. -- ",
+  "time_s": 720,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 8,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 55.0
+}

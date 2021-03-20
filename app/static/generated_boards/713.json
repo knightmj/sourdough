@@ -1,0 +1,86 @@
+{
+  "board": [
+    [
+      "V",
+      "E"
+    ],
+    [
+      "M",
+      "T"
+    ],
+    [
+      "U",
+      "Y"
+    ],
+    [
+      "E",
+      "Y"
+    ],
+    [
+      "F",
+      "O"
+    ],
+    [
+      "J",
+      "F"
+    ],
+    [
+      "I",
+      "O"
+    ],
+    [
+      "T",
+      "I"
+    ]
+  ],
+  "valid": [
+    "toff",
+    "item",
+    "fit",
+    "mute",
+    "joy",
+    "emu",
+    "toffy",
+    "vet",
+    "tie",
+    "jot",
+    "tum",
+    "foe",
+    "jiffy",
+    "tiff",
+    "veto"
+  ],
+  "invalid": [
+    "tiffy",
+    "toi",
+    "jiff",
+    "ume",
+    "tye",
+    "tue",
+    "iffy",
+    "meio",
+    "itemy",
+    "jiti",
+    "joey",
+    "vei",
+    "yoe",
+    "fey",
+    "vie",
+    "met",
+    "etym",
+    "fot",
+    "yeo",
+    "feu",
+    "foy",
+    "tume",
+    "joe",
+    "off",
+    "oii"
+  ],
+  "rule_text": "inside+wrap -- I'd pay attention to the kind of the words there are. Specifically: nouns -- ",
+  "time_s": 720,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 8,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 75.5
+}

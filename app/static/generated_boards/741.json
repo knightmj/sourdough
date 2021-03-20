@@ -1,0 +1,96 @@
+{
+  "board": [
+    [
+      "O",
+      "J"
+    ],
+    [
+      "T",
+      "I"
+    ],
+    [
+      "V",
+      "H"
+    ],
+    [
+      "T",
+      "Q"
+    ],
+    [
+      "E",
+      "A"
+    ],
+    [
+      "I",
+      "R"
+    ],
+    [
+      "I",
+      "W"
+    ],
+    [
+      "O",
+      "M"
+    ]
+  ],
+  "valid": [
+    "mire",
+    "air",
+    "ate",
+    "rat",
+    "eat",
+    "tear",
+    "are",
+    "mow",
+    "hit",
+    "tar",
+    "rim",
+    "wire",
+    "rate",
+    "ret",
+    "jot"
+  ],
+  "invalid": [
+    "aer",
+    "wreath",
+    "tari",
+    "tai",
+    "toi",
+    "rea",
+    "wim",
+    "mowie",
+    "ear",
+    "tera",
+    "aire",
+    "ire",
+    "mir",
+    "wir",
+    "tea",
+    "mirate",
+    "moire",
+    "rio",
+    "mowra",
+    "qeri",
+    "tare",
+    "eria",
+    "tji",
+    "rie",
+    "tarie",
+    "irate",
+    "thio",
+    "rath",
+    "eta",
+    "tae",
+    "wreat",
+    "era",
+    "wrath",
+    "ria",
+    "oii"
+  ],
+  "rule_text": "inside -- These words are all: verbs. -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 65.0
+}

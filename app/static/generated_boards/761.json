@@ -1,0 +1,58 @@
+{
+  "board": [
+    [
+      "E",
+      "O"
+    ],
+    [
+      "E",
+      "K"
+    ],
+    [
+      "L",
+      "I"
+    ],
+    [
+      "F",
+      "E"
+    ]
+  ],
+  "valid": [
+    "ilk",
+    "eel",
+    "like",
+    "file",
+    "lei",
+    "leek",
+    "lek",
+    "elk",
+    "lee",
+    "lie",
+    "elf",
+    "life",
+    "keel"
+  ],
+  "invalid": [
+    "fie",
+    "kiel",
+    "flee",
+    "fei",
+    "lief",
+    "ife",
+    "eke",
+    "kele",
+    "oki",
+    "koel",
+    "keelie",
+    "kil",
+    "fike",
+    "okee",
+    "feil"
+  ],
+  "rule_text": "inside -- I'd pay attention to the kind of the words there are. Specifically: nouns -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 51.0
+}

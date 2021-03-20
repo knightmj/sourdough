@@ -1,0 +1,99 @@
+{
+  "board": [
+    [
+      "I",
+      "X",
+      "N",
+      "O"
+    ],
+    [
+      "S",
+      "I",
+      "F",
+      "U"
+    ],
+    [
+      "P",
+      "W",
+      "C",
+      "E"
+    ],
+    [
+      "O",
+      "N",
+      "E",
+      "K"
+    ],
+    [
+      "O",
+      "O",
+      "D",
+      "S"
+    ],
+    [
+      "J",
+      "R",
+      "S",
+      "D"
+    ],
+    [
+      "L",
+      "I",
+      "H",
+      "O"
+    ],
+    [
+      "J",
+      "D",
+      "D",
+      "Y"
+    ]
+  ],
+  "valid": [
+    "rode",
+    "nod",
+    "shod",
+    "rid",
+    "don",
+    "fix",
+    "iron",
+    "done"
+  ],
+  "invalid": [
+    "ken",
+    "rod",
+    "node",
+    "one",
+    "sri",
+    "pone",
+    "hoy",
+    "dor",
+    "lid",
+    "nori",
+    "wis",
+    "pon",
+    "sken",
+    "rone",
+    "psi",
+    "ode",
+    "hod",
+    "eke",
+    "sho",
+    "ouf",
+    "nor",
+    "wisp",
+    "den",
+    "ked",
+    "hiro",
+    "irone",
+    "shi",
+    "six",
+    "keno"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- OMG,these are: verbs -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 49.0
+}

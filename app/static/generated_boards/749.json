@@ -1,0 +1,109 @@
+{
+  "board": [
+    [
+      "J",
+      "S",
+      "E",
+      "T"
+    ],
+    [
+      "E",
+      "V",
+      "M",
+      "I"
+    ],
+    [
+      "C",
+      "D",
+      "O",
+      "E"
+    ],
+    [
+      "E",
+      "R",
+      "C",
+      "E"
+    ],
+    [
+      "I",
+      "A",
+      "F",
+      "O"
+    ],
+    [
+      "S",
+      "A",
+      "E",
+      "W"
+    ],
+    [
+      "T",
+      "M",
+      "A",
+      "Z"
+    ]
+  ],
+  "valid": [
+    "omit",
+    "fardo",
+    "owe",
+    "feast",
+    "rais",
+    "fow",
+    "fare",
+    "foe",
+    "far",
+    "farce",
+    "reis",
+    "few"
+  ],
+  "invalid": [
+    "item",
+    "domite",
+    "saa",
+    "dome",
+    "erd",
+    "tie",
+    "sam",
+    "doe",
+    "cod",
+    "amt",
+    "era",
+    "sier",
+    "tsia",
+    "coe",
+    "east",
+    "mite",
+    "weam",
+    "mae",
+    "ama",
+    "aam",
+    "sie",
+    "semi",
+    "ist",
+    "times",
+    "met",
+    "set",
+    "doc",
+    "mast",
+    "woe",
+    "time",
+    "comes",
+    "easier",
+    "cee",
+    "come",
+    "emit",
+    "arc",
+    "are",
+    "dom",
+    "ast",
+    "comet",
+    "mas"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- The first part of the word is important. Is one of : frog -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5634920634920635,
+  "difficulty": 59.0
+}

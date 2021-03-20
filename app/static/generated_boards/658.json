@@ -1,0 +1,94 @@
+{
+  "board": [
+    [
+      "N",
+      "O"
+    ],
+    [
+      "E",
+      "U"
+    ],
+    [
+      "A",
+      "A"
+    ],
+    [
+      "X",
+      "M"
+    ],
+    [
+      "O",
+      "H"
+    ],
+    [
+      "E",
+      "I"
+    ],
+    [
+      "H",
+      "R"
+    ]
+  ],
+  "valid": [
+    "hire",
+    "horn",
+    "erne",
+    "aeon",
+    "hero",
+    "roue",
+    "iron",
+    "heir",
+    "hone"
+  ],
+  "invalid": [
+    "mho",
+    "moxa",
+    "one",
+    "unhero",
+    "her",
+    "hei",
+    "aune",
+    "hieron",
+    "eon",
+    "heron",
+    "rho",
+    "mae",
+    "nori",
+    "ama",
+    "ire",
+    "hoer",
+    "aam",
+    "rio",
+    "hie",
+    "rone",
+    "maun",
+    "moire",
+    "ore",
+    "rhe",
+    "roe",
+    "nor",
+    "hoe",
+    "norie",
+    "roun",
+    "herne",
+    "hox",
+    "rie",
+    "ohm",
+    "hiro",
+    "irone",
+    "hern",
+    "reh",
+    "hoi",
+    "oer",
+    "nea",
+    "mau",
+    "rehoe",
+    "neo"
+  ],
+  "rule_text": "inside+wrap -- No more no less than the best which is 4. -- These words are all: nouns. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.7103645066273933,
+  "difficulty": 97.0
+}

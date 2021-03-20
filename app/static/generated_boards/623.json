@@ -1,0 +1,111 @@
+{
+  "board": [
+    [
+      "N",
+      "D"
+    ],
+    [
+      "Z",
+      "T"
+    ],
+    [
+      "J",
+      "R"
+    ],
+    [
+      "E",
+      "R"
+    ],
+    [
+      "O",
+      "R"
+    ],
+    [
+      "T",
+      "E"
+    ],
+    [
+      "S",
+      "O"
+    ]
+  ],
+  "valid": [
+    "stre",
+    "dote",
+    "does",
+    "rest",
+    "ort",
+    "dos",
+    "doe",
+    "snot",
+    "ons",
+    "sond",
+    "ton",
+    "tore",
+    "eon",
+    "roto",
+    "sero",
+    "ere",
+    "oes",
+    "not",
+    "roer",
+    "ore",
+    "rote",
+    "snod",
+    "roe",
+    "toe",
+    "dot",
+    "err",
+    "set",
+    "sere",
+    "don",
+    "ser",
+    "ret",
+    "sert",
+    "sot",
+    "son",
+    "ose",
+    "dont",
+    "rot",
+    "stod",
+    "nose",
+    "tor",
+    "jert",
+    "sod",
+    "dose",
+    "oer",
+    "note",
+    "soe",
+    "tod",
+    "nod",
+    "doer"
+  ],
+  "invalid": [
+    "stere",
+    "store",
+    "restore",
+    "roter",
+    "noser",
+    "stero",
+    "error",
+    "stond",
+    "storer",
+    "stereo",
+    "doser",
+    "onset",
+    "tsere",
+    "doesnt",
+    "restorer",
+    "noter",
+    "seton",
+    "doter",
+    "estre",
+    "doest"
+  ],
+  "rule_text": "inside+wrap -- Your words my be not longer than dis many fingers: 4. -- ",
+  "time_s": 1260,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 14,
+  "uniqueness": 0.0,
+  "difficulty": 110.0
+}

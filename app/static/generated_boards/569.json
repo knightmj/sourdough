@@ -1,0 +1,115 @@
+{
+  "board": [
+    [
+      "E",
+      "G"
+    ],
+    [
+      "C",
+      "R"
+    ],
+    [
+      "L",
+      "N"
+    ],
+    [
+      "Y",
+      "E"
+    ],
+    [
+      "R",
+      "L"
+    ],
+    [
+      "T",
+      "A"
+    ],
+    [
+      "M",
+      "R"
+    ],
+    [
+      "Z",
+      "W"
+    ]
+  ],
+  "valid": [
+    "trey",
+    "mart",
+    "rat",
+    "lat",
+    "yen",
+    "crew",
+    "alert",
+    "try",
+    "mary",
+    "mar",
+    "tam",
+    "tar",
+    "arm",
+    "art",
+    "alt",
+    "mat",
+    "ley",
+    "ram",
+    "lam",
+    "marl",
+    "malt",
+    "erg",
+    "tram"
+  ],
+  "invalid": [
+    "tal",
+    "ale",
+    "eyn",
+    "clyer",
+    "rely",
+    "atry",
+    "lye",
+    "eyra",
+    "ger",
+    "cly",
+    "gez",
+    "amt",
+    "mal",
+    "marly",
+    "erne",
+    "mare",
+    "elt",
+    "ryen",
+    "ary",
+    "nye",
+    "atle",
+    "rare",
+    "eral",
+    "wer",
+    "lyra",
+    "lar",
+    "tare",
+    "grew",
+    "reg",
+    "rye",
+    "aryl",
+    "male",
+    "yelt",
+    "rarely",
+    "zer",
+    "cern",
+    "are",
+    "yer",
+    "tra",
+    "tale",
+    "taler",
+    "rel",
+    "lyre",
+    "era",
+    "alen",
+    "aly"
+  ],
+  "rule_text": "inside+wrap -- You don't need a sweater but you do need words with at least 5 letters. -- These words seem to end with the letters... consonants. -- OMG,these are: nouns -- ",
+  "time_s": 1080,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 12,
+  "uniqueness": 0.9590367965367965,
+  "difficulty": 136.0
+}

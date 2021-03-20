@@ -1,0 +1,64 @@
+{
+  "board": [
+    [
+      "L",
+      "D"
+    ],
+    [
+      "Q",
+      "N"
+    ],
+    [
+      "G",
+      "E"
+    ],
+    [
+      "A",
+      "M"
+    ],
+    [
+      "E",
+      "M"
+    ],
+    [
+      "E",
+      "X"
+    ]
+  ],
+  "valid": [
+    "agen",
+    "gemma",
+    "gam",
+    "gaen",
+    "mend",
+    "mae",
+    "gen",
+    "game",
+    "mage",
+    "amend",
+    "meng",
+    "mag",
+    "men",
+    "gem",
+    "amen",
+    "egma",
+    "ame",
+    "emma",
+    "age",
+    "nea",
+    "emend",
+    "eme",
+    "nema",
+    "end",
+    "mem"
+  ],
+  "invalid": [
+    "gemmae"
+  ],
+  "rule_text": "inside -- Your words my be not longer than dis many fingers: 5. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.0,
+  "difficulty": 56.0
+}

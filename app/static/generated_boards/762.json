@@ -1,0 +1,67 @@
+{
+  "board": [
+    [
+      "N",
+      "Y",
+      "A",
+      "H"
+    ],
+    [
+      "L",
+      "R",
+      "P",
+      "E"
+    ],
+    [
+      "A",
+      "W",
+      "S",
+      "C"
+    ],
+    [
+      "G",
+      "M",
+      "N",
+      "O"
+    ]
+  ],
+  "valid": [
+    "wag",
+    "gal",
+    "hap",
+    "ape",
+    "yap",
+    "swag",
+    "lag",
+    "spa",
+    "hay",
+    "spec",
+    "pry",
+    "pay",
+    "con",
+    "law"
+  ],
+  "invalid": [
+    "wry",
+    "aln",
+    "ceps",
+    "gawm",
+    "hep",
+    "pah",
+    "spay",
+    "gaw",
+    "spry",
+    "yah",
+    "cep",
+    "swa",
+    "ons",
+    "cepa",
+    "awry"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- OMG,these are: nouns -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 50.0
+}

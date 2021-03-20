@@ -1,0 +1,107 @@
+{
+  "board": [
+    [
+      "G",
+      "C",
+      "E",
+      "T"
+    ],
+    [
+      "E",
+      "R",
+      "S",
+      "J"
+    ],
+    [
+      "O",
+      "X",
+      "I",
+      "H"
+    ],
+    [
+      "D",
+      "A",
+      "L",
+      "N"
+    ],
+    [
+      "O",
+      "N",
+      "Z",
+      "S"
+    ],
+    [
+      "L",
+      "S",
+      "R",
+      "A"
+    ],
+    [
+      "B",
+      "U",
+      "I",
+      "C"
+    ]
+  ],
+  "valid": [
+    "sec",
+    "lan",
+    "sri",
+    "blo",
+    "ger",
+    "doe",
+    "ons",
+    "geo",
+    "ona",
+    "aln",
+    "lax",
+    "dal",
+    "his",
+    "ras",
+    "sac",
+    "bus",
+    "sil",
+    "lis",
+    "reg",
+    "ers",
+    "set",
+    "car",
+    "sub",
+    "don",
+    "lad",
+    "sar",
+    "dan",
+    "tec",
+    "oer",
+    "ado",
+    "oda",
+    "lod",
+    "six",
+    "nod"
+  ],
+  "invalid": [
+    "ansu",
+    "slon",
+    "nodal",
+    "snod",
+    "dali",
+    "sari",
+    "donax",
+    "secre",
+    "axil",
+    "oxan",
+    "doxa",
+    "gers",
+    "geodal",
+    "axis",
+    "slod",
+    "odal",
+    "doer"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- Your words my be not longer than dis many fingers: 3. -- ",
+  "time_s": 720,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 8,
+  "uniqueness": 0.0,
+  "difficulty": 70.5
+}

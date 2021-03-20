@@ -1,0 +1,86 @@
+{
+  "board": [
+    [
+      "Y",
+      "R"
+    ],
+    [
+      "B",
+      "U"
+    ],
+    [
+      "D",
+      "U"
+    ],
+    [
+      "N",
+      "E"
+    ]
+  ],
+  "valid": [
+    "yen",
+    "bud",
+    "derby",
+    "bun",
+    "bur",
+    "byre",
+    "due",
+    "rub",
+    "urn",
+    "ruby",
+    "dune",
+    "rye",
+    "dub",
+    "red",
+    "burn",
+    "den",
+    "bye",
+    "buyer",
+    "dun",
+    "nude",
+    "nub",
+    "end",
+    "buy"
+  ],
+  "invalid": [
+    "eyn",
+    "rud",
+    "deny",
+    "underbuy",
+    "burny",
+    "bury",
+    "rynd",
+    "unred",
+    "ure",
+    "bred",
+    "dey",
+    "unde",
+    "undub",
+    "ryen",
+    "nye",
+    "duny",
+    "rend",
+    "burned",
+    "dern",
+    "rude",
+    "yerb",
+    "yed",
+    "redub",
+    "brey",
+    "yern",
+    "bure",
+    "dure",
+    "bunder",
+    "durn",
+    "yer",
+    "bund",
+    "duer",
+    "under"
+  ],
+  "rule_text": "inside+wrap -- Your words my be not longer than dis many fingers: 5. -- I'd pay attention to the kind of the words there are. Specifically: nouns -- ",
+  "time_s": 1080,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 12,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 109.5
+}

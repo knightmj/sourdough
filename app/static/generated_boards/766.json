@@ -1,0 +1,85 @@
+{
+  "board": [
+    [
+      "U",
+      "O",
+      "E"
+    ],
+    [
+      "S",
+      "U",
+      "O"
+    ],
+    [
+      "T",
+      "D",
+      "Y"
+    ],
+    [
+      "W",
+      "I",
+      "R"
+    ],
+    [
+      "B",
+      "G",
+      "T"
+    ],
+    [
+      "M",
+      "V",
+      "H"
+    ],
+    [
+      "E",
+      "N",
+      "M"
+    ],
+    [
+      "A",
+      "G",
+      "E"
+    ]
+  ],
+  "valid": [
+    "dig",
+    "rid",
+    "twig",
+    "try",
+    "age",
+    "rig",
+    "girth",
+    "dust",
+    "oust",
+    "girt"
+  ],
+  "invalid": [
+    "you",
+    "wid",
+    "duo",
+    "tri",
+    "gid",
+    "gaen",
+    "wir",
+    "wiry",
+    "meng",
+    "men",
+    "gem",
+    "youd",
+    "yoe",
+    "widu",
+    "wig",
+    "trig",
+    "engem",
+    "sud",
+    "nea",
+    "ust",
+    "dirt"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- These words are all: verbs. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 47.0
+}

@@ -1,0 +1,81 @@
+{
+  "board": [
+    [
+      "I",
+      "E"
+    ],
+    [
+      "I",
+      "T"
+    ],
+    [
+      "O",
+      "I"
+    ],
+    [
+      "N",
+      "E"
+    ],
+    [
+      "P",
+      "C"
+    ],
+    [
+      "O",
+      "V"
+    ]
+  ],
+  "valid": [
+    "nit",
+    "one",
+    "open",
+    "cop",
+    "tie",
+    "cove",
+    "poet",
+    "cope",
+    "ton",
+    "poe",
+    "eon",
+    "pen",
+    "vet",
+    "tine",
+    "veto",
+    "peon",
+    "toe",
+    "ion",
+    "coition",
+    "tin",
+    "tone",
+    "poi",
+    "note"
+  ],
+  "invalid": [
+    "covet",
+    "ope",
+    "nei",
+    "toi",
+    "coe",
+    "copen",
+    "voe",
+    "not",
+    "covite",
+    "nep",
+    "vei",
+    "tien",
+    "vie",
+    "copei",
+    "cep",
+    "neo",
+    "nito",
+    "voet",
+    "once",
+    "oii"
+  ],
+  "rule_text": "inside+wrap -- These words are all: nouns. -- ",
+  "time_s": 1080,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 12,
+  "uniqueness": 0.5196428571428572,
+  "difficulty": 83.0
+}

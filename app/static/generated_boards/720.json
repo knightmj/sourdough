@@ -1,0 +1,103 @@
+{
+  "board": [
+    [
+      "R",
+      "Y"
+    ],
+    [
+      "E",
+      "T"
+    ],
+    [
+      "T",
+      "E"
+    ],
+    [
+      "C",
+      "I"
+    ],
+    [
+      "H",
+      "A"
+    ],
+    [
+      "N",
+      "Z"
+    ]
+  ],
+  "valid": [
+    "tree",
+    "itch",
+    "ice",
+    "tee",
+    "cite",
+    "try",
+    "retie",
+    "ace",
+    "chitter",
+    "retch",
+    "etch",
+    "tie",
+    "hit",
+    "act",
+    "can",
+    "ret",
+    "hie"
+  ],
+  "invalid": [
+    "trey",
+    "nace",
+    "hia",
+    "ach",
+    "tchai",
+    "citer",
+    "iter",
+    "chia",
+    "tret",
+    "cit",
+    "hic",
+    "tice",
+    "hitter",
+    "tete",
+    "tye",
+    "chitty",
+    "yee",
+    "aitch",
+    "teer",
+    "tetch",
+    "nach",
+    "tyee",
+    "citee",
+    "chai",
+    "tch",
+    "rye",
+    "eer",
+    "ich",
+    "teet",
+    "teety",
+    "retia",
+    "zac",
+    "ree",
+    "ceti",
+    "chit",
+    "ait",
+    "yet",
+    "tyre",
+    "teca",
+    "cee",
+    "tec",
+    "tech",
+    "cha",
+    "han",
+    "yer",
+    "tic",
+    "chi",
+    "reet"
+  ],
+  "rule_text": "inside -- I'd pay attention to the kind of the words there are. Specifically: verbs -- ",
+  "time_s": 810,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 9,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 73.5
+}

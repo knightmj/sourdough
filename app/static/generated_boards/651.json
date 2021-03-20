@@ -1,0 +1,111 @@
+{
+  "board": [
+    [
+      "I",
+      "A"
+    ],
+    [
+      "S",
+      "K"
+    ],
+    [
+      "R",
+      "E"
+    ],
+    [
+      "H",
+      "I"
+    ],
+    [
+      "N",
+      "C"
+    ],
+    [
+      "I",
+      "A"
+    ]
+  ],
+  "valid": [
+    "sake",
+    "sain",
+    "ski",
+    "saki",
+    "sri",
+    "ani",
+    "sai",
+    "hei",
+    "can",
+    "rein",
+    "hirse",
+    "cain",
+    "ase",
+    "ire",
+    "serin",
+    "hie",
+    "rhesian",
+    "ricin",
+    "ache",
+    "rhe",
+    "niche",
+    "ake",
+    "kai",
+    "sike",
+    "che",
+    "rie",
+    "skein",
+    "hire",
+    "chin",
+    "hin",
+    "sericin",
+    "rhein",
+    "chi",
+    "cheki"
+  ],
+  "invalid": [
+    "naik",
+    "china",
+    "saa",
+    "ach",
+    "krina",
+    "saker",
+    "her",
+    "chirk",
+    "heir",
+    "hers",
+    "hic",
+    "rich",
+    "riches",
+    "nicher",
+    "sker",
+    "rheinic",
+    "saic",
+    "nach",
+    "inch",
+    "rinch",
+    "eric",
+    "irk",
+    "ers",
+    "sika",
+    "ich",
+    "akia",
+    "siak",
+    "ser",
+    "asker",
+    "acier",
+    "rheic",
+    "reina",
+    "acher",
+    "reh",
+    "cheir",
+    "nais",
+    "kaiser",
+    "naa",
+    "ask"
+  ],
+  "rule_text": "inside+wrap -- These words seem to end with the letters... wedding. -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.48672566371681414,
+  "difficulty": 100.0
+}

@@ -1,0 +1,75 @@
+{
+  "board": [
+    [
+      "U",
+      "R",
+      "E"
+    ],
+    [
+      "M",
+      "I",
+      "S"
+    ],
+    [
+      "J",
+      "U",
+      "A"
+    ]
+  ],
+  "valid": [
+    "mire",
+    "air",
+    "aim",
+    "sum",
+    "sire",
+    "use",
+    "rise",
+    "muse",
+    "rim"
+  ],
+  "invalid": [
+    "rimu",
+    "umu",
+    "imu",
+    "sri",
+    "sai",
+    "reim",
+    "ure",
+    "sir",
+    "sair",
+    "sier",
+    "mise",
+    "aire",
+    "ase",
+    "ire",
+    "rum",
+    "mir",
+    "suji",
+    "reis",
+    "sie",
+    "mure",
+    "uji",
+    "miser",
+    "aumrie",
+    "ers",
+    "aum",
+    "musie",
+    "ser",
+    "muir",
+    "rie",
+    "serum",
+    "mias",
+    "user",
+    "saim",
+    "muser",
+    "saum",
+    "eria",
+    "ria"
+  ],
+  "rule_text": "inside -- I'd pay attention to the kind of the words there are. Specifically: verbs -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.5962230215827338,
+  "difficulty": 58.0
+}

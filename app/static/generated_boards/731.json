@@ -1,0 +1,115 @@
+{
+  "board": [
+    [
+      "L",
+      "C",
+      "I",
+      "O"
+    ],
+    [
+      "R",
+      "N",
+      "S",
+      "I"
+    ],
+    [
+      "T",
+      "L",
+      "E",
+      "A"
+    ],
+    [
+      "G",
+      "O",
+      "T",
+      "A"
+    ],
+    [
+      "O",
+      "E",
+      "L",
+      "O"
+    ],
+    [
+      "H",
+      "R",
+      "O",
+      "A"
+    ],
+    [
+      "E",
+      "W",
+      "I",
+      "D"
+    ]
+  ],
+  "valid": [
+    "got",
+    "taa",
+    "elt",
+    "tol",
+    "atle",
+    "selt",
+    "tea",
+    "atelo",
+    "lota",
+    "atloid",
+    "togt",
+    "tole",
+    "toe",
+    "tolt",
+    "set",
+    "lot",
+    "ate",
+    "tao",
+    "telt",
+    "lote",
+    "eta",
+    "tog",
+    "seta",
+    "gote",
+    "ates",
+    "let",
+    "oat"
+  ],
+  "invalid": [
+    "roi",
+    "hew",
+    "wid",
+    "road",
+    "dao",
+    "gol",
+    "rho",
+    "cise",
+    "hoer",
+    "hog",
+    "sic",
+    "diol",
+    "ore",
+    "goer",
+    "log",
+    "reload",
+    "loa",
+    "rhe",
+    "oleo",
+    "goel",
+    "roid",
+    "role",
+    "hoe",
+    "load",
+    "aes",
+    "lore",
+    "wro",
+    "sea",
+    "oer",
+    "rel",
+    "lea",
+    "roleo"
+  ],
+  "rule_text": "directions: ️E️️WN️S️ -- All these words have something in common. I think t. sry typo -- ",
+  "time_s": 450,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 5,
+  "uniqueness": 0.3076923076923077,
+  "difficulty": 69.5
+}

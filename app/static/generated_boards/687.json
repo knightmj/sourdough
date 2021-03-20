@@ -1,0 +1,105 @@
+{
+  "board": [
+    [
+      "L",
+      "F",
+      "R"
+    ],
+    [
+      "Z",
+      "D",
+      "L"
+    ],
+    [
+      "Y",
+      "I",
+      "U"
+    ],
+    [
+      "L",
+      "B",
+      "V"
+    ],
+    [
+      "A",
+      "L",
+      "I"
+    ],
+    [
+      "A",
+      "L",
+      "T"
+    ]
+  ],
+  "valid": [
+    "div",
+    "bid",
+    "ball",
+    "bud",
+    "billy",
+    "tib",
+    "lilt",
+    "bally",
+    "flu",
+    "bali",
+    "livid",
+    "lid",
+    "billa",
+    "bal",
+    "dilli",
+    "til",
+    "lab",
+    "till",
+    "baa",
+    "bit",
+    "dill",
+    "lill",
+    "dib",
+    "tilly",
+    "flub",
+    "baal",
+    "vill",
+    "dub",
+    "build",
+    "yill",
+    "lall",
+    "villa",
+    "bill",
+    "lily",
+    "balli",
+    "biz",
+    "lit",
+    "vila",
+    "fluid"
+  ],
+  "invalid": [
+    "ubi",
+    "alb",
+    "aby",
+    "ala",
+    "ably",
+    "abu",
+    "uvid",
+    "iba",
+    "alt",
+    "aly",
+    "aal",
+    "illy",
+    "ill",
+    "abilla",
+    "ally",
+    "idyl",
+    "alit",
+    "alba",
+    "all",
+    "alibi",
+    "uily",
+    "ibid"
+  ],
+  "rule_text": "inside -- In the beginning was one of these letters: consonants -- ",
+  "time_s": 990,
+  "text_fully_revealed_at_s": 90,
+  "number_of_words": 11,
+  "uniqueness": 0.40145985401459855,
+  "difficulty": 83.5
+}
