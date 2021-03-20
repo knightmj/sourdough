@@ -14,7 +14,7 @@ public class Board : MonoBehaviour
 
     public string game = "mik3";
     public string player = "player";
-    private bool debugMode = false;
+    private bool debugMode = true;
 
     private int levelIndex = -1;
     private string[][] boardData;

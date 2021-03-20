@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class GamerServer: MonoBehaviour
 {
-    static string server = "http://0.0.0.0/";
+    static string server = "http://sourdoughwordgames.com";
     public IEnumerator LoadBoard(string game, Action<string[][]> boardLoaded,  Action<string> error)
     {
         var request = UnityWebRequest.Get(server + "/get_board?game=" + game);
