@@ -53,6 +53,35 @@ def game_list():
     resp = make_response(render_template('game_list.html', games=all_games))
     return resp
 
+@app.route('/dead_letters', methods=["GET"])
+def dead_letters():
+    if "game" not in request.args:
+        return "Invalid args", 400
+    game = get_game(request.args["game"])
+    board = game["level"]["board"]
+    letters = set()
+    for row in board:
+        for letter in row:
+            letters.add(letter)
+    valid_letters = set()
+
+    found_words = set()
+    if "words" in board:
+        for found_word in board["words"]:
+            found_words.add(found_word["text"])
+
+    for word in game["level"]["valid"]:
+        if word not in found_words:
+            for letter in word:
+                valid_letters.add(letter.upper())
+
+    dead = []
+    for letter in letters:
+        if letter not in valid_letters:
+            dead.append(letter)
+
+    return jsonify(dead)
+
 
 @app.route('/play', methods=["POST", "GET"])
 def play():
@@ -103,6 +132,16 @@ def get_game_board():
     game = get_game(request.args["game"])
 
     return jsonify(game["level"]["board"])
+
+
+@app.route('/get_last_level', methods=["GET"])
+def get_last_level():
+    if "game" not in request.args:
+        return "Invalid args", 400
+    game = get_game(request.args["game"])
+    if 'past_levels' in game:
+        return jsonify(game['past_levels'][-1])
+    return jsonify(())
 
 
 @app.route('/get_game_data', methods=["GET"])

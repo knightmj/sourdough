@@ -206,6 +206,8 @@ def normalize(s):
     word = s.strip()
     if word != word.lower():
         return ""
+    if not word.isalpha():
+        return "";
     if len(word) < 3:
         return ""
     return word
@@ -238,7 +240,7 @@ def make_lookup(world_list):
     return prefixes
 
 
-def solve_board(board, word_list=get_local_words(), directions=all_cardinal_directions(), prefixes=None):
+def solve_board(board, word_list=None, directions=all_cardinal_directions(), prefixes=None):
     """
     Find all words in the provided letter board that meet the directional constraints
     are that are in the word list
@@ -251,7 +253,15 @@ def solve_board(board, word_list=get_local_words(), directions=all_cardinal_dire
         A list of valid words from the word list in the board
     """
     graph, character_dict = make_graph(board, directions)
-    prefixes = make_lookup(word_list)
+
+    if prefixes is None:
+        if word_list is None:
+            word_list = get_local_words()
+        prefixes = make_lookup(word_list)
+    if word_list is None:
+        print("can't set prefixes without word list")
+        exit()
+
     results = set()
     find_words(graph, character_dict, None, [], results, word_list, prefixes)
     return results
@@ -310,7 +320,6 @@ def exercise_boards():
     exercise_board_directions()
     exercise_board_super_directions()
     exercise_board_super_directions_word_list()
-
 
 def test_boards():
     board = ["test",

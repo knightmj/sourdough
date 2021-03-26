@@ -1,8 +1,11 @@
-function startGame(){
-    unityInstance.SendMessage("Board", "SetName", $("#player").val())
-    unityInstance.SendMessage("Board", "StartGame", $("#game_name").val())
 
+function UnityGameLoaded() {
+    unityInstance.SendMessage("Board", "SetName", $("#player").val())
+    unityInstance.SendMessage("Board", "SetHost", "http://" +  window.location.hostname)
+
+    unityInstance.SendMessage("Board", "StartGame", $("#game_name").val())
 }
+
 var settings =
 {
      onProgress: UnityProgress,
@@ -10,8 +13,6 @@ var settings =
      {
          preRun: [ function() { console.log("About to run....") ; } ],
          postRun: [ function() {
-            // hack until we we have a method that says we can start the game.
-            setTimeout(startGame, 4000)
          } ],
      }
  };

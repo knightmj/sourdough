@@ -29,6 +29,18 @@ def advance_game(game_name):
 def advance_game_unsafe(game_name):
     game = get_game(game_name)
     index = game["level_index"]
+    if 'past_levels' not in game:
+        game['past_levels'] = []
+
+    # add level to past levels
+    game['past_levels'].append(
+        dict(start_time=game['start_time'],
+             end_time=time.time(),
+             words=game['words'],
+             level_index=game['level_index'],
+             level=game['level'])
+    )
+
     game['start_time'] = time.time()
     game['level_index'] = index + 1
     game['level'] = get_level(index + 1)
@@ -42,14 +54,13 @@ def add_game_if_needed(game_name):
 
 
 def add_game_if_needed_unsafe(game_name, level=None):
-    if level is None:
-        level = get_level(1)
-
     shared = get_shared()
     if "games" not in shared:
         shared["games"] = {}
     if game_name not in shared["games"]:
-        shared["games"][game_name] = {"name": game_name,
+        if level is None:
+            level = get_level(1)
+        shared["games"][game_name] = {'name': game_name,
                                       'level': level,
                                       'level_index': 1,
                                       'start_time': time.time()}
@@ -136,7 +147,6 @@ def add_word_unsafe(game_name, word, player):
     valid_words = game["level"]['valid']
     invalid_words = game["level"]['invalid']
     print(valid_words)
-    print(invalid_words)
     if word not in game["found_words"]:
         valid = word in valid_words         # this is a good word
         invalid = word in invalid_words     # this is a known bad word

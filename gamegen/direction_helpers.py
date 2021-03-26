@@ -23,33 +23,27 @@ def direction_hint_text(directions):
             return "inside"
 
     lookup = {
-        (-1, 0): "️E️",
-        (1, 0): "️W",
-        (0, -1): "N️",
-        (0, 1): "S️",
-        (-1, 1): "SW️",
-        (-1, -1): "NW️",
-        (1, -1): "NE️️",
+        (-1, 0): "E",
+        (1, 0): "W",
+        (0, -1): "N",
+        (0, 1): "S",
+        (-1, 1): "SW",
+        (-1, -1): "NW",
+        (1, -1): "NE",
         (1, 1): "SE",
 
-        (-2, 0): "EE️",
-        (2, 0): "️WW",
-        (0, -2): "SS️",
+        (-2, 0): "EE",
+        (2, 0): "WW",
+        (0, -2): "SS",
         (0, 2): "NN",
-        (-2, 2): "SWSW️",
-        (-2, -2): "NWNW️",
+        (-2, 2): "SWSW",
+        (-2, -2): "NWNW",
         (2, -2): "NENE",
-        (2, 2): "SESE️",
+        (2, 2): "SESE",
     }
 
     for direction in dir_list:
-        hint += lookup[direction]
-    if "➡️" in hint and "⬅️" in hint:
-        hint = hint.replace("➡️", "")
-        hint = hint.replace("⬅️", "↔️")
-    if "⬆️" in hint and "⬇️" in hint:
-        hint = hint.replace("⬆️", "")
-        hint = hint.replace("⬇️", "↕️️")
+        hint += lookup[direction] + " "
     return hint
 
 

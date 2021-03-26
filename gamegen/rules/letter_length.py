@@ -26,8 +26,8 @@ class LetterLengthRule(WordRule):
     def get_hint_text(self):
         if self.min == 0:
             options = ["Your words my be not longer than dis many fingers: {}.",
-                       "You don't need a sweater but you do need words with at least {} letters.",
-                       "It may seem like this hint isn't useful. But i promise at least {} times it is."]
+                       "Words with at least {} letters.",
+                       "At least {} of da letters."]
             return random.choice(options).format(self.max)
         if self.max == -1:
             options = ["Yo words my gonna need ta be longer than dis: {}",

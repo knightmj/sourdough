@@ -1,7 +1,10 @@
 import sys
+import time
 
+from gamegen import solver
 from gamegen.direction_helpers import *
 import random
+import os
 
 from gamegen.game_board import GameBoard
 from gamegen.rules.pass_test_rule import PassesTestRule
@@ -33,6 +36,11 @@ def make_board(letters, x, y):
             "".join(random.sample(letters, x))
         )
     return board
+
+
+def get_word_board(w, h):
+    helpers = get_word_helpers()
+    return random.sample(helpers.hist[w], h)
 
 
 def get_random_board_patten():
@@ -111,7 +119,7 @@ def get_random_board_patten():
     return random.choice(pattens)
 
 
-def patten_board(letters, patten):
+def patten_board(patten):
     height = len(patten)
     width = len(patten[0])
     b = []
@@ -122,7 +130,7 @@ def patten_board(letters, patten):
 
     for col in range(0, width):
         for row in range(0, height):
-            if patten[row][col] != " ":
+            if patten[row][col] == "*":
                 b[row][col] = random.choice(letters)
 
     final_board = []
@@ -137,14 +145,12 @@ def get_substring_rules():
     terms = ["e", "el", "et", "i", "ee", "oo", "r", "s", "t", "z"]
     for substring in terms:
         rule = SubstringRule(substring)
-        # print(rule.get_hint_text())
         rules.append(rule)
     for substring in terms:
         for substring2 in terms:
             if substring2 == substring:
                 continue
             rule = SubstringRule(substring, substring2)
-            # print(rule.get_hint_text())
             rules.append(rule)
 
     return rules
@@ -165,7 +171,6 @@ def get_start_end():
     for start in position:
         for name, letters in terms.items():
             rule = StarsEndsRule(start, letters, name)
-            # print(rule.get_hint_text())
             rules.append(rule)
     return rules
 
@@ -197,7 +202,7 @@ def get_word_rules():
 
 
 def board_sizes():
-    one_dimensions = [2, 3, 4, 6, 7, 8]
+    one_dimensions = [1, 2, 3, 4, 6, 7, 8, 9]
     sizes = []
     for x in one_dimensions:
         for y in one_dimensions:
@@ -207,57 +212,46 @@ def board_sizes():
     return sizes
 
 
-def generate():
+def setup_rules():
     word_rules = get_word_rules()
-
     for key, rules in word_rules.items():
         print("rule group:", key, "rules:", len(rules))
+    return word_rules
 
-    games = []
 
-    # setup loop vars
-    boards_made = 0
-    directions = [8]
-    super_directions = [0, 8]
-    max_tries = 50
-    sizes = board_sizes()
-    # 3 from addition directions
-    total = len(directions) * len(super_directions) * 3 * max_tries * len(sizes)
+def generate_board(size):
+    if random.randint(0, 5) == 1:
+        board = patten_board(get_random_board_patten())
+    elif size[0] > 2 and random.randint(0, 5) == 1:
+        board = get_word_board(size[0], size[1])
+    else:
+        board = make_board(word_game_dist(), size[0], size[1])
+    return board
 
-    all_directions = []
+
+def print_status(batch_start, boards_made, games, total):
+    print("\ngames so far:", len(games))
+    print("games tried:", boards_made)
+    print("total to try:", total)
+    if batch_start:
+        elapsed = (time.time() - batch_start) / boards_made
+        print("seconds left:", (total - boards_made) * elapsed)
+    else:
+        batch_start = time.time()
+    print("progress:", round(boards_made / float(total) * 100, 2))
+    sys.stdout.flush()
+
+
+def get_directions(all_directions, directions, super_directions):
     for direction_count in directions:
         for super_direction_count in super_directions:
             directions = simplify_directions(direction_count, super_direction_count)
             all_directions.append(directions)
-
+    all_directions.append([(0, 1)])  # right only
+    all_directions.append([(-1, 0)])  # down only
     all_directions.append([(0, -1), (0, 1)])  # left right only
     all_directions.append([(-1, 0), (1, 0)])  # up/down only
     all_directions.append([(-1, 0), (1, 0), (0, -1), (0, 1)])  # left right up down
-
-    for directions in all_directions:
-        for size in sizes:
-            print("\ngames so far:", len(games))
-            print("games tried:", boards_made)
-            print("total to try:", total)
-            print("progress:", round(boards_made / float(total) * 100, 2))
-            sys.stdout.flush()
-            for i in range(0, max_tries):
-                if random.randint(0, 5) == 1:
-                    board = patten_board(word_game_dist(), get_random_board_patten())
-                else:
-                    board = make_board(word_game_dist(), size[0], size[1])
-                boards_made += 1
-                rules = select_rules(word_rules)
-                if len(rules) == 0:
-                    continue
-                game = GameBoard(directions, board, rules)
-                game.solve_and_apply_rules()
-                if game.is_healthy():
-                    games.append(game)
-    for game in games:
-        game.set_difficulty_uniqueness()
-    games.sort()
-    save_output(games)
 
 
 def select_rules(word_rules):
@@ -277,8 +271,8 @@ def simplify_directions(direction_count, super_direction_count):
     return directions
 
 
-def save_output(games):
-    cnt = 1
+def save_output(games, folder, start_index):
+    cnt = start_index
     with open("boards_" + str(len(games)) + ".csv", "w") as f:
         f.write("id, difficulty,uniqueness,rules,goal words,valid words,total words, cells, hint\n")
         for game in games:
@@ -287,15 +281,59 @@ def save_output(games):
                             str(len(game.board) * len(game.board[0])),
                             game.hint_text()])
             f.write(csv + "\n")
-            with open(str(cnt) + ".json", "w") as board_file:
+            with open(
+                    os.path.join(folder,
+                                 str(cnt) + ".json"), "w") as board_file:
                 board_file.write(game.to_json())
             cnt += 1
             sys.stdout.flush()
 
 
+def generate(folder, batch):
+    # setup loop vars
+    games = []
+    boards_made = 0
+    directions = [8]  # all directions
+    super_directions = [0, 8]  # none or all super directions
+    max_tries = 50
+    sizes = board_sizes()
+    percents = [.4, .6, .8, .9]
+    all_directions = []
+
+    word_rules = setup_rules()
+    get_directions(all_directions, directions, super_directions)
+
+    total = len(all_directions) * max_tries * len(sizes)
+    batch_start = None
+
+    for directions in all_directions:
+        for size in sizes:
+            print_status(batch_start, boards_made, games, total)
+            for i in range(0, max_tries):
+                board = generate_board(size)
+                boards_made += 1
+                rules = select_rules(word_rules)
+                game = GameBoard(directions, board, rules,
+                                 random.choice(percents))
+                game.solve_and_apply_rules()
+                if game.is_healthy():
+                    games.append(game)
+    for game in games:
+        game.set_difficulty_uniqueness()
+    games.sort()
+    save_output(games, folder, (batch * total) + 1)
+
+
 if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("board_gen.py <output> <batch>")
+        exit()
+
     # load up the words
     print("loading dictionary")
     helpers = get_word_helpers()
     print("making boards")
-    generate()
+    if not os.path.exists(sys.argv[1]):
+        os.mkdir(sys.argv[1])
+
+    generate(sys.argv[1], int(sys.argv[2]))

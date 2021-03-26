@@ -16,16 +16,20 @@ class GameBoard:
     difficulty = 0.0
     uniqueness = 0.0
     time = 0.0
+    goal_word_percent = .66
 
-    def __init__(self, directions_in, board_in, rules_in):
+    def __init__(self, directions_in, board_in, rules_in, goal_word_percent):
         self.board = board_in
         self.rules = rules_in
         self.directions = directions_in
+        self.goal_word_percent = goal_word_percent
 
     def solve_and_apply_rules(self):
         helpers = get_word_helpers()
 
-        self.words = solver.solve_board(self.board, directions=self.directions,
+        self.words = solver.solve_board(self.board,
+                                        directions=self.directions,
+                                        word_list=helpers.words,
                                         prefixes=helpers.prefixes)
         if len(self.words) == 0:
             return
@@ -48,16 +52,13 @@ class GameBoard:
             if word_frequency > 0:
                 self.goal_words += 1
 
-        self.goal_words = math.floor(.66 * self.goal_words)
+        self.goal_words = math.floor(self.goal_word_percent * self.goal_words)
 
-        self.time = self.goal_words * 90
+        self.time = self.goal_words * 90 * self.goal_word_percent
 
     def is_healthy(self):
         # not many good words found, so skip this one
         if 5 > self.goal_words:
-            return False
-        # rules did not reduce anything so skip this one
-        if len(self.valid_words) == len(self.words):
             return False
         return True
 
@@ -72,9 +73,11 @@ class GameBoard:
         extra_words = len(self.valid_words) - self.goal_words
         number_words = len(self.valid_words)
         filtered_words = len(self.words) - len(self.valid_words)
+        goal_percent = self.goal_word_percent * 100
 
         self.difficulty = direction_score + rule_sore + \
-            (number_words / 2.0) + (extra_words / 2.0) + self.goal_words + (filtered_words/2.0)
+                          (number_words / 2.0) + (extra_words / 2.0) + self.goal_words + \
+                          (filtered_words / 2.0) + (goal_percent * 10)
 
         for rule in self.rules:
             # the more this rule has failed the more unique we become
@@ -113,4 +116,4 @@ class GameBoard:
         return self.difficulty == other.difficulty
 
     def __lt__(self, other):
-        return self.difficulty > other.difficulty
+        return self.difficulty < other.difficulty
