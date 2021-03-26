@@ -11,7 +11,6 @@ public class SoundManager : MonoBehaviour
     public AudioClip clockAudioSource;
     public AudioClip GameOverSound;
     public AudioSource Source;
-    public bool Mute = false;
     public SoundManager()
     {
     }
@@ -21,5 +20,9 @@ public class SoundManager : MonoBehaviour
         if (!this.Mute)
             Source.PlayOneShot(clip);
     }
-
+    public bool Mute
+    {
+        get { return Source.mute; }
+        set { Source.mute = value;}
+    }
 }
