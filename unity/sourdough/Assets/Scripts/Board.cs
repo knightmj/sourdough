@@ -11,38 +11,49 @@ public class Board : MonoBehaviour
     public SoundManager Sounds;
     public GameObject NameStatusPrefab;
     public GameObject Canvas;
+    public VictoryPanel VictoryPanel;
 
     public string game = "mik3";
     public string player = "player";
-    private bool debugMode = false;
 
     private int levelIndex = -1;
     private string[][] boardData;
     private LetterBox[][] board;
 
     private long lastGameUpdate;
-    private Dictionary<string, GameObject> foundWordDictionary
-        = new Dictionary<string, GameObject>();
+    private long lastDeadLetters = -1;
 
-    private Dictionary<string, GameObject> playersDictionary
-    = new Dictionary<string, GameObject>();
+    private Dictionary<string, GameObject> foundWordDictionary = new Dictionary<string, GameObject>();
+
+    private Dictionary<string, GameObject> playersDictionary = new Dictionary<string, GameObject>();
 
     private bool clockStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (debugMode)
+        if (Application.isEditor)
         {
+            // testing form the editor just move foward
             BottomBarCanvas.PayerName = this.player;
             LoadBoard();
         }
         else
         {
+            //running in the browser. clear the
+            // game and let javascript know we are ready to start
             this.game = "";
             this.player = "";
+            GameStateController.GameStarted();
         }
     }
+
+    public void SetHost(string host)
+    {
+        var server = this.GetComponent<GamerServer>();
+        server.Host = host;
+    }
+
     public void SetName(string playerName)
     {
         this.player = playerName;
@@ -57,13 +68,11 @@ public class Board : MonoBehaviour
     }
     private void LoadBoard()
     {
-        Action<string[][]> boardLoaded = board =>
-        {
+        Action<string[][]> boardLoaded = board => {
             this.boardData = board;
             this.CreateBoard();
         };
-        Action<string> boardLoadError = error =>
-        {
+        Action<string> boardLoadError = error => {
             Debug.LogError(error);
         };
 
@@ -71,13 +80,14 @@ public class Board : MonoBehaviour
         StartCoroutine(server.LoadBoard(this.game, boardLoaded, boardLoadError));
 
     }
+
     public void CreateBoard()
     {
         Bounds b = LetterPrefab.GetComponent<MeshFilter>().sharedMesh.bounds;
         float width = b.size.x * LetterPrefab.transform.localScale.x;
         float height = b.size.y * LetterPrefab.transform.localScale.y;
 
-        this.board = new LetterBox[this.boardData.Length][];    
+        this.board = new LetterBox[this.boardData.Length][];
 
         for (int r = 0; r < boardData.Length; r++)
         {
@@ -87,10 +97,10 @@ public class Board : MonoBehaviour
             {
                 GameObject go = GameObject.Instantiate(LetterPrefab, this.transform);
                 go.transform.position = new Vector3(
-                    (c * width) - (.5f * boardData[0].Length * width) + .5f * width,
-                    (-r * height) + (.5f * boardData.Length * height),
+                    (c * width) - (0.5f * boardData[0].Length * width) + 0.5f * width,
+                    (-r * height) + (0.5f * boardData.Length * height),
                     -1
-                    );
+                );
                 LetterBox lb = go.GetComponent<LetterBox>();
                 lb.Letter.text = boardData[r][c];
                 this.board[r][c] = lb;
@@ -104,8 +114,7 @@ public class Board : MonoBehaviour
     }
     public void AddWord()
     {
-        Action<bool, bool, string> wordAdded = (error, isValid, message) =>
-        {
+        Action<bool, bool, string> wordAdded = (error, isValid, message) => {
             BottomBarCanvas.SetStatus(message);
             if (error)
             {
@@ -139,7 +148,7 @@ public class Board : MonoBehaviour
         {
             for (int c = 0; c < boardData[r].Length; c++)
             {
-                this.board[r][c].SetColor(Color.white);     
+                this.board[r][c].SetColor(Color.white);
             }
         }
         if (this.BottomBarCanvas.WordInputField.text.Length == 0)
@@ -160,9 +169,9 @@ public class Board : MonoBehaviour
             foreach (var p in path)
             {
                 float alpha = .10f + (1 / ((float)path.Count - i++));
-                this.board[p.x][p.y].SetColor(new Color(200/255.0f,
-                    70.0f/255.0f,
-                    200.0f/255.0f,
+                this.board[p.x][p.y].SetColor(new Color(200 / 255.0f,
+                    70.0f / 255.0f,
+                    200.0f / 255.0f,
                     alpha));
             }
         }
@@ -174,8 +183,13 @@ public class Board : MonoBehaviour
 
     IEnumerator WaitAndLoad()
     {
+        yield return new WaitForSeconds(1);
+        ShowLastLevel();
+
         yield return new WaitForSeconds(2);
+
         LoadBoard();
+        lastDeadLetters = -1;
     }
     void NextBoard(int levelIndex)
     {
@@ -187,7 +201,7 @@ public class Board : MonoBehaviour
                 this.board[r][c].Drop(true);
             }
         }
-        foreach(var key in this.foundWordDictionary.Keys)
+        foreach (var key in this.foundWordDictionary.Keys)
         {
             Destroy(this.foundWordDictionary[key]);
         }
@@ -207,7 +221,7 @@ public class Board : MonoBehaviour
 
     void UpdateWordsFound(GameState state)
     {
-        foreach(var word in state.Words)
+        foreach (var word in state.Words)
         {
             if (!this.foundWordDictionary.ContainsKey(word.Text))
             {
@@ -219,7 +233,8 @@ public class Board : MonoBehaviour
 
     void UpdatePlayers(GameState gameState)
     {
-        var playerFinds = new Dictionary<string, int[]>();
+        var playerFinds = new Dictionary<string,
+            int[]>();
 
         foreach (var word in gameState.Words)
         {
@@ -237,8 +252,8 @@ public class Board : MonoBehaviour
             }
         }
 
-       foreach (var player in playerFinds.Keys)
-       {
+        foreach (var player in playerFinds.Keys)
+        {
             if (!this.playersDictionary.ContainsKey(player))
             {
                 var go = Instantiate(NameStatusPrefab);
@@ -291,13 +306,39 @@ public class Board : MonoBehaviour
 
     void UpdateGame()
     {
+        var server = this.GetComponent<GamerServer>();
+        if (lastDeadLetters == -1 || DateTime.Now.Ticks - this.lastDeadLetters > 60 * TimeSpan.TicksPerSecond)
+        {
+            lastDeadLetters = DateTime.Now.Ticks;
+            Action<string[]> onDeadLetters = letters => {
+                Debug.Log("got dead letters");
+                foreach (var letter in letters)
+                {
+                    for (int r = 0; r < boardData.Length; r++)
+                    {
+                        for (int c = 0; c < boardData[r].Length; c++)
+                        {
+                            if (this.board[r][c].Letter.text == letter)
+                                this.board[r][c].Drop();
+                        }
+                    }
+                }
+            };
+
+            Action<string> onError = message => {
+                Debug.Log(message);
+
+            };
+
+            StartCoroutine(server.GetDeadLetters(this.game,
+                onDeadLetters, onError));
+        }
 
         if (DateTime.Now.Ticks - this.lastGameUpdate >
             TimeSpan.TicksPerSecond)
         {
             this.lastGameUpdate = DateTime.Now.Ticks;
-            Action<GameState> onGameState = gameState =>
-            {
+            Action<GameState> onGameState = gameState => {
                 ProcessGameState(gameState);
             };
 
@@ -305,9 +346,22 @@ public class Board : MonoBehaviour
                 Debug.Log(message);
 
             };
-            var server = this.GetComponent<GamerServer>();
+
             StartCoroutine(server.GetGameState(this.game, onGameState, onError));
         }
+    }
+    void ShowLastLevel()
+    {
+        var server = this.GetComponent<GamerServer>();
+        Action<LastLevel> onLastLevel = lastlevel =>
+        {
+            this.VictoryPanel.ShowLevel(lastlevel);
+
+        };
+        Action<string> onError = message => {
+            Debug.Log(message);
+        };
+        StartCoroutine(server.GetLastlevel(this.game, onLastLevel, onError));
     }
     // Update is called once per frame
     void Update()

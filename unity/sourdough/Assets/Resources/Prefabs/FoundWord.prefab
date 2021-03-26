@@ -185,8 +185,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5869351663944795112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5b45e016b324cfca0ae13a9bc357eb, type: 3}
+  m_Script: {fileID: 11500000, guid: d73c96f1f45494004b3a5d130a26efdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   word: {fileID: 5869351663944795119}
-  FoundWordPrefab: {fileID: 0}
+  direction: -1
